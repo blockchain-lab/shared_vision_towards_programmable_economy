@@ -3,19 +3,23 @@
 Authors: try get RvIG, KvK, Kadaster on board first. Then BC3 figurehead, DNB, even StartupDelta?
 
 _abstract_
-_We outline a trust-based blockchain architecture, present implementation results, and show the possible usage, for instance, land ownership transfer. In August 2007 we launched a primitive fully distributed ledger. Based our ledger deployment experience of the past decade we present a global architecture of a third generation blockchain fabric. This technology stack covers the complete range from low-level hardware with our Physical unclonable function prototypes towars our blockchain-regulated decentral marketplace. _
+_We outline a trust-based blockchain architecture, present partial implementation results, and show the possible usage, for instance, land ownership transfer. The scope of our proposal is broad, it should be usable across sectors and possibly replace paper-based procedures. In August 2007 we launched a primitive fully distributed ledger. Based our ledger deployment experience of the past decade we present a global architecture of a third generation blockchain fabric. This technology stack covers the complete range from low-level hardware with our Physical unclonable function prototypes towars our blockchain-regulated decentral marketplace._
 
 -introduction
  * current 2nd generation stuff (bitcoin,ethereum)
  * next generation vision: scalability and distributed database paradigm
  
- architectural outline for BC3 vision
+ architectural outline for BC3 vision.
+ Existing proposals for Bitcoin and Ethereum aim to build an entire socio-economic ecosystem from cratch. So far they failed.
  
 -future blockchain scenarios
  *ICO crash and ecosystem failure
  *chronic darknet and tax evasion currency
  *fancy Edifact,XML,json replacement
  *underhyped: new paradigm for identity and global trust
+ 
+ The National Bank stated that if the blockchain is the answer what is the questions.
+ 
 -Current and future distributed database models
  * cybercurrency versus blockchain database (.js)
  * yet another distributed database model (Hierarchical, relational,
@@ -23,7 +27,7 @@ NoSQL, graph-based,..)
  * new: permissionless, no servers, no central governance
  * new ownership model: nobody owns the blockchain-database
 -Legal registries and asset transfers
--System Architecture
+-TrustChain technology stack
   Our BC3/Delft technology portfolio / stack / architecture consists now of:
   * PUF (REF: Modeling SRAM start-up behavior for physical unclonable functions)
   * self-sovereign identity system for people, organisations and objects
@@ -35,6 +39,8 @@ NoSQL, graph-based,..)
   * Business primitives: legally binding identification, authentication, signatures, irrifutable notifications, business transactions, contracts, e-invoicing, e-factoring, and IFTTT logic.
   * real-time IBAN/BIC money transfer, conditional payments, currency conversion, clearing, and settlement
   * decentral blockchain-regulated markets
+  
+  We present a feasible system architecture for efficient, fast, and secure usage of blockchain technology in existing businesses.
 -TrustChain experiments
 -Land registration application
 -Global Mortgage Finance market application
