@@ -1,6 +1,11 @@
 # Draft title: "Trustchain: blockchain transactions for identity, trade, and legal registries".
 
-Authors: try get RvIG, KvK, Kadaster on board first. Then BC3 figurehead, DNB, even StartupDelta?
+Authors: Delft University of Technology as initiator, invite RvIG, Chamber of Commerce, Land Registry Agency to possibly join. With a readable draft might aim to include BC3 figurehead, DNB/AFM, banks, even StartupDelta?
+
+#### very tight deadlines
+- July 10: first readable draft, distributed to partners
+- July 16: partner feedback processed and alignment completed
+- July 22: Scientific Journal submission!
 
 _abstract_
 _We present a blueprint to create the worlds first programmable economy with blockchain technology as an organisational paradigm, supported by key players within an existing economy. 
