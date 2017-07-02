@@ -4,8 +4,16 @@ Authors: try get RvIG, KvK, Kadaster on board first. Then BC3 figurehead, DNB, e
 
 _abstract_
 _We present a blueprint to create the worlds first programmable economy with blockchain technology as an organisational paradigm, supported by key players within an existing economy. 
+Current scientific work on economic organisation is often focussed on helping society decide on the optimal allocation of our limited resources.
+We propose to re-organise parts of the global economy by using the following three rules: replace central decision making with decentral supervision {e.g. in Dutch 'horizontaal toezicht'}, and digital ostracism for rule breaking economic actors.
+We propose a new decision making doctrine: uncompromising transparency, full openness, and radically decentralised. 
+We believe our blueprint to take many years of effort, but still viable, realistic, and based on technology which is already partly implemented._
 
-We outline a trust-based blockchain architecture, present partial implementation results, and show the possible usage, for instance, land ownership transfer. The scope of our proposal is broad, it should be usable across sectors and possibly replace paper-based procedures. In August 2007 we launched a primitive fully distributed ledger. Based our ledger deployment experience of the past decade we present a global architecture of a third generation blockchain fabric. This technology stack covers the complete range from low-level hardware with our Physical unclonable function prototypes towars our blockchain-regulated decentral marketplace._
+_Our programmable economy blueprint consists of a natively-digital economic system with self-governance to avoid any single-point-of-failure, security grounded upon the laws of physics (avoiding software), radical transparency, publically verifiable claims on economic actors within the blockchain, reputation tracking for each economic actor, elaborate mechanisms to establish trust between strangers, legally frinctionless enforcable contracts, and facilitate a single blockchain-regulated digital marketplace for generic economic value exchange and any-asset trading.
+Digital ostracism or ecosystem banning is our cardinal mechanism to incentivise each participant to contribute towards a global desirable outcome and protect against freeriding, fraud, and abuse._
+
+_We outline a trust-based blockchain architecture, present partial implementation results, and show the possible usage, for instance, land ownership transfer. The scope of our proposal is broad, it should be usable across sectors and possibly replace paper-based procedures. In August 2007 we launched a primitive fully distributed ledger. Based our ledger deployment experience of the past decade we present a global architecture of a third generation blockchain fabric. This technology stack covers the complete range from low-level hardware with our Physical unclonable function prototypes towars our blockchain-regulated decentral marketplace._
+
 
 ### introduction
  - current 2nd generation stuff (bitcoin,ethereum)
