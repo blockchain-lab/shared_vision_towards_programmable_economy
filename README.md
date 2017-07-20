@@ -42,7 +42,7 @@ It establishes a goverance layer in which states, economic actors, and citizens 
 
 For thousands of years trusted guardians keep authentic ownership records of lands, gold, and other assets. These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with self-driving cars. This difference in innovation speed is creating increasing levels of friction.
 
-Blockchain enthousiasts claim this technology offers an alternative to any trusted guardian and central bank. It offers us another way to organise society, with a high degree of decentralisation. The popularity and attack-resilience and the rising gig economy supports this claim.
+Blockchain enthousiasts claim this technology offers an alternative to any trusted guardian and central bank. It offers us another way to organise society, with a high degree of decentralisation. The popularity and attack-resilience of Bitcoin together with the rising gig economy endorses this claim.
 The breakthrough that made the gig economy possible was the use of reputation systems to build trust between strangers. Reputation systems collect and process information about past interactions, to help people evaluate the trustworthiness of others [REF](http://www.emeraldinsight.com/doi/pdfplus/10.1016/S0278-0984%2802%2911030-3). However, an individual’s reputation on a platform such as eBay is owned by a profit-driven entity. This leads to the following problems for the social good:
 - Lock-in. A solid reputation on one platform is locked into that platform: you cannot move your reputation. Like other forms of lock-in, this inhibits competition and encourages monopoly behavior. Ironically, companies in the "sharing economy" do not share reputations. Users are increasingly being protected by European Union law from such data silos. The right to data portability allows individuals to obtain and reuse their personal data for their own purposes across different services.
 - Fragmentation. Each company operates its own closed market, only accessible through their smarphone app. This leads to lower overall efficiency, compared to a single open market. For example, the taxi market is fragmented into numerous closed markets operated by companies such as Uber, Lyft, BlaBla Car, Didi Kuaidi, GrabTaxi, Karhoo, etc. Each isolated marketplace tries to match drivers and customers in real-time.
@@ -50,7 +50,7 @@ Centralized approaches are ultimately always influenced by the goals and the rel
 
 For this reason central platforms can never be truly generic and universal. With a decentralized approach, multiple independent individuals cooperate in some manner to build a single ecosystem and no one entity has control over the entire environment. This is the model we envision for the future programmable economy: trust relations are not locked to a single profit-driven entity.
 
-The cardinal problem is: "who owns trust"? We will now further elaborate on why it is hard to craft a public infrastructure for creating trust.
+The cardinal problem is: "who owns trust"? Creating trust within a public infrastructure has proven to be a hard unsolved problem.
 
 In May 1962 the vision of a "[time-sharing computer system with many
 remote stations](http://dl.acm.org/citation.cfm?id=1460847)" was presented, known as The Internet today.
@@ -61,11 +61,11 @@ It has proven hard to create a decentralized governance layer for such vital pub
 Joseph Stiglitz co-authored the "Architecture of Economic Systems" in 1985, describing how decision making units can be organized together within a system. It presents a basic framework to compare the performance of decentralized and centralized economic systems. Centralized economic systems have given way to decentralized forms. The current challenge is to further refine the decentralized form: storage and governance 
 of authoritative answers to ownership questions use a public and transparent infrastructure.
 
-Trust, accountability and reputation mechanisms are closely tied.
+Trust, accountability, and reputation mechanisms are closely tied.
 Transparency can be used to make an authority accountable in order to establish trust. 
 It promotes integrity of operations by monitoring the correct behavior of economic actors [[REF](https://www.petsymposium.org/2017/papers/issue4/paper87-2017-4-source.pdf)].
 
-Creating public, transparent, and decentralized infrastructures has remained an open problem in many cases. We lack a decentral infrastructure for essential economic primitives such as: identity, money, trust, and markets. 
+Creating trustworthy, public, transparent, and decentralized infrastructures is hard. We lack a decentral infrastructure for essential economic primitives such as: identity, money, trust, and markets. 
 
 ### Architecture for creating trust
 
