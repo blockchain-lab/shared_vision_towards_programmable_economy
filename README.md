@@ -118,7 +118,13 @@ Digital ostracism or ecosystem banning is our cardinal mechanism to incentivise 
 
 We outline a trust-based blockchain architecture, present partial implementation results, and show the possible usage, for instance, land ownership transfer. The scope of our proposal is broad, it should be usable across sectors and possibly replace paper-based procedures. In August 2007 we launched a primitive fully distributed ledger. Based our ledger deployment experience of the past decade we present a global architecture of a third generation blockchain fabric. This technology stack covers the complete range from low-level hardware with our Physical unclonable function prototypes towars our blockchain-regulated decentral marketplace.
 
-### Increasing economic efficiency by decentralized blockchain-regulated markets
+![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/stack_simple.png)
+
+### Land registration application
+
+### Global Mortgage Finance market (application)
+
+### Inter-personal/organizational cooperation (application)
 
 Traditionally, inter-organizational coordination is realized through one out of the following methods:
 * by bilateral agreements: easy to arrange (sometimes within a single day), most often used for single transactions (buying a single product or service), not always the most economically efficient outcome; often along existing relations
@@ -135,31 +141,25 @@ For example, a demand for high frequency transactions occur when:
 
 We present a feasible system architecture for efficient, fast, and secure usage of blockchain technology to coordinate existing businesses.
 
-### The State of the Blockchain
+As an example of the broad applicability of a trust network, please consider the following coordination problem.
+Electric vehicles (EVs) have a limited driving range defined by their installed battery capacity, which is limited because batteries are large, heavy and costly.
+Consequently, for longer drives they need to recharge, in a way similar to the refueling of fossil-fuel-based vehicles.
+Very different, however, is the time it typically takes for such a refill: for EVs this can be anywhere from 30 minutes to several hours.
+This is a problem in particular when the capacity at recharging stations is limited: if a driver arrives at a charging station (with an almost empty battery) and has to wait for another car to be charged first, this has a significant  effect on the total travel time.
+Apart from the solution to design such charging stations for peak capacity requirements, solutions have been proposed to better coordinate the time and location where vehicles charge.
 
-ToDo: keep in special issue scope
-```technische uitleg en huidige technologische stavaza.```
+For example, a charging station could offer a reservation system where drivers can book a charging slot in advance as soon as they know at what time they will arrive at the station [].
+Such a system would require only bilateral trust and systems like these have been around (without a blockchain) for many years, e.g., for administration purposes at governmental front desks, restaurants, etc..
+However, this system leads to significant inefficiencies when arrival conditions are not completely certain.
+In particular this holds for travel times, since these may be very uncertain especially around peak times when such reservations matter.
+Reserving a larger time window introduces extra (lost opportunity) costs on the side of the charging station, or booking a later slot introduces extra costs on the side of the driver.
+
+Another solution is a cooperative one where all drivers share and coordinate their charging plans among themselves [].
+Previous work has shown which algorithmic solutions can be used to combine stochastic information based on historic travel  information with stochastic policies for routing and charging, and how this can be used for coordinating these policies.
+What is still missing, though, is a system to reliably exchange this information.
 
 
-### System architecture
-
-![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/stack_simple.png)
-
-![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/tech_stack.png)
-
-The National Bank stated that "if the blockchain is the answer what is the question".
- 
-### Distributed databases for trust, value transfer, and legal registries
-
-How to store and govern authoritative answers to ownership questions.
-
-- cybercurrency versus blockchain database (.js)
-- yet another distributed database model (Hierarchical, relational,
-NoSQL, graph-based,..)
-- new: permissionless, no servers, no central governance
-- new ownership model: nobody owns the blockchain-database
-
-BAG register as currently open linked data [[inspiration REF](http://discipl.org/discipl-technology-for-a-future-society/)].
+### Distributed databases for legal signatures ?
 
 To be determined: offline identificatie van mensen die bepaalde rechtspersonen mogen representeren.
 Openbaar electronisch handtekeningen register; waarin elke bedrijf kan registreren welke
@@ -167,7 +167,11 @@ natuurlijke personen bepaalde authorisaties of verantwoordelijkheden dragen.
 Bijvoorbeeld Onderneming X verklaart dat persoon Y tekenbevoegd is voor 
 financiele verplichtingen tot bedrag Z.
 
-### TrustChain technology stack
+### Trust creation technology portfolio
+
+System architecture
+
+![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/tech_stack.png)
 
 We now introduce our TrustChain technology stack, presented in Figure x. This stack can roughly be divided in four parts. The lower levels consists of Physical Uncloneable Functions (PUFS), biometric-based authentication and self-sovereign identity. These components are essential for the ambitious goal to create a decentralized, secure identity framework, named IPv8. These layers will be discussed in Section x.
 
@@ -268,29 +272,6 @@ We have implemented TrustChain and the scalable consensus mechanism discussed in
 The global throughput of the mechanism is displayed in Figure x. On the horizontal axis, the network size is shown as the amount of users whereas the vertical axis denotes the transaction throughput in transactions per second. In this experiment, each user transacts with another user in a fixed set of neighbours. As a first observation, note the linear relationship in the figure between the population size and transaction throughput; this strongly indicates the horizontal scalability property for a network up to 1400 users. The throughput rate lowers when the number of facilitators in increased. This is explained by the fact that more facilitators require additional network communication between users, introducing overhead and latency.
 
 Figure x indicates that we have indeed created a scalable consensus mechanism, not bounded by a wasteful, expensive consensus mechanism like Proof-of-Work. With only a few servers, our consensus mechanism is able to reach global throughput rates surpassing that of Visa or SWIFT. Together with components higher in our technology stack, we enabled trusted trade at a large scale.
-
-### Land registration application
-
-### Global Mortgage Finance market (application)
-
-### Inter-personal/organizational cooperation (application)
-
-As an example of the broad applicability of a trust network, please consider the following coordination problem.
-Electric vehicles (EVs) have a limited driving range defined by their installed battery capacity, which is limited because batteries are large, heavy and costly.
-Consequently, for longer drives they need to recharge, in a way similar to the refueling of fossil-fuel-based vehicles.
-Very different, however, is the time it typically takes for such a refill: for EVs this can be anywhere from 30 minutes to several hours.
-This is a problem in particular when the capacity at recharging stations is limited: if a driver arrives at a charging station (with an almost empty battery) and has to wait for another car to be charged first, this has a significant  effect on the total travel time.
-Apart from the solution to design such charging stations for peak capacity requirements, solutions have been proposed to better coordinate the time and location where vehicles charge.
-
-For example, a charging station could offer a reservation system where drivers can book a charging slot in advance as soon as they know at what time they will arrive at the station [].
-Such a system would require only bilateral trust and systems like these have been around (without a blockchain) for many years, e.g., for administration purposes at governmental front desks, restaurants, etc..
-However, this system leads to significant inefficiencies when arrival conditions are not completely certain.
-In particular this holds for travel times, since these may be very uncertain especially around peak times when such reservations matter.
-Reserving a larger time window introduces extra (lost opportunity) costs on the side of the charging station, or booking a later slot introduces extra costs on the side of the driver.
-
-Another solution is a cooperative one where all drivers share and coordinate their charging plans among themselves [].
-Previous work has shown which algorithmic solutions can be used to combine stochastic information based on historic travel  information with stochastic policies for routing and charging, and how this can be used for coordinating these policies.
-What is still missing, though, is a system to reliably exchange this information.
 
 
 ### Conclusions
