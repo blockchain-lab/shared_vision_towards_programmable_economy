@@ -84,53 +84,37 @@ Offering full sovereignty to all decision making entities, full transparency one
 We are applying ideas fundamentally concerned with freedom of individuals, embedding a natural disposition to trust, and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism.
 
 The term programmable economy was introduced by consultancy form Gartner Inc. in 2015. 
-Our work adds numerous architectural details, a clear direction, feasible laws, and operational prototypes when compared to the original idea.
+Our work adds various architectural details, a single clear direction, feasible laws, and operational prototypes when compared to the original idea.
 They describe it as _"the programmable economy, enabled by metacoin platforms and smart technologies, will support new forms of value exchange, new kinds of markets (including dynamically defined on-demand markets), and new kinds of economies such as the attention economy, the reputation economy, the on-demand economy and the resource optimization economy."_[[REF](http://www.gartner.com/newsroom/id/3146018)]
 
 
 ![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/stack_simple.png)
 
-the Figure above.
+The Figure above shows our four layers.
+First we need to address the digital identity problem, shown as the bottom layer.
+A wealth of applications require strong authentication and long-lived secure identities. The Internet requires a common continuously evolving strong identity layer. This would make the Internet safer, better and more efficient. A single common identity layer also needs full decentralisation and self-governance.
 
-Bitcoin solves :
-How do I create a system where nobody can stop me spending my own money? [ref](http://www.r3cev.com/blog/2016/4/4/introducing-r3-corda-a-distributed-ledger-designed-for-financial-services)
+However, we lack control over our identity, as formulated [within the proposed WebDHT documentation](https://opencreds.org/specs/source/webdht/).
+"The Web currently does not have a mechanism where people and organizations can claim identifiers that they have sole ownership over. Identifiers, such as those rooted in domain names like emails addresses and website addresses, are effectively rented by people and organizations rather than owned. Therefore, their use as long-term identifiers is dependent upon parameters outside of their control. One danger is that if the rent is not paid, all data associated with the identifier can be made temporarily or permanently inaccessible. This document specifies a mechanism where people and organizations can cryptographically claim ownership over identifiers such that they control them and the documents that they refer to."
 
-ToDo: Empowered citizens
-[financial sovereignty](http://www.persee.fr/doc/ecofi_1767-4603_2009_hos_9_1_5491)
+Self-sovereign identities require that users are the rulers of their own identity. This idea was presented in 2012 by Moxie Marlinspike [[REF](http://www.moxytongue.com/2012/02/what-is-sovereign-source-authority.html)].
+With this concept people and businesses can store their own identity data on their own devices, and present it efficiently to anyone who wants to validate it. The decentralized storage within concept removes the need for any central database of identity data.
 
+This approach to identity is a complete overhaul to the approach used today by governments using central controlled identity administration frameworks. Users become autonomous by using self-sovereign identities and are free to store their digital passport inside their own smartphone device. Instead of your government assigning you citizen number "0013" or your telecommunication provider renting you cell phone number "0-013" you can claim ownership of cryptographic key "8A4D48B" as you worldwide identity.
+Together with cryptographic techniques it becomes possible to identify and authenticate people, members of organisations and objects without even requiring Internet access. A large list of worldwide claimed identities by citizens could replace all central identity administration frameworks.
 
-Our work aims to re-invent economic value chains based on the organisational principle of The Internet itself: a high degree of autonomy and self-governance. 
+Being the ruler of your own identity is closely related to the core concept of Bitcoin.
+Bitcoin creates money without banks, but also provides users with an exceptional level of control.
+The novelty of Bitcoin is: a system where nobody can stop me spending my own money? [ref](http://www.r3cev.com/blog/2016/4/4/introducing-r3-corda-a-distributed-ledger-designed-for-financial-services)
+Identity autonomy provides a new level of citizen empowerment and enables [financial sovereignty](http://www.persee.fr/doc/ecofi_1767-4603_2009_hos_9_1_5491).
 
-ToDo: self-sovereign economy
-self-governance.
-New laws and principles to structure economic activity.
+Second layer is our TrustChain fabric, a blockchain with mathematically proven linear scalability. [REF KELONG].
 
-Rapid progress of technology has impacted our notion of trust!
-We step in the car of a stranger (Uber), sleep without worries in house of a stranger (Airbnb.
-
-ToDo: Citizen empowerment, money without banks, etc.
- 
-1962 advice " 'to begin is everything',
-even if it is necessary at first to
-build research systems along lines that
-would be uneconomic for widespread application."
-
-
-
- architectural outline for BC3 vision.
- Existing proposals for Bitcoin and Ethereum aim to build an entire socio-economic ecosystem from cratch. So far they failed.
-
-Stated in [[REF](https://papers.ssrn.com/soL3/papers.cfm?abstract_id=2943227)]: "the present economic systems are highly centralised in nature. They are prone to single point failures, i.e. a failure by the central authority has a cascading effect on the whole economy. Moreover, due to the centralised nature of the setup, any failures have to be corrected by the central authority alone. Local solutions can only be temporary in
-nature. Thus, self-correcting mechanisms are lacking in a centralised (i.e a central bank) economic system."
-
-First we need to address the digital identity problem. ToDo: expand.
-
-Second we provide a roadmap to transform our usage of money. By reengineering and building upon existing antiquated payment systems we provide a realistic, legally compliant, and efficient overlay. Re-use the existing infrastructure and transform it into loosely coupled autonomous entities.
+Third we provide a roadmap to transform our usage of money. By reengineering and building upon existing antiquated payment systems we provide a realistic, legally compliant, and efficient overlay. Re-use the existing infrastructure and transform it into loosely coupled autonomous entities.
 We provide a proof-of-principle for making international money transfers with sub-second speed, near-zero commissions, instant clearance, and real-time settlement. No progress is possible without a transformation of our expensive transaction network build in 1970s (swift) using a programming language from the 1950s (cobol).
 
 We propose to re-organise parts of the global economy by using the following three rules: replace central decision making with decentral supervision {e.g. in Dutch 'horizontaal toezicht'}, and digital ostracism for rule breaking economic actors.
 We propose a new decision making doctrine: uncompromising transparency, full openness, and radically decentralised. 
-We believe our blueprint to take many years of effort, but still viable, realistic, and based on technology which is already partly implemented and validated.
 
 Our programmable economy blueprint consists of a natively-digital economic system with self-governance to avoid any single-point-of-failure, security grounded upon the laws of physics (avoiding software), radical transparency, publically verifiable claims on economic actors within the blockchain, reputation tracking for each economic actor, elaborate mechanisms to establish trust between strangers, legally frinctionless enforcable contracts, and facilitate a single blockchain-regulated digital marketplace for generic economic value exchange and any-asset trading.
 Digital ostracism or ecosystem banning is our cardinal mechanism to incentivise each participant to contribute towards a global desirable outcome and protect against freeriding, fraud, and abuse.
