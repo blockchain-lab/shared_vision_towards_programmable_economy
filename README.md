@@ -40,21 +40,21 @@ Contracts, transactions, and the records of them are among the defining structur
 These authentic records create ownership, verify identities, and register events.
 It establishes a goverance layer in which states, economic actors, and citizens interact.
 
-For thousands of years trusted guardians keep authentic ownership records of lands, gold, and other assets. These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with self-driving cars. This difference in innovation speed is creating increasing levels of friction.
+For thousands of years trusted guardians kept authentic ownership records of land and assets. These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with self-driving cars, trucks, drones, and barges. This difference in innovation speed is creating increasing levels of friction.
 
-Blockchain enthousiasts claim this technology offers an alternative to any trusted guardian and central bank. It offers us another way to organise society, with a high degree of decentralisation. The popularity and attack-resilience of Bitcoin together with the rising gig economy endorses this claim.
+Blockchain enthousiasts claim this technology offers an alternative to any trusted guardian and central bank. It offers us another way to organise society, with a high degree of decentralisation. The resilience of Bitcoin together with the rising gig economy endorses this claim.
 The breakthrough that made the gig economy possible was the use of reputation systems to build trust between strangers. Reputation systems collect and process information about past interactions, to help people evaluate the trustworthiness of others [REF](http://www.emeraldinsight.com/doi/pdfplus/10.1016/S0278-0984%2802%2911030-3). However, an individual’s reputation on a platform such as eBay is owned by a profit-driven entity. This leads to the following problems for the social good:
-- Lock-in. A solid reputation on one platform is locked into that platform: you cannot move your reputation. Like other forms of lock-in, this inhibits competition and encourages monopoly behavior. Ironically, companies in the "sharing economy" do not share reputations. Users are increasingly being protected by European Union law from such data silos. The right to data portability allows individuals to obtain and reuse their personal data for their own purposes across different services.
+- Lock-in. A solid reputation on one platform is locked into that platform: you cannot move your reputation. Like other forms of lock-in, this inhibits competition and encourages monopoly behavior. Ironically, companies in the "sharing economy" do not share reputations. Users are increasingly being protected by European Union law from such data silos. The newly defined right to data portability allows individuals to obtain and reuse their personal data for their own purposes across different services. 
 - Fragmentation. Each company operates its own closed market, only accessible through their smarphone app. This leads to lower overall efficiency, compared to a single open market. For example, the taxi market is fragmented into numerous closed markets operated by companies such as Uber, Lyft, BlaBla Car, Didi Kuaidi, GrabTaxi, Karhoo, etc. Each isolated marketplace tries to match drivers and customers in real-time.
-Centralized approaches are ultimately always influenced by the goals and the reliability of the central entity or authority that controls them. 
 
+Centralized approaches are ultimately always influenced by the goals and the reliability of the central entity or authority that controls them. 
 For this reason central platforms can never be truly generic and universal. With a decentralized approach, multiple independent individuals cooperate in some manner to build a single ecosystem and no one entity has control over the entire environment. This is the model we envision for the future programmable economy: trust relations are not locked to a single profit-driven entity.
 
 The cardinal problem is: "who owns trust"? Creating trust within a public infrastructure has proven to be a hard unsolved problem.
 
 In May 1962 the vision of a "[time-sharing computer system with many
 remote stations](http://dl.acm.org/citation.cfm?id=1460847)" was presented, known as The Internet today.
-Nobody owns the Internet. This has been a critical factor for its decade long success story. The Internet consists of numerous Autonomous Systems which are loosely coupled and have a common numbering mechanism.
+Nobody owns the Internet. This has been a critical factor for its decades long success story. The Internet consists of numerous Autonomous Systems which are loosely coupled and have a common numbering mechanism.
 On top of this global communication infrastructure we build email, videoconferencing, entertainment platforms, search engines, marketplaces, countless cloud services, and essentially a digital economy. These examples often contain a single central point of control and authority.
 It has proven hard to create a decentralized governance layer for such vital public infrastructure.
 
@@ -75,6 +75,9 @@ It contains four layers: strong digital identities, sub-second money transfers, 
 This work is based on experimental science, for each component within our architecture we crafted an operational prototype and conducted real-world testing.
 Each of the four layers in our proposed economic architectural blueprint is designed to reinforce the strength, usability and profitability of the other layers. 
 
+In the remaining sections of this work we will present how we have applied and validated our architecture. 
+We created a decentralized alternative for the Uber taxi service and a decentral market for direct real-estate investment, without middlemen.
+
 We believe that Blockchain technology enables decentralized economies of higher efficiency and stability then currently known. 
 This work broadens the applications of the organisational principle behind The Internet, owned by nobody and everybody. 
 Offering full sovereignty to all decision making entities, full transparency one their past performance, and openness.
@@ -84,6 +87,10 @@ The term programmable economy was introduced by consultancy form Gartner Inc. in
 Our work adds numerous architectural details, a clear direction, feasible laws, and operational prototypes when compared to the original idea.
 They describe it as _"the programmable economy, enabled by metacoin platforms and smart technologies, will support new forms of value exchange, new kinds of markets (including dynamically defined on-demand markets), and new kinds of economies such as the attention economy, the reputation economy, the on-demand economy and the resource optimization economy."_[[REF](http://www.gartner.com/newsroom/id/3146018)]
 
+
+![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/stack_simple.png)
+
+the Figure above.
 
 Bitcoin solves :
 How do I create a system where nobody can stop me spending my own money? [ref](http://www.r3cev.com/blog/2016/4/4/introducing-r3-corda-a-distributed-ledger-designed-for-financial-services)
@@ -130,7 +137,6 @@ Digital ostracism or ecosystem banning is our cardinal mechanism to incentivise 
 
 We outline a trust-based blockchain architecture, present partial implementation results, and show the possible usage, for instance, land ownership transfer. The scope of our proposal is broad, it should be usable across sectors and possibly replace paper-based procedures. In August 2007 we launched a primitive fully distributed ledger. Based our ledger deployment experience of the past decade we present a global architecture of a third generation blockchain fabric. This technology stack covers the complete range from low-level hardware with our Physical unclonable function prototypes towars our blockchain-regulated decentral marketplace.
 
-![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/stack_simple.png)
 
 ### Land registration application
 
