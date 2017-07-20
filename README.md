@@ -36,7 +36,19 @@ However, Bitcoin and Ethereum are in our opinion unsuitable for this task or oth
 
 ### Problem description
 
-The cardinal problem is: who owns the trust?
+Contracts, transactions, and the records of them are among the defining structures in our economic, legal, and political systems [REF](https://hbr.org/2017/01/the-truth-about-blockchain). They protect assets and set organizational boundaries. 
+These authentic records create ownership, verify identities, and register events.
+It establishes a goverance layer in which states, economic actors, and citizens interact.
+
+For thousands of years trusted guardians keep authentic ownership records of lands, gold, and other assets.
+These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with self-driving cars, computers which defeat humans at various board games, and we can create meat in the lab without animals.
+
+Blockchain technology offers an alternative to trusted guardians and central banks. This technology offers us another way to organise society, with a high degree of decentralisation. The central platforms of the gig economy. 
+
+The cardinal problem is: who owns trust?
+
+Bitcoin solves :
+How do I create a system where nobody can stop me spending my own money? [ref](http://www.r3cev.com/blog/2016/4/4/introducing-r3-corda-a-distributed-ledger-designed-for-financial-services)
 
 We propose a new organisational principles for our economy, called a self-sovereign economy. Each layer in our proposed economic blueprint is designed to reinforce the strength, usability and profitability of the other layers. Our aim is to transform digital identity, money, trust, and markets. 
 
