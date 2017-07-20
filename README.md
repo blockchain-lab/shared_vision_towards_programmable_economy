@@ -55,11 +55,17 @@ The cardinal problem is: "who owns trust"? We will now further elaborate on why 
 In May 1962 the vision of a "[time-sharing computer system with many
 remote stations](http://dl.acm.org/citation.cfm?id=1460847)" was presented, known as The Internet today.
 Nobody owns the Internet. This has been a critical factor for its decade long success story. The Internet consists of numerous Autonomous Systems which are loosely coupled and have a common numbering mechanism.
-On top of this global communication infrastructure we build email, videoconferencing, entertainment platforms, search engines, marketplaces, countless cloud services, and essentially a digital economy.
-However, after many decades we still lack a similar decentral infrastructure for essential economic primitives such as: identity, money, trust, and markets. It has proven hard to create a decentralized governance layer for such vital public infrastructure.
+On top of this global communication infrastructure we build email, videoconferencing, entertainment platforms, search engines, marketplaces, countless cloud services, and essentially a digital economy. These examples often contain a single central point of control and authority.
+It has proven hard to create a decentralized governance layer for such vital public infrastructure.
 
-Joseph Stiglitz co-authored the "Architecture of Economic Systems" in 1985, describing how decision making units can be organized together within a system. It presents a basic framework to compare the performance of decentralized and centralized economic systems. Centralized economic systems have given away to decentralized forms.
+Joseph Stiglitz co-authored the "Architecture of Economic Systems" in 1985, describing how decision making units can be organized together within a system. It presents a basic framework to compare the performance of decentralized and centralized economic systems. Centralized economic systems have given away to decentralized forms. The current challenge is to further refine the decentralized form: storage and governance 
+of authoritative answers to ownership questions use a public and transparent infrastructure.
 
+Trust, accountability and reputation mechanisms are closely tied.
+Transparency can be used to make an authority accountable in order to establish trust. 
+It promotes integrity of operations by monitoring the correct behavior of economic actors [[REF](https://www.petsymposium.org/2017/papers/issue4/paper87-2017-4-source.pdf)].
+
+Creating public, transparent, and decentralized infrastructures has remained an open problem in many cases. We lack a decentral infrastructure for essential economic primitives such as: identity, money, trust, and markets. 
 
 ### Architecture for creating trust
 
