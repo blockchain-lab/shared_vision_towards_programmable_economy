@@ -40,11 +40,11 @@ Contracts, transactions, and the records of them are among the defining structur
 These authentic records create ownership, verify identities, and register events.
 It establishes a goverance layer in which states, economic actors, and citizens interact.
 
-For thousands of years trusted guardians keep authentic ownership records of lands, gold, and other assets. These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with self-driving cars, computers defeat humans at various board games, and we can create meat in the lab without animals. This difference in innovation speed is creating increasing levels of friction.
+For thousands of years trusted guardians keep authentic ownership records of lands, gold, and other assets. These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with self-driving cars. This difference in innovation speed is creating increasing levels of friction.
 
 Blockchain enthousiasts claim this technology offers an alternative to any trusted guardian and central bank. It offers us another way to organise society, with a high degree of decentralisation. The popularity and attack-resilience and the rising gig economy supports this claim.
 The breakthrough that made the gig economy possible was the use of reputation systems to build trust between strangers. Reputation systems collect and process information about past interactions, to help people evaluate the trustworthiness of others [REF](http://www.emeraldinsight.com/doi/pdfplus/10.1016/S0278-0984%2802%2911030-3). However, an individual’s reputation on a platform such as eBay is owned by a profit-driven entity. This leads to the following problems for the social good:
-- Lock-in. A solid reputation on one platform is locked into that platform: you cannot move your reputation. Like other forms of lock-in, this inhibits competition and encourages monopoly behavior.
+- Lock-in. A solid reputation on one platform is locked into that platform: you cannot move your reputation. Like other forms of lock-in, this inhibits competition and encourages monopoly behavior. Ironically, companies in the "sharing economy" do not share reputations. Users are increasingly being protected by European Union law from such data silos. The right to data portability allows individuals to obtain and reuse their personal data for their own purposes across different services.
 - Fragmentation. Each company operates its own closed market, only accessible through their smarphone app. This leads to lower overall efficiency, compared to a single open market. For example, the taxi market is fragmented into numerous closed markets operated by companies such as Uber, Lyft, BlaBla Car, Didi Kuaidi, GrabTaxi, Karhoo, etc. Each isolated marketplace tries to match drivers and customers in real-time.
 Centralized approaches are ultimately always influenced by the goals and the reliability of the central entity or authority that controls them. 
 
@@ -58,7 +58,7 @@ Nobody owns the Internet. This has been a critical factor for its decade long su
 On top of this global communication infrastructure we build email, videoconferencing, entertainment platforms, search engines, marketplaces, countless cloud services, and essentially a digital economy. These examples often contain a single central point of control and authority.
 It has proven hard to create a decentralized governance layer for such vital public infrastructure.
 
-Joseph Stiglitz co-authored the "Architecture of Economic Systems" in 1985, describing how decision making units can be organized together within a system. It presents a basic framework to compare the performance of decentralized and centralized economic systems. Centralized economic systems have given away to decentralized forms. The current challenge is to further refine the decentralized form: storage and governance 
+Joseph Stiglitz co-authored the "Architecture of Economic Systems" in 1985, describing how decision making units can be organized together within a system. It presents a basic framework to compare the performance of decentralized and centralized economic systems. Centralized economic systems have given way to decentralized forms. The current challenge is to further refine the decentralized form: storage and governance 
 of authoritative answers to ownership questions use a public and transparent infrastructure.
 
 Trust, accountability and reputation mechanisms are closely tied.
