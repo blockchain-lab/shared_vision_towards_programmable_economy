@@ -69,12 +69,21 @@ Creating trustworthy, public, transparent, and decentralized infrastructures is 
 
 ### Architecture for creating trust
 
-We present a vision of a challenging nature, to re-invent our global economy based on the organisational principle of The Internet itself: self-governance. Our work is facilitated by strong identities, sub-second money transfers, digital trust, and blockchain-regulated marketplaces.
+We present a blueprint for creating a trustworthy programmable economy. 
+Our blueprint builds heavily on the concepts proven within the gig economy and combines it with blockchain technology.
+It contains four layers: strong digital identities, sub-second money transfers, digital trust, and blockchain-regulated marketplaces.
+This work is based on experimental science, for each component within our architecture we crafted an operational prototype and conducted real-world testing.
+Each of the four layers in our proposed economic architectural blueprint is designed to reinforce the strength, usability and profitability of the other layers. 
 
-We propose a new organisational principles for our economy, called a self-sovereign economy. Each layer in our proposed economic blueprint is designed to reinforce the strength, usability and profitability of the other layers. Our aim is to transform digital identity, money, trust, and markets. 
-We will open a new direction for science by pioneering the future sharing economy (non-profit, open, and fair).
+We believe that Blockchain technology enables decentralized economies of higher efficiency and stability then currently known. 
+This work broadens the applications of the organisational principle behind The Internet, owned by nobody and everybody. 
+Offering full sovereignty to all decision making entities, full transparency one their past performance, and openness.
+We are applying ideas fundamentally concerned with freedom of individuals, embedding a natural disposition to trust, and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism.
 
-Our work has more architectural details, feasible laws, and operational prototypes when compared to a somewhat similar idea by consultancy firm Gartner Inc. from 2015, dubbed the programmable economy. They describe it as _"the programmable economy, enabled by metacoin platforms and smart technologies, will support new forms of value exchange, new kinds of markets (including dynamically defined on-demand markets), and new kinds of economies such as the attention economy, the reputation economy, the on-demand economy and the resource optimization economy."_[[REF](http://www.gartner.com/newsroom/id/3146018)]
+The term programmable economy was introduced by consultancy form Gartner Inc. in 2015. 
+Our work adds numerous architectural details, a clear direction, feasible laws, and operational prototypes when compared to the original idea.
+They describe it as _"the programmable economy, enabled by metacoin platforms and smart technologies, will support new forms of value exchange, new kinds of markets (including dynamically defined on-demand markets), and new kinds of economies such as the attention economy, the reputation economy, the on-demand economy and the resource optimization economy."_[[REF](http://www.gartner.com/newsroom/id/3146018)]
+
 
 Bitcoin solves :
 How do I create a system where nobody can stop me spending my own money? [ref](http://www.r3cev.com/blog/2016/4/4/introducing-r3-corda-a-distributed-ledger-designed-for-financial-services)
@@ -82,14 +91,11 @@ How do I create a system where nobody can stop me spending my own money? [ref](h
 ToDo: Empowered citizens
 [financial sovereignty](http://www.persee.fr/doc/ecofi_1767-4603_2009_hos_9_1_5491)
 
-We believe that Blockchain technology enables decentralized economies of higher efficiency and stability then currently known. We call our organisational principle a "self-sovereign economy", owned by nobody and everybody. Our work differs substantially from market-based decentralized economies. We are applying ideas fundamentally concerned with freedom of individuals, embedding a natural disposition to trust, and combining it with a very unforgiving blockchain-based mechanism for rule breaking economic actors: digital ostracism.
 
+Our work aims to re-invent economic value chains based on the organisational principle of The Internet itself: a high degree of autonomy and self-governance. 
 
 ToDo: self-sovereign economy
 self-governance.
-We present a blueprint for creating a self-sovereign economy. Our proposal is based on experimental science, for each component within our architecture we crafted an operational prototype and conducted real-world testing.
-One with full sovereignty of all decision making entities, full transparency of their past performance, and 
-In this article we present an enhancement to the decentralized
 New laws and principles to structure economic activity.
 
 Rapid progress of technology has impacted our notion of trust!
