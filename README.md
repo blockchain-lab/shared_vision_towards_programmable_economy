@@ -48,34 +48,36 @@ The breakthrough that made the gig economy possible was the use of reputation sy
 - Fragmentation. Each company operates its own closed market, only accessible through their smarphone app. This leads to lower overall efficiency, compared to a single open market. For example, the taxi market is fragmented into numerous closed markets operated by companies such as Uber, Lyft, BlaBla Car, Didi Kuaidi, GrabTaxi, Karhoo, etc. Each isolated marketplace tries to match drivers and customers in real-time.
 Centralized approaches are ultimately always influenced by the goals and the reliability of the central entity or authority that controls them. 
 
-For this reason, they can never be truly generic and universal. With a decentralized approach, multiple independent individuals cooperate in some manner to build a single ecosystem and no one entity has control over the entire environment. This is the model we envision for the future programmable economy: trust relations are not locked to a single profit-driven entity.
+For this reason central platforms can never be truly generic and universal. With a decentralized approach, multiple independent individuals cooperate in some manner to build a single ecosystem and no one entity has control over the entire environment. This is the model we envision for the future programmable economy: trust relations are not locked to a single profit-driven entity.
 
-The cardinal problem is: "who owns trust"?
-
-Bitcoin solves :
-How do I create a system where nobody can stop me spending my own money? [ref](http://www.r3cev.com/blog/2016/4/4/introducing-r3-corda-a-distributed-ledger-designed-for-financial-services)
-
-We propose a new organisational principles for our economy, called a self-sovereign economy. Each layer in our proposed economic blueprint is designed to reinforce the strength, usability and profitability of the other layers. Our aim is to transform digital identity, money, trust, and markets. 
-
-We will open a new direction for science by pioneering the future sharing economy (non-profit, open, and fair).
-
-ToDo: Empowered citizens
-[financial sovereignty](http://www.persee.fr/doc/ecofi_1767-4603_2009_hos_9_1_5491)
+The cardinal problem is: "who owns trust"? We will now further elaborate on why it is hard to craft a public infrastructure for creating trust.
 
 In May 1962 the vision of a "[time-sharing computer system with many
 remote stations](http://dl.acm.org/citation.cfm?id=1460847)" was presented, known as The Internet today.
 Nobody owns the Internet. This has been a critical factor for its decade long success story. The Internet consists of numerous Autonomous Systems which are loosely coupled and have a common numbering mechanism.
 On top of this global communication infrastructure we build email, videoconferencing, entertainment platforms, search engines, marketplaces, countless cloud services, and essentially a digital economy.
-However, after many decades of failures we still lack a similar infrastructure for
-essential economic primitives such as: identity, money, trust, and markets.
-
-We present a vision of a challenging nature, to re-invent our global economy based on the organisational principle of The Internet itself: self-governance. Our work is facilitated by strong identities, sub-second money transfers, digital trust, and blockchain-regulated marketplaces.
+However, after many decades we still lack a similar decentral infrastructure for essential economic primitives such as: identity, money, trust, and markets. It has proven hard to create a decentralized governance layer for such vital public infrastructure.
 
 Joseph Stiglitz co-authored the "Architecture of Economic Systems" in 1985, describing how decision making units can be organized together within a system. It presents a basic framework to compare the performance of decentralized and centralized economic systems. Centralized economic systems have given away to decentralized forms.
 
-We believe that Blockchain technology enables decentralized economies of higher efficiency and stability then currently known. We call our organisational principle a "self-sovereign economy", owned by nobody and everybody. Our work differs substantially from market-based decentralized economies. We are applying ideas fundamentally concerned with freedom of individuals, embedding a natural disposition to trust, and combining it with a very unforgiving blockchain-based mechanism for rule breaking economic actors: digital ostracism.
+
+### Architecture for creating trust
+
+We present a vision of a challenging nature, to re-invent our global economy based on the organisational principle of The Internet itself: self-governance. Our work is facilitated by strong identities, sub-second money transfers, digital trust, and blockchain-regulated marketplaces.
+
+We propose a new organisational principles for our economy, called a self-sovereign economy. Each layer in our proposed economic blueprint is designed to reinforce the strength, usability and profitability of the other layers. Our aim is to transform digital identity, money, trust, and markets. 
+We will open a new direction for science by pioneering the future sharing economy (non-profit, open, and fair).
 
 Our work has more architectural details, feasible laws, and operational prototypes when compared to a somewhat similar idea by consultancy firm Gartner Inc. from 2015, dubbed the programmable economy. They describe it as _"the programmable economy, enabled by metacoin platforms and smart technologies, will support new forms of value exchange, new kinds of markets (including dynamically defined on-demand markets), and new kinds of economies such as the attention economy, the reputation economy, the on-demand economy and the resource optimization economy."_[[REF](http://www.gartner.com/newsroom/id/3146018)]
+
+Bitcoin solves :
+How do I create a system where nobody can stop me spending my own money? [ref](http://www.r3cev.com/blog/2016/4/4/introducing-r3-corda-a-distributed-ledger-designed-for-financial-services)
+
+ToDo: Empowered citizens
+[financial sovereignty](http://www.persee.fr/doc/ecofi_1767-4603_2009_hos_9_1_5491)
+
+We believe that Blockchain technology enables decentralized economies of higher efficiency and stability then currently known. We call our organisational principle a "self-sovereign economy", owned by nobody and everybody. Our work differs substantially from market-based decentralized economies. We are applying ideas fundamentally concerned with freedom of individuals, embedding a natural disposition to trust, and combining it with a very unforgiving blockchain-based mechanism for rule breaking economic actors: digital ostracism.
+
 
 ToDo: self-sovereign economy
 self-governance.
@@ -93,6 +95,8 @@ ToDo: Citizen empowerment, money without banks, etc.
 even if it is necessary at first to
 build research systems along lines that
 would be uneconomic for widespread application."
+
+
 
  architectural outline for BC3 vision.
  Existing proposals for Bitcoin and Ethereum aim to build an entire socio-economic ecosystem from cratch. So far they failed.
