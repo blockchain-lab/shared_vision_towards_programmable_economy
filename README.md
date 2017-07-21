@@ -180,20 +180,14 @@ Similar to self-driving cars, it is likely that legal issues will decelerate tec
 
 ### Trust creation technology portfolio
 
-System architecture
+We now expand on each of the four layers of our envisioned architecture for a programmable economy, see Figure X.
+We now go into additional detail for each of the economic primitives: identity, trust, money, and markets.
 
 ![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/tech_stack.png)
 
-We now introduce our TrustChain technology stack, presented in Figure x. This stack can roughly be divided in four parts. The lower levels consists of Physical Uncloneable Functions (PUFS), biometric-based authentication and self-sovereign identity. These components are essential for the ambitious goal to create a decentralized, secure identity framework, named IPv8. These layers will be discussed in Section x.
+#### physical unclonable functions
 
-The next two levels are defined by our blockchain data structure, TrustChain, scalable consensus and reputation mechanisms that use prior interactions between for trustworthiness estimation. Our TrustChain architecture will be elaborated in section x.
-
-Markets and trade lie at the heart of a capitalism economy. First, a mechanism to transfer currencies in real time will be discussed. Next, we present a blockchain-regulated, decentralized market, capable of trading any asset and without a central point of control. By combining the functionality of our decentralized trading platform and real-time value transfer with conditional payments or smart contracts, essentially a programmable chain of value transfer can be created. This will be the focus of section x.
-
-All our aforementioned components combined provide powerful tools to create trust and initiate interactions with others. Different applications, using parts of our technology stack will be discussed.
-
-  Our BC3/Delft technology portfolio / stack / architecture consists now of:
-- PUF (REF: Modeling SRAM start-up behavior for physical unclonable functions)
+The foundations of security are based on the laws of physics, we specifically avoid software and the risk of implementation bugs. For numerous years scientists have searched for a secure basis for critical infrastructure.
 
 A physical uncloneable function (PUF) is a physical device that is easy and cheap to manufactor but practically infeasible to duplicate, due to process variation of the integrated circuit in the device. Their typical usage can be found in applications, requiring a high level of security, for instance, self-sovereign identity. The devices offers tamper-proof and safe storage of cryptographic keys. Each PUF device contains an unique fingerprint, determined by the randomness of embedded components. A PUF responds to challenges and leads to unique but unpredictable responses, together forming a challenge-response pair (CRP).
 
