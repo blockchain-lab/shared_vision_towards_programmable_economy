@@ -33,7 +33,7 @@ It establishes a goverance layer in which states, economic actors, and citizens 
 They create trust.
 
 For thousands of years trusted guardians kept authentic ownership records of land and assets in general. These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with self-driving cars, trucks, drones, and barges. 
-This difference in innovation speed is creating increasing levels of friction around data governance, for instance, the debate "Land registration systems: public, private or privately public?" debate [[REF](https://www.degruyter.com/view/j/eplj.2017.6.issue-1/eplj-2017-0001/eplj-2017-0001.xml)]. 
+This difference in innovation speed is creating increasing levels of friction around data governance, for instance, the debate "Land registration systems: public, private or privately public?" [[REF](https://www.degruyter.com/view/j/eplj.2017.6.issue-1/eplj-2017-0001/eplj-2017-0001.xml)]. 
 The legal world might be at the beginning of a transition towards full digitization, additional standardization, and further automation. 
 Already 22 years ago the book "Law in a Digital World" was published, however deeds of land transfer are rarely pure bits.
 
@@ -43,7 +43,9 @@ The breakthrough that made the gig economy possible was the use of reputation sy
 - Fragmentation. Each company operates its own closed market, only accessible through their smarphone app. This leads to lower overall efficiency, compared to a single open market. For example, the taxi market is fragmented into numerous closed markets operated by companies such as Uber, Lyft, BlaBla Car, Didi Kuaidi, GrabTaxi, Karhoo, etc. Each isolated marketplace tries to match drivers and customers in real-time.
 
 Centralized approaches are ultimately always influenced by the goals and the reliability of the central entity or authority that controls them. 
-For this reason central platforms can never be truly generic and universal. With a decentralized approach, multiple independent individuals cooperate in some manner to build a single ecosystem and no one entity has control over the entire environment. This is the model we envision for the future programmable economy: trust relations are not locked to a single profit-driven entity.
+One economic model even predicts the rise of predatory platforms within two-sided markets [[REF](http://andras.niedermayer.ch/wp-content/uploads/2014/08/PFS-2016-06-27-AN-SL.pdf)].
+For these reasons central platforms can never be truly generic and universal. 
+With a decentralized approach, multiple independent individuals cooperate in some manner to build a single ecosystem and no one entity has control over the entire environment. This is the model we envision for the future programmable economy: trust relations are not locked to a single profit-driven entity.
 
 The cardinal problem is: "who owns trust"? Creating trust within a public infrastructure has proven to be a hard unsolved problem.
 
@@ -64,7 +66,7 @@ Creating trustworthy, public, transparent, and decentralized infrastructures is 
 
 ### Architecture for creating trust
 
-We propose an architecture to create a decentralized infrastructure for four economic primitives.
+We propose an architecture to create a trustworthy decentralized infrastructure for four economic primitives.
 The novelty of our work is the application of the Internet architecture throughout our architecture, owned by both everybody and nobody. Our work is academically pure. It relies on self-governance, and weak coupling between autonomous entities. 
 Each of the four economic primitives are meticulously designed without relying on any middleman, they are void of any central authority, make traditional intermediaries optional, do not require any central server, remove the need for central databases, and even do not depend on Internet connectivity.
 
@@ -79,8 +81,8 @@ Upcoming sections present how we applied and validated our architecture by creat
 We believe that Blockchain technology enables decentralized economies of higher efficiency and stability then currently known. 
 This work broadens the applications of the organisational principle behind The Internet. 
 Offering full sovereignty to all decision making entities, full transparency on their past performance, and openness in general.
-We are applying ideas fundamentally concerned with freedom of individuals, embedding a natural disposition to trust [[REF](www.socsci.uci.edu/~duffy/papers/trustamongstrangers.pdf)], and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism. 
-The threath of being banned forever from an ecosystem may seem to lack compassion and forgiveness, but boosts trust. 
+We are applying ideas fundamentally concerned with freedom of individuals, embedding humanities natural disposition to trust [[REF](www.socsci.uci.edu/~duffy/papers/trustamongstrangers.pdf)], and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism. 
+The threath of being banned forever from an ecosystem may seem to lack compassion and decency, but boosts trust. 
 Game theory shows that the "shadow of the future" removes cheating incentives. Note that fraud differs from blunders by economic actors, which merely impact their reputation (e.g. star rating).
 In our architecture we apply the grim trigger defined in 1971 to punish dishonesty, lying, cheating, and fraud [[REF](https://www.jstor.org/stable/2296617)]. In other words, mistakes can be forgiven, but intentional digital manipulations are not.
 
@@ -101,7 +103,7 @@ However, we lack control over our identity, as formulated [within the proposed W
 
 Self-sovereign identities require that users are the rulers of their own identity. This idea was presented in 2012 by Moxie Marlinspike [[REF](http://www.moxytongue.com/2012/02/what-is-sovereign-source-authority.html)].
 With this concept people and businesses can store their own identity data on their own devices, and present it efficiently to anyone who wants to validate it. The decentralized storage within concept removes the need for any central database of identity data.
-This might be important with the upcoming EU General Data Protection Regulation.
+This might be increasingly important with the upcoming EU General Data Protection Regulation.
 
 This approach to identity is a complete overhaul to the approach used today by governments using central controlled identity administration frameworks. Users become autonomous by using self-sovereign identities and are free to store their digital passport inside their own smartphone device. Instead of your government assigning you citizen number "0013" or your telecommunication provider renting you cell phone number "0-013" you can claim ownership of cryptographic key "8A4D48B" as you worldwide identity.
 Together with cryptographic techniques it becomes possible to identify and authenticate people, members of organisations and objects without even requiring Internet access. A large list of worldwide claimed identities by citizens could replace all central identity administration frameworks.
@@ -118,6 +120,7 @@ TrustChain exclusively focusses on the emergence of trust through repeated inter
 Instead of using complex mathematical puzzles, our basic building blocks are the interactions between untrusted entities.
 Each actor within our ecosystem operates a their own unique database which contains measures against tampering and make prior agreed transactions irrefutable.
 Within TrustChain each actor is completely autonomous, owns their own chain, and publishes new electronic business transactions in a tamper-proof append-only manner.
+
 TrustChain and all other layers in our architecture utilise a new model of governance, we call self-governance.
 It is an ecosystem where ordinary users self-organise into a large-scale Internet-based collective which can be freely joined by anyone, with the special strong property that all authority is temporary.
 We define a self-governance system as: a distributed system in which autonomous individuals
@@ -146,14 +149,14 @@ Traditionally, inter-organizational coordination within our economy is realized 
 - using tenders: for larger, more expensive and/or long-term contracts: more difficult to arrange (may take months), if broadly announced, possibility to obtain most economically efficient outcome; significant risk regarding trust issues
 - through an open market (e.g. power market, AirBnB, eBay, expedia): if there is a market, this can be quite fast to arrange, and if the traded products are not too complex, often efficient matches are found: trust is taken care of by the market operator/authority; however it takes a lot of effort to set up such a specialized market place
 
-Each of these existing methods perform poor on one of the following criteria: efficiency of allocation / time to agreement / trust-risk / initial set-up costs. Our fourth layer is focussed on the open market showcased by the gig economy, but also offers the more traditional alternatives.
+Each of these existing methods perform poor on one of the following criteria: efficiency of allocation, time to agreement, trust-risk, or initial set-up costs. Our fourth layer is focussed on the open market showcased by the gig economy, but also offers the more traditional alternatives.
 
 In a recent economics publication it is stated that with blockchains, "marketplaces can be bootstrapped without the need of traditional trusted intermediaries, lowering the cost of networking." furthermore they challenge "existing revenue models and incumbents's market power, and opens opportunities for novel approaches to regulation, auctions and the provision of public goods, software, identity and reputation systems" [[REF](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2874598)].
-Little experience, evidence, and knowledge exists for devising this fourth layer. We are currently conducting trials with various businesses to expand our understanding.
-
-Our programmable economy blueprint consists of a natively-digital economic system with self-governance to avoid any single-point-of-failure, security grounded upon the laws of physics (avoiding software), radical transparency, publically verifiable claims on economic actors within the blockchain, reputation tracking for each economic actor, elaborate mechanisms to establish trust between strangers, legally frinctionless enforcable contracts, and facilitate a single blockchain-regulated digital marketplace for generic economic value exchange and any-asset trading.
-
-We outline a trust-based blockchain architecture, present partial implementation results, and show the possible usage, for instance, land ownership transfer. The scope of our proposal is broad, it should be usable across sectors and possibly replace paper-based procedures. In August 2007 we launched a primitive fully distributed ledger. Based our ledger deployment experience of the past decade we present a global architecture of a third generation blockchain fabric. This technology stack covers the complete range from low-level hardware with our Physical unclonable function prototypes towars our blockchain-regulated decentral marketplace.
+Little experience, evidence, and knowledge exists for devising this fourth layer.
+We are currently conducting trials with various businesses to expand our understanding.
+This is newly developing area of research. However, we believe too few research teams have 
+the resources for the learn-by-doing methodology required to make serious scientific progress.
+Building open infrastructures with self-governance is costly (Our key funding was the EU FP7 project P2P-Next of 19,500,000 Euro [[REF](http://cordis.europa.eu/project/rcn/85326_en.html)] and QLectives of 6,900,000 Euro [[REF](http://cordis.europa.eu/project/rcn/89031_en.html).
 
 
 ### Land registration application
