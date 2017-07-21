@@ -306,5 +306,14 @@ The global throughput of the mechanism is displayed in Figure x. On the horizont
 
 Figure x indicates that we have indeed created a scalable consensus mechanism, not bounded by a wasteful, expensive consensus mechanism like Proof-of-Work. With only a few servers, our consensus mechanism is able to reach global throughput rates surpassing that of Visa or SWIFT. Together with components higher in our technology stack, we enabled trusted trade at a large scale.
 
+#### Decentralized marketplace
+
+Our final piece of the architecture is an operational prototype for the core functionality of Uber.
+We created several generations of markets with improving levels of scalability, efficiency, and security.
+
+- picture of orderbook
+- autonomous entities exchanging bid/asks
+- dataset to obtain insight into real-world efficiency of our system
+
 
 ### Conclusions
