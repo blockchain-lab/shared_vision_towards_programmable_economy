@@ -176,7 +176,14 @@ This technology is not yet sufficiently understood to underpin such an essential
 But it will be soon.
 Similar to self-driving cars, it is likely that legal issues will decelerate technological progress.
 
-### Global Mortgage Finance market (application)
+### Open market for mortgage finance
+
+We created minimal viable system to offer mortgage financing on a global open market.
+This system enables banks to offer consumers mortgage products and obtain the required capital investments from the global market. 
+Traditionally this market is not open, public, and transparent. This enables foreign pension funds to invest in real-estate of financially solid countries with predictable return-on-investment and low risk.
+
+- prototype pictures
+- tech details
 
 ### Trust creation technology portfolio
 
