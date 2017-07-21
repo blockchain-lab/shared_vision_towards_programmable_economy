@@ -4,7 +4,8 @@
 
 # Laws for creating trust in the blockchain age
 
-Authors: Delft University of Technology, invite RvIG, Chamber of Commerce, Land Registry Agency. Possibly BC3, DNB/AFM, banks, optionally StartupDelta?
+Authors: Johan Pouwelse, Martijn de Vos, Delft University of Technology, 
+invite RvIG, Chamber of Commerce, Land Registry Agency. Possibly BC3, DNB/AFM, banks, optionally StartupDelta?
 
 #### very tight deadlines
 - July 10: first readable draft, distributed to partners
@@ -37,7 +38,7 @@ However, Bitcoin and Ethereum are in our opinion unsuitable for this task or oth
 ### Problem description
 
 Contracts, transactions, and the records of them are among the defining structures in our economic, legal, and political systems [REF](https://hbr.org/2017/01/the-truth-about-blockchain). They protect assets and set organizational boundaries. 
-These authentic records create ownership, verify identities, and register events.
+These authentic records create ownership, establish citizenship, and define partnerships between entities.
 It establishes a goverance layer in which states, economic actors, and citizens interact.
 
 For thousands of years trusted guardians kept authentic ownership records of land and assets. These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with self-driving cars, trucks, drones, and barges. This difference in innovation speed is creating increasing levels of friction.
