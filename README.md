@@ -39,7 +39,10 @@ These authentic records create ownership, determine citizenship, and define part
 It establishes a goverance layer in which states, economic actors, and citizens interact.
 They create trust.
 
-For thousands of years trusted guardians kept authentic ownership records of land and assets in general. These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with self-driving cars, trucks, drones, and barges. This difference in innovation speed is creating increasing levels of friction. The legal world might be at the beginning of a transition towards full digitization, additional standardization, and further automation. Already 22 years ago the book "Law in a Digital World" was published, however deeds of land transfer are rarely pure bits.
+For thousands of years trusted guardians kept authentic ownership records of land and assets in general. These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with self-driving cars, trucks, drones, and barges. 
+This difference in innovation speed is creating increasing levels of friction around data governance, for instance, the debate "Land registration systems: public, private or privately public?" debate [[REF](https://www.degruyter.com/view/j/eplj.2017.6.issue-1/eplj-2017-0001/eplj-2017-0001.xml)]. 
+The legal world might be at the beginning of a transition towards full digitization, additional standardization, and further automation. 
+Already 22 years ago the book "Law in a Digital World" was published, however deeds of land transfer are rarely pure bits.
 
 Blockchain enthousiasts claim this technology offers an alternative to any trusted guardian and central bank. It offers us another way to organise society, with a high degree of decentralisation. The resilience of Bitcoin together with the rising gig economy endorses this claim.
 The breakthrough that made the gig economy possible was the use of reputation systems to build trust between strangers. Reputation systems collect and process information about past interactions, to help people evaluate the trustworthiness of others [REF](http://www.emeraldinsight.com/doi/pdfplus/10.1016/S0278-0984%2802%2911030-3). However, an individual’s reputation on a platform such as eBay is owned by a profit-driven entity. This leads to the following problems for the social good:
@@ -69,7 +72,7 @@ Creating trustworthy, public, transparent, and decentralized infrastructures is 
 ### Architecture for creating trust
 
 We propose an architecture to create a decentralized infrastructure for four economic primitives.
-The novelty of our work is the application of the Internet architecture throughout our architecture, owned by both everybody and nobody. Our work is academically pure. It relies self-governance, and weak coupling between autonomous entities. 
+The novelty of our work is the application of the Internet architecture throughout our architecture, owned by both everybody and nobody. Our work is academically pure. It relies on self-governance, and weak coupling between autonomous entities. 
 Each of the four economic primitives are meticulously designed without relying on any middleman, they are void of any central authority, make traditional intermediaries optional, do not require any central server, remove the need for central databases, and even do not depend on Internet connectivity.
 
 Our blueprint builds heavily on the concepts proven within the gig economy and combines it with blockchain technology.
@@ -78,13 +81,15 @@ We believe our proposal is the first proposal with real-world viability, as it i
 This work is based on a decade of experimentation, for each component within our architecture we crafted various generations of operational prototypes and conducted Internet-deployment tests.
 Each of the four layers in our proposed economic architectural blueprint is designed to reinforce the strength, usability and efficiency of the other layers. 
 
-Upcoming sections present how we applied and validated our architecture. 
-We created a decentralized alternative for the Uber taxi service and a decentral market for direct real-estate investment, without middlemen.
+Upcoming sections present how we applied and validated our architecture by creating a decentralized alternative for Uber and an open decentral market for mortgages.
 
 We believe that Blockchain technology enables decentralized economies of higher efficiency and stability then currently known. 
 This work broadens the applications of the organisational principle behind The Internet. 
 Offering full sovereignty to all decision making entities, full transparency on their past performance, and openness in general.
-We are applying ideas fundamentally concerned with freedom of individuals, embedding a natural disposition to trust [[REF](www.socsci.uci.edu/~duffy/papers/trustamongstrangers.pdf)], and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism. The threath of being banned forever from an ecosystem may seem to lack compassion and forgiveness, but boosts trust. Game theory shows that the "shadow of the future" removes cheating incentives. In our architecture we apply the grim trigger defined in 1971 to punish dishonesty, lying, cheating, and fraud [[REF](https://www.jstor.org/stable/2296617)]. In other words, mistakes can be forgiven, but intentional digital manipulations are not.
+We are applying ideas fundamentally concerned with freedom of individuals, embedding a natural disposition to trust [[REF](www.socsci.uci.edu/~duffy/papers/trustamongstrangers.pdf)], and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism. 
+The threath of being banned forever from an ecosystem may seem to lack compassion and forgiveness, but boosts trust. 
+Game theory shows that the "shadow of the future" removes cheating incentives. Note that fraud differs from blunders by economic actors, which merely impact their reputation (e.g. star rating).
+In our architecture we apply the grim trigger defined in 1971 to punish dishonesty, lying, cheating, and fraud [[REF](https://www.jstor.org/stable/2296617)]. In other words, mistakes can be forgiven, but intentional digital manipulations are not.
 
 Our work establishes a blueprint for creating a trustworthy programmable economy.
 The term programmable economy was introduced by consultancy form Gartner Inc. in 2015. 
@@ -94,25 +99,41 @@ They describe it as _"the programmable economy, enabled by metacoin platforms an
 
 ![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/stack_simple.png)
 
-The Figure above shows our four layers.
+The Figure above shows the four layers which define our architecture.
 First we need to address the digital identity problem, shown as the bottom layer.
-A wealth of applications require strong authentication and long-lived secure identities. The Internet requires a common continuously evolving strong identity layer. This would make the Internet safer, better and more efficient. A single common identity layer also needs full decentralisation and self-governance.
+A wealth of applications require strong authentication and long-lived secure identities. The Internet requires a common continuously evolving strong identity layer. This would make the Internet safer, better and more efficient. A single common identity layer also needs full decentralisation and self-governance. This blocks progress, for instance, a single standard for globally legally valid electronic signatures does not yet exist.
 
 However, we lack control over our identity, as formulated [within the proposed WebDHT documentation](https://opencreds.org/specs/source/webdht/).
 "The Web currently does not have a mechanism where people and organizations can claim identifiers that they have sole ownership over. Identifiers, such as those rooted in domain names like emails addresses and website addresses, are effectively rented by people and organizations rather than owned. Therefore, their use as long-term identifiers is dependent upon parameters outside of their control. One danger is that if the rent is not paid, all data associated with the identifier can be made temporarily or permanently inaccessible. This document specifies a mechanism where people and organizations can cryptographically claim ownership over identifiers such that they control them and the documents that they refer to."
 
 Self-sovereign identities require that users are the rulers of their own identity. This idea was presented in 2012 by Moxie Marlinspike [[REF](http://www.moxytongue.com/2012/02/what-is-sovereign-source-authority.html)].
 With this concept people and businesses can store their own identity data on their own devices, and present it efficiently to anyone who wants to validate it. The decentralized storage within concept removes the need for any central database of identity data.
+This might be important with the upcoming EU General Data Protection Regulation.
 
 This approach to identity is a complete overhaul to the approach used today by governments using central controlled identity administration frameworks. Users become autonomous by using self-sovereign identities and are free to store their digital passport inside their own smartphone device. Instead of your government assigning you citizen number "0013" or your telecommunication provider renting you cell phone number "0-013" you can claim ownership of cryptographic key "8A4D48B" as you worldwide identity.
 Together with cryptographic techniques it becomes possible to identify and authenticate people, members of organisations and objects without even requiring Internet access. A large list of worldwide claimed identities by citizens could replace all central identity administration frameworks.
 
 Being the ruler of your own identity is closely related to the core concept of Bitcoin.
 Bitcoin creates money without banks, but also provides users with an exceptional level of control.
-The novelty of Bitcoin is: a system where nobody can stop me spending my own money? [ref](http://www.r3cev.com/blog/2016/4/4/introducing-r3-corda-a-distributed-ledger-designed-for-financial-services)
+The novelty of Bitcoin is: a system where nobody can stop me spending my own money. [REF](http://www.r3cev.com/blog/2016/4/4/introducing-r3-corda-a-distributed-ledger-designed-for-financial-services)
 Identity autonomy provides a new level of citizen empowerment and enables [financial sovereignty](http://www.persee.fr/doc/ecofi_1767-4603_2009_hos_9_1_5491).
 
-Second layer is our TrustChain fabric, a blockchain with mathematically proven linear scalability. [REF KELONG].
+Second layer is our TrustChain fabric, a blockchain design with loose coupling and linear scalability. 
+Our work differs radically from the current generation of cybercurrency, which does not scale beyond several transactions per second. 
+We specifically avoid the concept of coins.
+TrustChain exclusively focusses on the emergence of trust through repeated interactions.
+Instead of using complex mathematical puzzles, our basic building blocks are the interactions between untrusted entities.
+Each actor within our ecosystem operates a their own unique database which contains measures against tampering and make prior agreed transactions irrefutable.
+Within TrustChain each actor is completely autonomous, owns their own chain, and publishes new electronic business transactions in a tamper-proof append-only manner.
+TrustChain introduces a new governance model: self-governance.
+It is an ecosystem where ordinary users self-organise into a large-scale Internet-based collective which can be freely joined by anyone, with the special strong property that all authority is temporary.
+We define a self-governance system as: a distributed system in which autonomous individuals
+can collectively exercise all of the necessary functions of power without intervention from any authority
+which they cannot themselves alter.
+Self-governance implies a mechanism for peaceful transfer of power. Users ether directly vote on appoint those responsible
+for the daily administration of the community through some voting process. Distributed systems with
+self-governance have no external overseers and no central controlling servers.
+
 
 Third we provide a roadmap to transform our usage of money. By reengineering and building upon existing antiquated payment systems we provide a realistic, legally compliant, and efficient overlay. Re-use the existing infrastructure and transform it into loosely coupled autonomous entities.
 We provide a proof-of-principle for making international money transfers with sub-second speed, near-zero commissions, instant clearance, and real-time settlement. No progress is possible without a transformation of our expensive transaction network build in 1970s (swift) using a programming language from the 1950s (cobol).
