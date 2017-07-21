@@ -4,15 +4,8 @@ Authors: Johan Pouwelse, Martijn de Vos, Delft University of Technology
 
 invite RvIG, Chamber of Commerce, Land Registry Agency. Possibly BC3, DNB/AFM, banks, optionally StartupDelta?
 
-#### very tight deadlines
-- July 10: first readable draft, distributed to partners
-- July 16: partner feedback processed and alignment completed
-- July 22: Scientific Journal submission!
-
-**abstract**
-_New platforms have disrupted the taxi business (Uber), hospitality (Airbnb), tourism (booking, expedia), and marketplaces (Amazon, Alibaba). We take these validated concepts to the next level, generalise their operating principles, and combined these fragmented platforms into a single infrastructure. We propose a new organisational principles for our economy, called a self-sovereign economy. Each layer in our proposed economic blueprint is designed to reinforce the strength, usability and profitability of the other layers. Our aim is to transform digital identity, money, trust, and markets. Our leading and illustrative use-case is the following value chain: the mortgage process, transfer of real-estate ownership, and selling on an open market of housing investments._
-
-_Our blueprint is ambitious, will take years to realise, and is impossible to implement by a single organisation. Like Email, GSM, and GPS, our programmable economy facilitates new business opportunities and alters existing business practices. First, we outline a solution for the digital identity problem using a blockchain and self-sovereign identity prototype with end-to-end cryptographic integrity checks, avoiding data honeypots, and void of central gatekeepers. Second, we outline our ideas to re-architect the existing banking system for sub-second electronic business transactions, beyond the current slow and costly money transfers. Third, we provide a realistic roadmap to upgrade the trust and two-way rating system used by renting platform Airbnb and other pioneers to a global public infrastructure with ability to rate any legal entity, offering full openness, and storage on our tamper-proof blockchain. Finally, based on trustworthiness reports, trust calculations, and sub-second money transfers we demonstrate our Internet-deployed decentral marketplace can trade any asset and can be applied to any value transfer network._
+### abstract
+ (prior draft had outdated storyline)
 
 ### introduction
 Humanity has a disposition to trust, meaning the tendency of individuals to be willing to depend on others.
@@ -164,6 +157,16 @@ We outline a trust-based blockchain architecture, present partial implementation
 
 
 ### Land registration application
+
+Our presented architecture for the programmable economy is designed to greatly simplify critical transactions such as land ownership.
+
+Authoritive chain with 
+the digital version is authorative
+electronic signature
+checks on validity are always conducted beforehand
+Courts and validity rule
+mortgages on smart contracts?
+legal
 
 ### Global Mortgage Finance market (application)
 
