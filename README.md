@@ -1,8 +1,8 @@
 # Laws for creating trust in the blockchain age
 
-Authors: Johan Pouwelse, Martijn de Vos, Delft University of Technology
+Johan Pouwelse and Martijn de Vos
+Department of Software Technology, Delft University of Technology
 
-invite RvIG, Chamber of Commerce, Land Registry Agency. Possibly BC3, DNB/AFM, banks, optionally StartupDelta?
 
 ### abstract
  (prior draft had outdated storyline)
@@ -161,15 +161,20 @@ Building open infrastructures with self-governance is costly (Our key funding wa
 
 ### Land registration application
 
-Our presented architecture for the programmable economy is designed to greatly simplify critical transactions such as land ownership.
+Recently the World Bank indicated that 70% of the world’s population still lacks access to proper land titling or demarcation [[REF](http://ieg.worldbankgroup.org/blog/why-land-administration-matters-development)]. A digital land registration system using blockchain technology requires re-designing existing procedures for submission and verification of records and claims.
+It is most likely to demand changes to legal frameworks.
 
-Authoritive chain with 
-the digital version is authorative
-electronic signature
-checks on validity are always conducted beforehand
-Courts and validity rule
-mortgages on smart contracts?
-legal
+Obtaining agreement from numerous parties during several of the stages of a property transactions, detecting errors, and to preserve tamper-proof logging is a significant challenge.
+Central keepers of records are often entrusted with this critical coordination task.
+Blockchains clearly have potential here, offering transparency, reduce overhead, and especially the single-source-of-truth aspect.
+Various reports support this opinion [[REF](https://www2.deloitte.com/content/dam/Deloitte/uk/Documents/Innovation/deloitte-uk-blockchain-app-in-public-sector.pdf).
+
+Our presented architecture for the programmable economy is designed to greatly simplify critical public infrastructure such as land ownership. As technology experts we are unable to judge if laws of various countries are ready to transition to a world where analog printouts hold less authority and the digital world is the authoritative source of truth. To date it seems no country recognizes the electronic signatures created using self-sovereign identity systems.
+
+The blockchain technology of today is sufficiently mature to start prototyping and understanding the (possible) advantages for land registration. 
+This technology is not yet sufficiently understood to underpin such an essential public service. 
+But it will be soon.
+Similar to self-driving cars, it is likely that legal issues will decelerate technological progress.
 
 ### Global Mortgage Finance market (application)
 
