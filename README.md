@@ -1,10 +1,7 @@
-## Latest version : https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/wiki
-
-#### Click here to Edit: https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/wiki/Home/_edit
-
 # Laws for creating trust in the blockchain age
 
-Authors: Johan Pouwelse, Martijn de Vos, Delft University of Technology, 
+Authors: Johan Pouwelse, Martijn de Vos, Delft University of Technology
+
 invite RvIG, Chamber of Commerce, Land Registry Agency. Possibly BC3, DNB/AFM, banks, optionally StartupDelta?
 
 #### very tight deadlines
@@ -33,15 +30,16 @@ This work aims to help transform the gig economy. We aim to institutionalize the
 First, we designed and created an operational open source prototype of the core Uber functionality, matching drivers and passengers. Our non-profit alternative aims to be more transparent, fair, and open. Second, we created a alternative set of rules and principles for the emergence of trust, using only the repeated interactions between strangers. Third, we present a blueprint of a public infrastructure and prototypes for each part of this blueprint for the gig economy. Our proposed public infrastructure in principle should be able to offer non-profit alternative to current matchmaking platforms (e.g. Uber, TaskRabbit, Amazon, Expedia, Booking, etc.). Finally, we hint at how such an infrastructure might be used to realise what has become known as the _programmable economy_.
 
 Blockchain technology is at the core of our proposed Uber alternative and blueprint for a public gig economy.
-However, Bitcoin and Ethereum are in our opinion unsuitable for this task or others such as land registration. We do not consider cybercurrency research in the remainder of this work. Our reason is that all current work based on coin creation, proof-of-work or variants thereof lack robust and effective ties to any legal system, or even the real world in general. The current generation of cybercurrency-based blockchain technology lacks a durable governance structure. Severe disagreements exists within these communities, as various fraction battle for control of ecosystems worth billions. The cybercurrency ecosystem is unsuitable for land registration as it occasionally has periods dubbed [civil war](https://www.bloomberg.com/news/articles/2017-07-10/bitcoin-risks-splintering-as-civil-war-enters-critical-month) by the media. We also do not consider private or consortium blockchains, as they do not offer any significant advantage versus classical distributed databases. We focus on the tamper-proof leaderless database type of solutions. The statements and opinions in this paper are based on our decade-long experience of deploying and gradually improving our own ledger, installed by 1.8 million users. We deployed a very primitive fully distributed ledger in [August 2007](http://news.bbc.co.uk/2/hi/technology/6971904.stm), pre-dating the launch of Bitcoin.
+However, Bitcoin and Ethereum are in our opinion unsuitable for this task or others such as land registration. We do not consider cybercurrency research in the remainder of this work. Our reason is that all current work based on coin creation, proof-of-work or variants thereof lack robust and effective ties to any legal system, or even the real world in general. The current generation of cybercurrency-based blockchain technology lacks a durable governance structure. Severe disagreements exists within these communities, as various fraction battle for control of ecosystems worth billions. The cybercurrency ecosystem is unsuitable for land registration as it occasionally has periods dubbed [civil war](https://www.bloomberg.com/news/articles/2017-07-10/bitcoin-risks-splintering-as-civil-war-enters-critical-month) by the media. We also do not consider private or consortium blockchains, as they do not offer any significant advantage versus classical distributed databases. We focus on the tamper-proof leaderless database type of solutions. The statements and opinions in this paper are based on our decade-long experience of deploying and gradually improving our own ledger, installed by 1.8 million users. We deployed a very primitive fully distributed ledger in [August 2007](http://news.bbc.co.uk/2/hi/technology/6971904.stm), pre-dating the launch of Bitcoin. In 2017 we mathematically proven that our TrustChain scales linear and surpasses 10k transactions per second [[REF](https://github.com/Tribler/tribler/issues/2457)].
 
 ### Problem description
 
 Contracts, transactions, and the records of them are among the defining structures in our economic, legal, and political systems [REF](https://hbr.org/2017/01/the-truth-about-blockchain). They protect assets and set organizational boundaries. 
-These authentic records create ownership, establish citizenship, and define partnerships between entities.
+These authentic records create ownership, determine citizenship, and define partnerships between entities.
 It establishes a goverance layer in which states, economic actors, and citizens interact.
+They create trust.
 
-For thousands of years trusted guardians kept authentic ownership records of land and assets. These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with self-driving cars, trucks, drones, and barges. This difference in innovation speed is creating increasing levels of friction.
+For thousands of years trusted guardians kept authentic ownership records of land and assets in general. These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with self-driving cars, trucks, drones, and barges. This difference in innovation speed is creating increasing levels of friction. The legal world might be at the beginning of a transition towards full digitization, additional standardization, and further automation. Already 22 years ago the book "Law in a Digital World" was published, however deeds of land transfer are rarely pure bits.
 
 Blockchain enthousiasts claim this technology offers an alternative to any trusted guardian and central bank. It offers us another way to organise society, with a high degree of decentralisation. The resilience of Bitcoin together with the rising gig economy endorses this claim.
 The breakthrough that made the gig economy possible was the use of reputation systems to build trust between strangers. Reputation systems collect and process information about past interactions, to help people evaluate the trustworthiness of others [REF](http://www.emeraldinsight.com/doi/pdfplus/10.1016/S0278-0984%2802%2911030-3). However, an individual’s reputation on a platform such as eBay is owned by a profit-driven entity. This leads to the following problems for the social good:
@@ -55,7 +53,7 @@ The cardinal problem is: "who owns trust"? Creating trust within a public infras
 
 In May 1962 the vision of a "[time-sharing computer system with many
 remote stations](http://dl.acm.org/citation.cfm?id=1460847)" was presented, known as The Internet today.
-Nobody owns the Internet. This has been a critical factor for its decades long success story. The Internet consists of numerous Autonomous Systems which are loosely coupled and have a common numbering mechanism.
+Nobody owns The Internet. This has been a critical factor for its decades long success story. The Internet consists of numerous Autonomous Systems which are loosely coupled and have a common numbering mechanism.
 On top of this global communication infrastructure we build email, videoconferencing, entertainment platforms, search engines, marketplaces, countless cloud services, and essentially a digital economy. These examples often contain a single central point of control and authority.
 It has proven hard to create a decentralized governance layer for such vital public infrastructure.
 
@@ -70,20 +68,24 @@ Creating trustworthy, public, transparent, and decentralized infrastructures is 
 
 ### Architecture for creating trust
 
-We present a blueprint for creating a trustworthy programmable economy. 
+We propose an architecture to create a decentralized infrastructure for four economic primitives.
+The novelty of our work is the application of the Internet architecture throughout our architecture, owned by both everybody and nobody. Our work is academically pure. It relies on autonomy, self-governance, and weak coupling. Each of the four economic primitives are meticulously designed without relying on any middleman, they are void of any central authority, do not require any central server, remove the need for central databases, and even does not depend on Internet connectivity.
+
 Our blueprint builds heavily on the concepts proven within the gig economy and combines it with blockchain technology.
 It contains four layers: strong digital identities, sub-second money transfers, digital trust, and blockchain-regulated marketplaces.
-This work is based on experimental science, for each component within our architecture we crafted an operational prototype and conducted real-world testing.
-Each of the four layers in our proposed economic architectural blueprint is designed to reinforce the strength, usability and profitability of the other layers. 
+We believe our proposal is the first proposal with real-world viability, as it is the only detailed proposal based on rigorous experimental science: running code.
+This work is based on a decade of experimentation, for each component within our architecture we crafted an operational prototype and conducted Internet-deployment tests.
+Each of the four layers in our proposed economic architectural blueprint is designed to reinforce the strength, usability and efficiency of the other layers. 
 
-In the remaining sections of this work we will present how we have applied and validated our architecture. 
+Upcoming sections present how we applied and validated our architecture. 
 We created a decentralized alternative for the Uber taxi service and a decentral market for direct real-estate investment, without middlemen.
 
 We believe that Blockchain technology enables decentralized economies of higher efficiency and stability then currently known. 
-This work broadens the applications of the organisational principle behind The Internet, owned by nobody and everybody. 
-Offering full sovereignty to all decision making entities, full transparency one their past performance, and openness.
-We are applying ideas fundamentally concerned with freedom of individuals, embedding a natural disposition to trust, and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism.
+This work broadens the applications of the organisational principle behind The Internet. 
+Offering full sovereignty to all decision making entities, full transparency on their past performance, and opennessi in general.
+We are applying ideas fundamentally concerned with freedom of individuals, embedding a natural disposition to trust, and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism. The threath of being banned forever from an ecosystem may seem to lack compassion and forgiveness, but boosts trust. Game theory shows that the "shadow of the future" removes cheating incentives. In our architecture we apply the grim trigger strategy defined in 1971 to punish dishonesty, lying, cheating, and fraud [[REF](https://www.jstor.org/stable/2296617)]. In other words, mistakes can be forgiven, but intentional digital manipulation or cheating is not.
 
+Our work establishes a blueprint for creating a trustworthy programmable economy.
 The term programmable economy was introduced by consultancy form Gartner Inc. in 2015. 
 Our work adds various architectural details, a single clear direction, feasible laws, and operational prototypes when compared to the original idea.
 They describe it as _"the programmable economy, enabled by metacoin platforms and smart technologies, will support new forms of value exchange, new kinds of markets (including dynamically defined on-demand markets), and new kinds of economies such as the attention economy, the reputation economy, the on-demand economy and the resource optimization economy."_[[REF](http://www.gartner.com/newsroom/id/3146018)]
