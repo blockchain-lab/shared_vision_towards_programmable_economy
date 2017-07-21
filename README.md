@@ -214,6 +214,22 @@ Operational open source framework, with low accuracy (proof-of-principle).
 - transitive trust and real-time incremental reputations for any entity
 - TrustChain: transaction storage fabric and self-governance
 
+### Self-sovereign Identity
+
+One of the earliest centralized identity authorities is attributed to the roman emperor August who initiated a basic civil register. This register was helpful to collect and keep track of payed. This mechanism is an example of a centralized identity system where there is a single authority in control. This trend continued when society adopted digital solutions: issuers of digital identities like IANA, ICANN, the organization responsible for domain name registration, were mostly centralized (ref: http://www.coindesk.com/path-self-sovereign-identity/). Some identity systems took a small step beyond the centralized approach and offered hierarchical solutions like certificate authorities (CAs). Still, such systems rely on root authorities which form a single point of failure.
+
+As internet usage increased, more and more digital services became available with the need for users to create their digital identity. This leaded to identity  fragmentation where a user had to manage multiple identities for different services. Initiatives like OpenID, Facebook Connect and OAuth attempted to address this problem by providing a single identity service. Websites are able to implement this identity service without much effort and allow users to login using the implemented service identity provider. Unfortunately, this kind of identification is again regulated by mostly centralized authorities. Additionally, identity service providers are now able to track users across different digital services.
+
+While some of the described identity solutions are used by millions of users, they do not put the user owning that specific identity in control. Another issue is that cmopanies often want users to reveal more information about their identity than they actually need. This data can be used for analysis of user behaviour or data mining. This raises the question whether an identity system can be designed, void of any central authority and where users can decide which attributes they wish to reveal. Attribute requesters should be able to verify claims about statements without being dependent on a central authority.
+
+We present a self-sovereign identity (SSI) mechanism, capable of verifying statements, without any central authorization, point-of-failure or possibility of data tracking, giving users full control over their identity. Self-sovereign identity serves a purpose in a large range of applications, have the potential to speed up traditional, inefficient verification processes and enables inter-operability between companies, individuals and governments while respecting the privacy of identity owners. In a SSI system, civilians, legal entities and objects are able to prove statements such as "my age is over 18" to entities that require verification of this claim, like alcoholic shops or car rental services. A reliable SSI mechanism is an indispensable building block to empower blockchain-based applications and sector-specific processes, operating at higher levels in our technology stack.
+
+
+
+As an example, consider a company that provides services for a reduced fee to members of an academic institutions. Use
+
+### TrustChain
+
 The TrustChain transaction fabric is designed around the notion of agents performing transactions with each other. In comparison to traditional blockchain constructions like Bitcoin or Ethereum, each agent in the TrustChain network maintains and grows their own chain of historical transactions. We now discuss the creation, storage and dissemination of transactions recorded on TrustChain.
 
 ![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/trustchain_tutorial_1.png)
