@@ -125,26 +125,40 @@ TrustChain exclusively focusses on the emergence of trust through repeated inter
 Instead of using complex mathematical puzzles, our basic building blocks are the interactions between untrusted entities.
 Each actor within our ecosystem operates a their own unique database which contains measures against tampering and make prior agreed transactions irrefutable.
 Within TrustChain each actor is completely autonomous, owns their own chain, and publishes new electronic business transactions in a tamper-proof append-only manner.
-TrustChain introduces a new governance model: self-governance.
+TrustChain and all other layers in our architecture utilise a new model of governance, we call self-governance.
 It is an ecosystem where ordinary users self-organise into a large-scale Internet-based collective which can be freely joined by anyone, with the special strong property that all authority is temporary.
 We define a self-governance system as: a distributed system in which autonomous individuals
 can collectively exercise all of the necessary functions of power without intervention from any authority
 which they cannot themselves alter.
-Self-governance implies a mechanism for peaceful transfer of power. Users ether directly vote on appoint those responsible
-for the daily administration of the community through some voting process. Distributed systems with
-self-governance have no external overseers and no central controlling servers.
+Self-governance implies a mechanism for peaceful transfer of power. 
+Users may directly vote on new laws, changes to rules, routine maintenance updates, and key changes in principles. 
+This approach has proven to be usable, but occasionally leads to fascinating outcomes.
+On 20 July 2016 the Ethereum community split apart because a majority voted to revert a completely valid transaction, created by faulty user software (known as the DAO hack) [[REF](https://www.cryptocompare.com/coins/guides/the-dao-the-hack-the-soft-fork-and-the-hard-fork/)].
+Another option is use representatives and appoint professionals responsible
+for the daily administration of the community through some voting process.
+However, this goes against the prevailing anti-authority culture within operational blockchain ecosystems.
+Distributed systems with self-governance have no external overseers and no central controlling servers.
 
+The third layer transforms our usage of money. Our proposed approach there is again the opposite of the cybercurrency community. We believe building a trustworthy and reliable financial infrastructure from scratch is unwise.
+By reengineering and building upon existing bank-based payment systems we provide a realistic, legally compliant, and efficient overlay. We re-use the existing infrastructure and transform it into loosely coupled autonomous entities.
+We provide a proof-of-principle prototype for making international money transfers with sub-second speed, near-zero commissions, instant clearance, and real-time settlement. 
+Steps towards a programmable economy necessitate a transformation of the expensive transaction network build in 1970s (swift) using a programming language from the 1950s (cobol).
 
-Third we provide a roadmap to transform our usage of money. By reengineering and building upon existing antiquated payment systems we provide a realistic, legally compliant, and efficient overlay. Re-use the existing infrastructure and transform it into loosely coupled autonomous entities.
-We provide a proof-of-principle for making international money transfers with sub-second speed, near-zero commissions, instant clearance, and real-time settlement. No progress is possible without a transformation of our expensive transaction network build in 1970s (swift) using a programming language from the 1950s (cobol).
+Our fourth layer consists of a generic value exchange marketplace and coordination mechanism.
+This enables efficient, fast, and secure usage of blockchain technology to coordinate existing businesses.
+As processes inside economic actors get more and more efficient by automation, there is also a strong demand for increasing the efficiency and reducing the time to agreement with other organizations.
+Traditionally, inter-organizational coordination within our economy is realized through one out of the following methods:
 
-We propose to re-organise parts of the global economy by using the following three rules: replace central decision making with decentral supervision {e.g. in Dutch 'horizontaal toezicht'}, and digital ostracism for rule breaking economic actors.
-We propose a new decision making doctrine: uncompromising transparency, full openness, and radically decentralised. 
+- by bilateral agreements: easy to arrange (sometimes within a single day), most often used for single transactions (buying a single product or service), not always the most economically efficient outcome; often along existing relations
+- using tenders: for larger, more expensive and/or long-term contracts: more difficult to arrange (may take months), if broadly announced, possibility to obtain most economically efficient outcome; significant risk regarding trust issues
+- through an open market (e.g. power market, AirBnB, eBay, expedia): if there is a market, this can be quite fast to arrange, and if the traded products are not too complex, often efficient matches are found: trust is taken care of by the market operator/authority; however it takes a lot of effort to set up such a specialized market place
 
-In a recent economics publication it is stated that with blockchains, "marketplaces can be bootstrapped without the need of traditional trusted intermediaries, lowering the cost of networking.", furthermore they challenge "existing revenue models and incumbents's market power, and opens opportunities for novel approaches to regulation, auctions and the provision of public goods, software, identity and reputation systems" [[REF](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2874598)].
+Each of these existing methods perform poor on one of the following criteria: efficiency of allocation / time to agreement / trust-risk / initial set-up costs. Our fourth layer is focussed on the open market showcased by the gig economy, but also offers the more traditional alternatives.
+
+In a recent economics publication it is stated that with blockchains, "marketplaces can be bootstrapped without the need of traditional trusted intermediaries, lowering the cost of networking." furthermore they challenge "existing revenue models and incumbents's market power, and opens opportunities for novel approaches to regulation, auctions and the provision of public goods, software, identity and reputation systems" [[REF](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2874598)].
+Little experience, evidence, and knowledge exists for devising this fourth layer. We are currently conducting trials with various businesses to expand our understanding.
 
 Our programmable economy blueprint consists of a natively-digital economic system with self-governance to avoid any single-point-of-failure, security grounded upon the laws of physics (avoiding software), radical transparency, publically verifiable claims on economic actors within the blockchain, reputation tracking for each economic actor, elaborate mechanisms to establish trust between strangers, legally frinctionless enforcable contracts, and facilitate a single blockchain-regulated digital marketplace for generic economic value exchange and any-asset trading.
-Digital ostracism or ecosystem banning is our cardinal mechanism to incentivise each participant to contribute towards a global desirable outcome and protect against freeriding, fraud, and abuse.
 
 We outline a trust-based blockchain architecture, present partial implementation results, and show the possible usage, for instance, land ownership transfer. The scope of our proposal is broad, it should be usable across sectors and possibly replace paper-based procedures. In August 2007 we launched a primitive fully distributed ledger. Based our ledger deployment experience of the past decade we present a global architecture of a third generation blockchain fabric. This technology stack covers the complete range from low-level hardware with our Physical unclonable function prototypes towars our blockchain-regulated decentral marketplace.
 
@@ -152,49 +166,6 @@ We outline a trust-based blockchain architecture, present partial implementation
 ### Land registration application
 
 ### Global Mortgage Finance market (application)
-
-### Inter-personal/organizational cooperation (application)
-
-Traditionally, inter-organizational coordination is realized through one out of the following methods:
-* by bilateral agreements: easy to arrange (sometimes within a single day), most often used for single transactions (buying a single product or service), not always the most economically efficient outcome; often along existing relations
-* using tenders: for larger, more expensive and/or long-term contracts: more difficult to arrange (may take months), if broadly announced, possibility to obtain most economically efficient outcome; significant risk regarding trust issues
-* through a specialized open market/platform (e.g. power market, AirBnB, eBay, expedia, AMT): if there is a market, this can be quite fast to arrange, and if the traded products are not too complex, often efficient matches are found: trust is taken care of by the market operator/authority; however it takes a lot of effort to set up such a specialized market place
-
-Each of these existing methods perform poor on one of the following criteria: efficiency of allocation / time to agreement / trust-risk / initial set-up costs.
-
-As processes within companies get more and more efficient by automation, there is also a strong demand for increasing the efficiency and reducing the time to agreement with other organizations.
-For example, a demand for high frequency transactions occur when:
-* logistics: exchanging transportation tasks
-* information exchange: coordination of charging slots: EV routing
-* coordinating use of (scarce) capacity on an infrastructure: Frits, Rens, Joris
-
-We present a feasible system architecture for efficient, fast, and secure usage of blockchain technology to coordinate existing businesses.
-
-As an example of the broad applicability of a trust network, please consider the following coordination problem.
-Electric vehicles (EVs) have a limited driving range defined by their installed battery capacity, which is limited because batteries are large, heavy and costly.
-Consequently, for longer drives they need to recharge, in a way similar to the refueling of fossil-fuel-based vehicles.
-Very different, however, is the time it typically takes for such a refill: for EVs this can be anywhere from 30 minutes to several hours.
-This is a problem in particular when the capacity at recharging stations is limited: if a driver arrives at a charging station (with an almost empty battery) and has to wait for another car to be charged first, this has a significant  effect on the total travel time.
-Apart from the solution to design such charging stations for peak capacity requirements, solutions have been proposed to better coordinate the time and location where vehicles charge.
-
-For example, a charging station could offer a reservation system where drivers can book a charging slot in advance as soon as they know at what time they will arrive at the station [].
-Such a system would require only bilateral trust and systems like these have been around (without a blockchain) for many years, e.g., for administration purposes at governmental front desks, restaurants, etc..
-However, this system leads to significant inefficiencies when arrival conditions are not completely certain.
-In particular this holds for travel times, since these may be very uncertain especially around peak times when such reservations matter.
-Reserving a larger time window introduces extra (lost opportunity) costs on the side of the charging station, or booking a later slot introduces extra costs on the side of the driver.
-
-Another solution is a cooperative one where all drivers share and coordinate their charging plans among themselves [].
-Previous work has shown which algorithmic solutions can be used to combine stochastic information based on historic travel  information with stochastic policies for routing and charging, and how this can be used for coordinating these policies.
-What is still missing, though, is a system to reliably exchange this information.
-
-
-### Distributed databases for legal signatures ?
-
-To be determined: offline identificatie van mensen die bepaalde rechtspersonen mogen representeren.
-Openbaar electronisch handtekeningen register; waarin elke bedrijf kan registreren welke
-natuurlijke personen bepaalde authorisaties of verantwoordelijkheden dragen.
-Bijvoorbeeld Onderneming X verklaart dat persoon Y tekenbevoegd is voor 
-financiele verplichtingen tot bedrag Z.
 
 ### Trust creation technology portfolio
 
