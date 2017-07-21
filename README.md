@@ -69,12 +69,13 @@ Creating trustworthy, public, transparent, and decentralized infrastructures is 
 ### Architecture for creating trust
 
 We propose an architecture to create a decentralized infrastructure for four economic primitives.
-The novelty of our work is the application of the Internet architecture throughout our architecture, owned by both everybody and nobody. Our work is academically pure. It relies on autonomy, self-governance, and weak coupling. Each of the four economic primitives are meticulously designed without relying on any middleman, they are void of any central authority, do not require any central server, remove the need for central databases, and even does not depend on Internet connectivity.
+The novelty of our work is the application of the Internet architecture throughout our architecture, owned by both everybody and nobody. Our work is academically pure. It relies self-governance, and weak coupling between autonomous entities. 
+Each of the four economic primitives are meticulously designed without relying on any middleman, they are void of any central authority, make traditional intermediaries optional, do not require any central server, remove the need for central databases, and even do not depend on Internet connectivity.
 
 Our blueprint builds heavily on the concepts proven within the gig economy and combines it with blockchain technology.
 It contains four layers: strong digital identities, sub-second money transfers, digital trust, and blockchain-regulated marketplaces.
 We believe our proposal is the first proposal with real-world viability, as it is the only detailed proposal based on rigorous experimental science: running code.
-This work is based on a decade of experimentation, for each component within our architecture we crafted an operational prototype and conducted Internet-deployment tests.
+This work is based on a decade of experimentation, for each component within our architecture we crafted various generations of operational prototypes and conducted Internet-deployment tests.
 Each of the four layers in our proposed economic architectural blueprint is designed to reinforce the strength, usability and efficiency of the other layers. 
 
 Upcoming sections present how we applied and validated our architecture. 
@@ -82,12 +83,12 @@ We created a decentralized alternative for the Uber taxi service and a decentral
 
 We believe that Blockchain technology enables decentralized economies of higher efficiency and stability then currently known. 
 This work broadens the applications of the organisational principle behind The Internet. 
-Offering full sovereignty to all decision making entities, full transparency on their past performance, and opennessi in general.
-We are applying ideas fundamentally concerned with freedom of individuals, embedding a natural disposition to trust, and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism. The threath of being banned forever from an ecosystem may seem to lack compassion and forgiveness, but boosts trust. Game theory shows that the "shadow of the future" removes cheating incentives. In our architecture we apply the grim trigger strategy defined in 1971 to punish dishonesty, lying, cheating, and fraud [[REF](https://www.jstor.org/stable/2296617)]. In other words, mistakes can be forgiven, but intentional digital manipulation or cheating is not.
+Offering full sovereignty to all decision making entities, full transparency on their past performance, and openness in general.
+We are applying ideas fundamentally concerned with freedom of individuals, embedding a natural disposition to trust [[REF](www.socsci.uci.edu/~duffy/papers/trustamongstrangers.pdf)], and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism. The threath of being banned forever from an ecosystem may seem to lack compassion and forgiveness, but boosts trust. Game theory shows that the "shadow of the future" removes cheating incentives. In our architecture we apply the grim trigger defined in 1971 to punish dishonesty, lying, cheating, and fraud [[REF](https://www.jstor.org/stable/2296617)]. In other words, mistakes can be forgiven, but intentional digital manipulations are not.
 
 Our work establishes a blueprint for creating a trustworthy programmable economy.
 The term programmable economy was introduced by consultancy form Gartner Inc. in 2015. 
-Our work adds various architectural details, a single clear direction, feasible laws, and operational prototypes when compared to the original idea.
+We expand upon their ideas with various architectural details, propose feasible rules, show operational prototypes, and in general mature this concept.
 They describe it as _"the programmable economy, enabled by metacoin platforms and smart technologies, will support new forms of value exchange, new kinds of markets (including dynamically defined on-demand markets), and new kinds of economies such as the attention economy, the reputation economy, the on-demand economy and the resource optimization economy."_[[REF](http://www.gartner.com/newsroom/id/3146018)]
 
 
@@ -118,6 +119,8 @@ We provide a proof-of-principle for making international money transfers with su
 
 We propose to re-organise parts of the global economy by using the following three rules: replace central decision making with decentral supervision {e.g. in Dutch 'horizontaal toezicht'}, and digital ostracism for rule breaking economic actors.
 We propose a new decision making doctrine: uncompromising transparency, full openness, and radically decentralised. 
+
+In a recent economics publication it is stated that with blockchains, "marketplaces can be bootstrapped without the need of traditional trusted intermediaries, lowering the cost of networking.", furthermore they challenge "existing revenue models and incumbents's market power, and opens opportunities for novel approaches to regulation, auctions and the provision of public goods, software, identity and reputation systems" [[REF](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2874598)].
 
 Our programmable economy blueprint consists of a natively-digital economic system with self-governance to avoid any single-point-of-failure, security grounded upon the laws of physics (avoiding software), radical transparency, publically verifiable claims on economic actors within the blockchain, reputation tracking for each economic actor, elaborate mechanisms to establish trust between strangers, legally frinctionless enforcable contracts, and facilitate a single blockchain-regulated digital marketplace for generic economic value exchange and any-asset trading.
 Digital ostracism or ecosystem banning is our cardinal mechanism to incentivise each participant to contribute towards a global desirable outcome and protect against freeriding, fraud, and abuse.
