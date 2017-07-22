@@ -180,15 +180,13 @@ Similar to self-driving cars, it is likely that legal issues will decelerate tec
 
 We created a minimal prototype to offer mortgage financing on a global, decentralized, blockchain-regulated and open market. This system enables financial service providers like banks to offer consumers mortgage products and obtain the required capital investments from the global market. This enables external investors such as foreign pension funds to invest in real-estate of financially solid countries with predictable return-on-investment and low risk. Traditionally the mortgage market is not unpermissioned or transparent. A screenshot of the developed application can be found in Figure x where the user interface is shown from the perspective of a financial institution. After providing the necessary documents, users looking for mortgage financing are able to negotiate one with a bank on our open platform.
 
-Every agreement reached between users in the market are recorded as a double-signed contract on an unpermissioned and public blockchain. We distinguish between three different types of contracts:
+Every agreement reached between users in the market are stored as a double-signed contract on an unpermissioned and public blockchain. We distinguish between three different types of contracts in our market:
 - Mortage contracts: these contracts represent the initial mortgage agreement between a requester and a bank. This contracts contains all relevant information about the agreed mortgage, like the house address, mortgage rate and redemption.
 - Investment contracts: this type of contract is created when (a part of) a mortgage is sold to an investor. It describes properties the resold mortgage.
-- Transaction contracts: when a mortgage is transferred from one investor to another investor, this type of contract is created.
+- Transaction contracts: when a mortgage is transferred from one investor to another investor, a transaction contract is created.
+Investment and transaction contracts must have at least one contract where they depend on. For investment contracts, this should be a mortgage contract. Transaction contracts should have a investment contract as dependency. Contract dependencies, originating from a single mortgage contract, yields an overview of all owner transferrals since the existance of the mortgage.
 
-This blockchain is specifically designed for transfer-of-ownership transactions. TODO proof-of-stake etc
-
-- prototype pictures
-- tech details
+We designed a blockchain specifically for transactions that transfer ownership of assets between entities, in this scenario, mortgages. After a contract has been signed by both involved parties, both transaction participants send the contract to all banks (we assume that financial institutions are always connected to the market). Periodically, banks will try to create a new block, containing one or more received contracts. Contracts can only be appended to a transaction block if all of the contract's dependencies are already published on the blockchain. The adopted consensus mechanism here is proof-of-work: while the scalability of this mechanism is limited, it is viable for our prototype since mortgages won't be created and traded at a high rate. A dynamic difficulty target mechanism assures that on average, one block is added to the chain every three minutes.
 
 ### Trust creation technology portfolio
 
