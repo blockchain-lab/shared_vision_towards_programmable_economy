@@ -325,3 +325,7 @@ Figure x indicates that we have indeed created a scalable consensus mechanism, n
 
 
 ### Conclusions
+
+Over the past few years, blockchain technology has attracted a significant amount of media attention. The adoption and growth of blockchain-powered platforms like Ethereum and Bitcoin raised questions whether blockchain is able to provide value within economic processes like trading, banking and the value chain. Besides illegal trading and various security weaknesses resulting in compromised digital assets, there are to date few real-world results demonstrating long-term viability of blockchain technology in our legal systems. We believe this is caused by a fundamental lack of ties to any real-world, legal system.
+
+We proposed a novel architecture to create trust. Each component of our technology portfolio is designed and implemented based on the philosophy of the Internet itself: loosly coupled autonomous systems. The essential technology to cultivate trust within our decentralized technology platform is TrustChain, a blockchain built around the notion of transacting real-world entities. Extended with a mathematical-proven scalable consensus mechanism, TrustChain yields transaction throughputs surpassing that of most traditional blockchain fabrics and scales up to Visa or SWIFT-comparable performance levels. Our open-source infrastructure is shown to be viable in various real-world applications: trading mortgage finance, programming money flows and matching taxi drivers with passengers.
