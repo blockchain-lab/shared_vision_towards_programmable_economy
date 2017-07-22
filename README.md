@@ -182,6 +182,8 @@ We created minimal viable system to offer mortgage financing on a global open ma
 This system enables banks to offer consumers mortgage products and obtain the required capital investments from the global market. 
 Traditionally this market is not open, public, and transparent. This enables foreign pension funds to invest in real-estate of financially solid countries with predictable return-on-investment and low risk.
 
+
+
 - prototype pictures
 - tech details
 
@@ -303,6 +305,16 @@ Temporal Pagerank has a weak property of transitive trust. Transitive trust mean
 
 To demonstrate the feasibility of Temporal Pagerank, we evaluated the mechanism using a real-world interaction trace, extracted from our file-sharing network Tribler for over a month. This trace consists of 917 different identities which are not necessarily unique users and around 200.000 unique transactions. The result of our experiment is displayed in Figure x. The horizontal axis displays the number of users in the trace and the vertical axis shows time it takes to compute a reputation score for all these users. For a network with 900 identities, we notice that it takes just under 12 seconds to compute reputations. It is often not necessary to determine reputation of all users in the network; in most scenarios, determining reputations of identities you are likely to interact with is sufficient. However, we have demonstrated that Temporal Pagerank is a feasible mechanism to use for trustworthiness estimation, even when the size of the network grows.
 
+#### Decentralized Marketplace
+
+Our final piece of the architecture is an operational prototype for a generic, decentralized two-sided marketplace, capable of trading generic assets like houses, currencies or bonds. The platform facilitates trading without presence of a central clearinghouse performing matchmaking. Matchmaking, clearing and settlement proceeds in a completely decentralized fashion where autonomous entities are directly exchanging buy and sell offers. Every trader operates on their own orderbook and acts as a matchmaker, attempting to match buy and sell offers. Assets are stored in wallets which are used to query available assets or to transfer assets to others. When a trade between market participants has been settled, the transaction details like the type, quantity and price of the exchanged assets are stored on TrustChain (see Section x) and gossiped to other traders. This transaction history is used as input for trust estimation. Our market is secured against malicious behaviour and built to be operational in the presence of a large amount of traders.
+
+We build our decentralized marketplace and integrated it in Tribler. The initial release supports trading bandwidth against both crypto- and regular currencies, using the Internet-of-Money module discussed in Section x. Figure x shows the orderbook of a trader in the Tribler software. Information about installed wallets of a trader are present in the upper-right corner of the window.
+
+To obtain insight in the real-world efficiency of our system, we evaluate matching efficiency of Uber taxi drives. Uber, one of the largest companies operating in the sharing economy, can be considered as a two-sided market where taxi drivers, offering a ride to a location, are matched against users requesting transportation. Since there is no public, reliable dataset provided by the Uber platform, we use historical information of taxi rides published by the government of New York instead <ref>. The dataset provides insights in time and location of pickup and dropoff location of each taxi ride. We assume that the dropoff location of a taxi ride is the location where the taxi driver waits for a new ride request. We assume a total of 1100 taxi drivers and 1000 users requesting transportation. It is also assumed that only the taxi drivers perform matching since they are likely to be connected to the network for a longer time whereas taxi requester most likely closes the application when a taxi has been located. Matching between taxi drivers and requesters is based on the mimimal distance between the driver and requester, determined by the great-circle distance.
+
+Figure x shows the relation between decentralization and efficiency. The horizontal axis denotes the percentage of taxi drivers performing matchmaking whereas the vertical axis represents the average distance between the matched driver and the requester. It is clear that decentralization negatively impacts matching efficiency which is expected since each matchmaker only holds partial knowledge of the global order book. In particular, a matchmaker might not be aware of an offer that could improve his proposed matching. This effect can be reduced by synchronizing orderbooks between matchmakers, at the cost of additional required network communication but increased matching efficiency.
+
 ### TrustChain experiments
 
 We have implemented TrustChain and the scalable consensus mechanism discussed in Section x. This section will focus on experimentation to assess the global transaction throughput and consensus duration. It is assumed that every node generates two transactions per second. We investigate the effect of the number of facilitators in the network; due to implementation-specific constraints, our network can host at most 32 facilitators. The size of each transaction is approximately 500 bytes. It is assumed that every user knows the IP address and identity of all other users. All experiments are executed on the DAS-5 supercomputer.
@@ -312,15 +324,6 @@ We have implemented TrustChain and the scalable consensus mechanism discussed in
 The global throughput of the mechanism is displayed in Figure x. On the horizontal axis, the network size is shown as the amount of users whereas the vertical axis denotes the transaction throughput in transactions per second. In this experiment, each user transacts with another user in a fixed set of neighbours. As a first observation, note the linear relationship in the figure between the population size and transaction throughput; this strongly indicates the horizontal scalability property for a network up to 1400 users. The throughput rate lowers when the number of facilitators in increased. This is explained by the fact that more facilitators require additional network communication between users, introducing overhead and latency.
 
 Figure x indicates that we have indeed created a scalable consensus mechanism, not bounded by a wasteful, expensive consensus mechanism like Proof-of-Work. With only a few servers, our consensus mechanism is able to reach global throughput rates surpassing that of Visa or SWIFT. Together with components higher in our technology stack, we enabled trusted trade at a large scale.
-
-#### Decentralized marketplace
-
-Our final piece of the architecture is an operational prototype for the core functionality of Uber.
-We created several generations of markets with improving levels of scalability, efficiency, and security.
-
-- picture of orderbook
-- autonomous entities exchanging bid/asks
-- dataset to obtain insight into real-world efficiency of our system
 
 
 ### Conclusions
