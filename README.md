@@ -178,11 +178,14 @@ Similar to self-driving cars, it is likely that legal issues will decelerate tec
 
 ### Open market for mortgage finance
 
-We created minimal viable system to offer mortgage financing on a global open market.
-This system enables banks to offer consumers mortgage products and obtain the required capital investments from the global market. 
-Traditionally this market is not open, public, and transparent. This enables foreign pension funds to invest in real-estate of financially solid countries with predictable return-on-investment and low risk.
+We created a minimal prototype to offer mortgage financing on a global, decentralized, blockchain-regulated and open market. This system enables financial service providers like banks to offer consumers mortgage products and obtain the required capital investments from the global market. This enables external investors such as foreign pension funds to invest in real-estate of financially solid countries with predictable return-on-investment and low risk. Traditionally the mortgage market is not unpermissioned or transparent. A screenshot of the developed application can be found in Figure x where the user interface is shown from the perspective of a financial institution. After providing the necessary documents, users looking for mortgage financing are able to negotiate one with a bank on our open platform.
 
+Every agreement reached between users in the market are recorded as a double-signed contract on an unpermissioned and public blockchain. We distinguish between three different types of contracts:
+- Mortage contracts: these contracts represent the initial mortgage agreement between a requester and a bank. This contracts contains all relevant information about the agreed mortgage, like the house address, mortgage rate and redemption.
+- Investment contracts: this type of contract is created when (a part of) a mortgage is sold to an investor. It describes properties the resold mortgage.
+- Transaction contracts: when a mortgage is transferred from one investor to another investor, this type of contract is created.
 
+This blockchain is specifically designed for transfer-of-ownership transactions. TODO proof-of-stake etc
 
 - prototype pictures
 - tech details
