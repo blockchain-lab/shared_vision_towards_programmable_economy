@@ -9,21 +9,44 @@ Department of Software Technology, Delft University of Technology
 
 ## introduction
 Humanity has a disposition to trust, meaning the tendency of individuals to be willing to depend on others.
-Technology is altering our notion trust. Technology platforms such as Uber and Airbnb disrupt how taxi services are provided and the way in which apartments are rented out. 
+Technology is altering our notion of trust.
+New technology platforms such as Uber and Airbnb disrupt how taxi services are provided and the way in which apartments are rented out. 
 
-Trust is essential for these platforms: people step into the car of a person they never met before or let strangers sleep in their spare room without worries.
-These platforms use rating systems as the foundation for their quality and safety measures. For instance, pre-testing for potentially dangerous drivers and prescreening is [reduced](http://www.cnbc.com/2016/02/23/understanding-ubers-five-star-rating-system.html) and replaced with a continuous quality monitoring system.
-The Uber smartphone app asks both driver and passengers to provide feedback on their experience. The software averages the 1 to 5-star ratings of the most recent [500 trips](https://help.uber.com/h/7b64dda6-78f5-4575-b7da-3c9e40d2c816). If this average long-term quality rating of a driver drops below a certain level, it automatically triggers [contract termination](https://www.forbes.com/sites/ellenhuet/2014/10/30/uber-driver-firing-policy/#7d29b53b1527). 
-The traditional dynamics of trust are altered on such platforms. Employment regulations are under [pressure](https://www.ft.com/content/6f4ac284-362b-11e7-99bd-13beb0903fa3?mhq5j=e3), some courts found that Uber violated local taxi regulations [[1](http://www.reuters.com/article/us-uber-denmark-idUSKBN13R14G),[2](http://www.reuters.com/article/us-uber-tech-southkorea-idUSKBN17S09F),[3](http://www.reuters.com/article/us-uber-netherlands-investigation-idUSKBN0N81G620150417)].
-For the UK these platforms are responsible for lowering unemployment levels, reducing fixed employment contracts by a few percent, enforce the trend towards zero-hour contracts and self-employment. A 2017 UK government report states that currently 1.1 million people work within this _[gig economy](https://www.thersa.org/globalassets/pdfs/reports/rsa_good-gigs-fairer-gig-economy-report.pdf)_.
-The laws which govern trust, employment terminations, and access to marketplaces is no longer the exclusive domain of national law. The laws of trust are now partly inside commercial software.
+For these platforms, trust is an essential element: people step into the car of a person they never met before or let strangers sleep in their spare room without worries.
+Trust is addressed by rating systems, the foundation for their quality and safety measures.
+For instance, pre-testing for potentially dangerous drivers and prescreening is [reduced](http://www.cnbc.com/2016/02/23/understanding-ubers-five-star-rating-system.html) and replaced with a continuous quality monitoring system.
+The Uber mobile application asks both drivers and passengers to provide feedback on their experience.
+The software averages the one to five-star ratings of the most recent [500 trips](https://help.uber.com/h/7b64dda6-78f5-4575-b7da-3c9e40d2c816).
+If this average long-term quality rating of a driver drops below a certain level, it automatically triggers [contract termination](https://www.forbes.com/sites/ellenhuet/2014/10/30/uber-driver-firing-policy/#7d29b53b1527). 
+The traditional dynamics of trust are altered on such platforms.
+Employment regulations are under [pressure](https://www.ft.com/content/6f4ac284-362b-11e7-99bd-13beb0903fa3?mhq5j=e3): some courts found that Uber violated local taxi regulations [[1](http://www.reuters.com/article/us-uber-denmark-idUSKBN13R14G),[2](http://www.reuters.com/article/us-uber-tech-southkorea-idUSKBN17S09F),[3](http://www.reuters.com/article/us-uber-netherlands-investigation-idUSKBN0N81G620150417)].
+For the United Kingdom these platforms are responsible for lowering unemployment levels, reducing fixed employment contracts by a few percent, enforce the trend towards zero-hour contracts and self-employment.
+A 2017 United Kingdom government report states that currently 1.1 million people work within this _[gig economy](https://www.thersa.org/globalassets/pdfs/reports/rsa_good-gigs-fairer-gig-economy-report.pdf)_.
+The laws which govern trust, employment terminations, and access to marketplaces is no longer the exclusive domain of national law.
+The laws of trust are now partly inside commercial software.
 
-This work aims to help transform the gig economy. We aim to institutionalize the empowerment of workers and small businesses with our software, rules and architectural principles.
+This work aims to help transform the gig economy.
+We aim to institutionalize the empowerment of workers and small businesses with our software, rules and architectural principles.
 
-First, we designed and created an operational open source prototype of the core Uber functionality, matching drivers and passengers. Our non-profit alternative aims to be more transparent, fair, and open. Second, we created a alternative set of rules and principles for the emergence of trust, using only the repeated interactions between strangers. Third, we present a blueprint of a public infrastructure and prototypes for each part of this blueprint for the gig economy. Our proposed public infrastructure in principle should be able to offer non-profit alternative to current matchmaking platforms (e.g. Uber, TaskRabbit, Amazon, Expedia, Booking, etc.). Finally, we hint at how such an infrastructure might be used to realise what has become known as the _programmable economy_.
+First, we designed and created an operational open source prototype of the core Uber functionality, matching drivers and passengers on a two-sided market.
+Our non-profit alternative aims to be more transparent, fair, and open.
+Second, we created a alternative set of rules and principles for the emergence of trust, using only the repeated interactions between strangers.
+Third, we present a blueprint for a public infrastructure and prototypes for each part of this blueprint for the gig economy.
+Our proposed public infrastructure in principle should be able to offer non-profit alternative to current matchmaking platforms (e.g. Uber, TaskRabbit, Amazon, Expedia, Booking, etc.).
+Finally, we hint at how such an infrastructure might be used to realise what has become known as the _programmable economy_.
 
 Blockchain technology is at the core of our proposed Uber alternative and blueprint for a public gig economy.
-However, Bitcoin and Ethereum are in our opinion unsuitable for this task or others such as land registration. We do not consider cybercurrency research in the remainder of this work. Our reason is that all current work based on coin creation, proof-of-work or variants thereof lack robust and effective ties to any legal system, or even the real world in general. The current generation of cybercurrency-based blockchain technology lacks a durable governance structure. Severe disagreements exists within these communities, as various factions battle for control of ecosystems worth billions. The cybercurrency ecosystem is unsuitable for land registration as it occasionally has periods dubbed [civil war](https://www.bloomberg.com/news/articles/2017-07-10/bitcoin-risks-splintering-as-civil-war-enters-critical-month) by the media. We also do not consider private or consortium blockchains, as they do not offer any significant advantage versus classical distributed databases. We focus on the tamper-proof leaderless database type of solutions. The statements and opinions in this paper are based on our decade-long experience of deploying and gradually improving our own ledger, installed by 1.8 million users. We deployed a very primitive fully distributed ledger in [August 2007](http://news.bbc.co.uk/2/hi/technology/6971904.stm), pre-dating the launch of Bitcoin. In 2017 we mathematically proven that our TrustChain scales linear and surpasses 10k transactions per second [[REF](https://github.com/Tribler/tribler/issues/2457)].
+However, Bitcoin and Ethereum are in our opinion unsuitable for this task or other legal processes such as land registration.
+We do not consider cybercurrency research in the remainder of this work.
+Our reason is that all current work based on coin creation, blockchain consensus like proof-of-work or variants thereof lack robust and effective ties to any legal system, or even the real world in general.
+The current generation of cybercurrency-based blockchain technology lacks a durable governance structure.
+Severe disagreements exists within these communities, as various factions battle for control of ecosystems worth billions.
+The cybercurrency ecosystem is unsuitable for land registration as it occasionally has periods dubbed [civil war](https://www.bloomberg.com/news/articles/2017-07-10/bitcoin-risks-splintering-as-civil-war-enters-critical-month) by the media.
+We also do not consider private or consortium blockchains, as they do not offer any significant advantage over classical distributed databases.
+We focus on the tamper-proof leaderless database type of solutions.
+The statements and opinions in this paper are based on our decade-long experience of deploying and gradually improving our own ledger, installed by 1.8 million users.
+We deployed a very primitive fully distributed ledger in [August 2007](http://news.bbc.co.uk/2/hi/technology/6971904.stm), pre-dating the launch of Bitcoin.
+In 2017 we mathematically proven that our blockchain technology, TrustChain, scales linear and surpasses a transaction throughput of 10.000 transactions per second [[REF](https://github.com/Tribler/tribler/issues/2457)].
 
 ## Problem Description
 
