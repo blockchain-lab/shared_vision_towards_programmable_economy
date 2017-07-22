@@ -4,10 +4,10 @@ Johan Pouwelse and Martijn de Vos
 Department of Software Technology, Delft University of Technology
 
 
-### abstract
+## abstract
  (prior draft had outdated storyline)
 
-### introduction
+## introduction
 Humanity has a disposition to trust, meaning the tendency of individuals to be willing to depend on others.
 Technology is altering our notion trust. Technology platforms such as Uber and Airbnb disrupt how taxi services are provided and the way in which apartments are rented out. 
 
@@ -25,7 +25,7 @@ First, we designed and created an operational open source prototype of the core 
 Blockchain technology is at the core of our proposed Uber alternative and blueprint for a public gig economy.
 However, Bitcoin and Ethereum are in our opinion unsuitable for this task or others such as land registration. We do not consider cybercurrency research in the remainder of this work. Our reason is that all current work based on coin creation, proof-of-work or variants thereof lack robust and effective ties to any legal system, or even the real world in general. The current generation of cybercurrency-based blockchain technology lacks a durable governance structure. Severe disagreements exists within these communities, as various factions battle for control of ecosystems worth billions. The cybercurrency ecosystem is unsuitable for land registration as it occasionally has periods dubbed [civil war](https://www.bloomberg.com/news/articles/2017-07-10/bitcoin-risks-splintering-as-civil-war-enters-critical-month) by the media. We also do not consider private or consortium blockchains, as they do not offer any significant advantage versus classical distributed databases. We focus on the tamper-proof leaderless database type of solutions. The statements and opinions in this paper are based on our decade-long experience of deploying and gradually improving our own ledger, installed by 1.8 million users. We deployed a very primitive fully distributed ledger in [August 2007](http://news.bbc.co.uk/2/hi/technology/6971904.stm), pre-dating the launch of Bitcoin. In 2017 we mathematically proven that our TrustChain scales linear and surpasses 10k transactions per second [[REF](https://github.com/Tribler/tribler/issues/2457)].
 
-### Problem description
+## Problem Description
 
 Contracts, transactions, and the records of them are among the defining structures in our economic, legal, and political systems [REF](https://hbr.org/2017/01/the-truth-about-blockchain). They protect assets and set organizational boundaries. 
 These authentic records create ownership, determine citizenship, and define partnerships between entities.
@@ -64,7 +64,7 @@ It promotes integrity of operations by monitoring the correct behavior of econom
 
 Creating trustworthy, public, transparent, and decentralized infrastructures is hard. We lack a decentral infrastructure for essential economic primitives such as: identity, money, trust, and markets. 
 
-### Architecture for creating trust
+## Architecture for Creating Trust
 
 We propose an architecture to create a trustworthy decentralized infrastructure for four economic primitives.
 The novelty of our work is the application of the Internet architecture throughout our architecture, owned by both everybody and nobody. Our work is academically pure. It relies on self-governance, and weak coupling between autonomous entities. 
@@ -158,8 +158,7 @@ This is newly developing area of research. However, we believe too few research 
 the resources for the learn-by-doing methodology required to make serious scientific progress.
 Building open infrastructures with self-governance is costly (Our key funding was the EU FP7 project P2P-Next of 19,500,000 Euro [[REF](http://cordis.europa.eu/project/rcn/85326_en.html)] and QLectives of 6,900,000 Euro [[REF](http://cordis.europa.eu/project/rcn/89031_en.html).
 
-
-### Land registration application
+## Land Registration Application
 
 Recently the World Bank indicated that 70% of the world’s population still lacks access to proper land titling or demarcation [[REF](http://ieg.worldbankgroup.org/blog/why-land-administration-matters-development)]. A digital land registration system using blockchain technology requires re-designing existing procedures for submission and verification of records and claims.
 It is most likely to demand changes to legal frameworks.
@@ -176,7 +175,7 @@ This technology is not yet sufficiently understood to underpin such an essential
 But it will be soon.
 Similar to self-driving cars, it is likely that legal issues will decelerate technological progress.
 
-### Open market for mortgage finance
+## Open Market for Mortgage Finance
 
 We created a minimal prototype to offer mortgage financing on a global, decentralized, blockchain-regulated and open market. This system enables financial service providers like banks to offer consumers mortgage products and obtain the required capital investments from the global market. This enables external investors such as foreign pension funds to invest in real-estate of financially solid countries with predictable return-on-investment and low risk. Traditionally the mortgage market is not unpermissioned or transparent. A screenshot of the developed application can be found in Figure x where the user interface is shown from the perspective of a financial institution. After providing the necessary documents, users looking for mortgage financing are able to negotiate one with a bank on our open platform.
 
@@ -188,14 +187,14 @@ Investment and transaction contracts must have at least one contract where they 
 
 We designed a blockchain specifically for transactions that transfer ownership of assets between entities, in this scenario, mortgages. After a contract has been signed by both involved parties, both transaction participants send the contract to all banks (we assume that financial institutions are always connected to the market). Periodically, banks will try to create a new block, containing one or more received contracts. Contracts can only be appended to a transaction block if all of the contract's dependencies are already published on the blockchain. The adopted consensus mechanism here is proof-of-work: while the scalability of this mechanism is limited, it is viable for our prototype since mortgages won't be created and traded at a high rate. A dynamic difficulty target mechanism assures that on average, one block is added to the chain every three minutes.
 
-### Trust creation technology portfolio
+## Trust creation technology portfolio
 
 We now expand on each of the four layers of our envisioned architecture for a programmable economy, see Figure X.
 We now go into additional detail for each of the economic primitives: identity, trust, money, and markets.
 
 ![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/tech_stack.png)
 
-#### physical unclonable functions
+### Physical Unclonable Functions
 
 The foundations of security are based on the laws of physics, we specifically avoid software and the risk of implementation bugs. For numerous years scientists have searched for a secure basis for critical infrastructure.
 
@@ -211,9 +210,7 @@ PUFs can also be used for identification purposes. An authentication mechanism b
 
 For TUDelft publication on PUF technology: "[Modeling SRAM start-up behavior for physical unclonable functions](http://ce-publications.et.tudelft.nl/publications/1298_modeling_sram_startup_behavior_for_physical_unclonable_fun.pdf)"
 
-- self-sovereign identity system for people, organisations and objects
-- identity governance, claim verification and selective attribute revealing
-- biometric-based authentication of people and legal representatives
+### Biometric-based Authentication
 
 We present a mobile biometric-based authentication system that does not involve any central authority or specialized, licensed hardware. An proof-of-principle mobile application has been developed for Android, capable of matching fingerprints using the built-in device camera. By using device-specific components like the camera, no permissioned or specialized, contractual hardware is needed. This work provides a solution for portable trust and our framework has been specifically designed to serve as a building block for a self-sovereign identity solution.
 
@@ -223,11 +220,6 @@ The procedure for fingerprint acquisition is divided into three components. Firs
 
  [https://arxiv.org/abs/1706.03744](https://arxiv.org/abs/1706.03744)
 Operational open source framework, with low accuracy (proof-of-principle).
-
-
-- elastic persistent storage of data, metadata, and versioning services
-- transitive trust and real-time incremental reputations for any entity
-- TrustChain: transaction storage fabric and self-governance
 
 ### Self-sovereign Identity
 
@@ -273,7 +265,7 @@ TrustChain blocks are designed to be disseminated and replicated in the network.
 
 TODO: misschien hier nog wat afsluitende woorden over TrustChain? Bijv: we envision TrustChain as a generic transaction ledger, used on a large scale bla bla...
 
-#### Scalable Consensus
+### Scalable Consensus
 
 Most blockchain fabrics have a requirement for a consistent state which is agreed upon by (a part of) the network. This requirement holds in particular when considering digital money (cryptocurrencies) like Bitcoin or Ethereum. Consensus is usually in place to prevent the double-spending attack where users transfer the same digital asset twice in multiple transactions. Possibility of such an attack impacts reliability and trust of the system. Unfortunately, most consensus mechanisms are computationally expensive and limit the global transaction throughput of the system. For instance, the Proof-of-Work consensus mechanism implemented in the Bitcoin fabric limits the theoretical transaction throughput to around seven transactions per second which is by far not enough for a medium to large-sized trading platform. In comparison, Visa processes several hundreds of transactions every second. In April 2017, SWIFT recorded an average of 28.38 million FIN messages per day, around 328 per second. This motivates the need for scalability.
 
@@ -287,12 +279,6 @@ We designed, implemented and evaluated a fault-tolerant, horizontal scalable con
 We extend the TrustChain data structure with a new type of block, called a checkpoint block. This is displayed in Figure x, showing a transaction block (described in Section x) and a checkpoint block. A checkpoint block consists of a pointer to a previous block in the same chain, a number indicating the consensus round after which the specific checkpoint block has been created, a cryptographic hash of the consensus result and a digital signature, generated by the owner of the chain. We modify the data structure such that the first block in a chain (the genesis block) is always a checkpoint block. The available checkpoint blocks in a chain are used during detection of malicious activities.
 
 Our consensus mechanism proceeds in rounds. The outcome of each round is a set of checkpoint blocks agreed by the facilitators of that round. Facilitators are special user, selected during the first phase in a round of consensus. These facilitators reach consensus not on the individual transactions like in Bitcoin or Ethereum but on the state of every chain. There are two scenarios. If a specific user is not a facilitator, it sends its most recent checkpoint block to all facilitators. When the facilitators received a sufficient number of checkpoint blocks, they start to reach consensus on all received checkpoint blocks using an Asynchronous Subset Consensus (ACS) algorithm. When this algorithm is finished, the facilitators send two messages to all nodes, first the consensus result and second a signature message where the facilitator signed the consensus result, adding authenticity to the consensus result. When a user receives the consensus result and a sufficient amount of valid facilitator signatures, a new checkpoint block is created and appended to the chain. Finally, the new set of facilitators is computed from the new consensus result and the round number is increased. The process starts over now.
-
-- Business primitives: legally binding identification, authentication, signatures, irrifutable notifications, business transactions, archiving, contracts, e-invoicing, e-factoring, and IFTTT logic.
-- real-time IBAN/BIC money transfer, conditional payments, currency conversion, clearing, and settlement
-- decentral blockchain-regulated markets
-  
-  We present a feasible system architecture for efficient, fast, and secure usage of blockchain technology in existing businesses.
   
 ### Trustworthiness and Reputation
 
@@ -306,7 +292,7 @@ Temporal Pagerank has a weak property of transitive trust. Transitive trust mean
 
 To demonstrate the feasibility of Temporal Pagerank, we evaluated the mechanism using a real-world interaction trace, extracted from our file-sharing network Tribler for over a month. This trace consists of 917 different identities which are not necessarily unique users and around 200.000 unique transactions. The result of our experiment is displayed in Figure x. The horizontal axis displays the number of users in the trace and the vertical axis shows time it takes to compute a reputation score for all these users. For a network with 900 identities, we notice that it takes just under 12 seconds to compute reputations. It is often not necessary to determine reputation of all users in the network; in most scenarios, determining reputations of identities you are likely to interact with is sufficient. However, we have demonstrated that Temporal Pagerank is a feasible mechanism to use for trustworthiness estimation, even when the size of the network grows.
 
-#### Decentralized Marketplace
+### Decentralized Marketplace
 
 Our final piece of the architecture is an operational prototype for a generic, decentralized two-sided marketplace, capable of trading generic assets like houses, currencies or bonds. The platform facilitates trading without presence of a central clearinghouse performing matchmaking. Matchmaking, clearing and settlement proceeds in a completely decentralized fashion where autonomous entities are directly exchanging buy and sell offers. Every trader operates on their own orderbook and acts as a matchmaker, attempting to match buy and sell offers. Assets are stored in wallets which are used to query available assets or to transfer assets to others. When a trade between market participants has been settled, the transaction details like the type, quantity and price of the exchanged assets are stored on TrustChain (see Section x) and gossiped to other traders. This transaction history is used as input for trust estimation. Our market is secured against malicious behaviour and built to be operational in the presence of a large amount of traders. We build our decentralized marketplace and integrated it in Tribler. The initial release supports trading bandwidth against both crypto- and regular currencies, using the Internet-of-Money module discussed in Section x. Figure x shows the orderbook of a trader in the Tribler software. Information about installed wallets of a trader are present in the upper-right corner of the window. Finally, our market is void of any transaction fee, enabling  unrestricted and fair trading unlike most existing blockchain-based exchanges.
 
@@ -314,7 +300,7 @@ To obtain insight in the real-world efficiency of our system, we evaluate matchi
 
 Figure x shows the relation between decentralization and efficiency. The horizontal axis denotes the percentage of taxi drivers performing matchmaking whereas the vertical axis represents the average distance between the matched driver and the requester. It is clear that decentralization negatively impacts matching efficiency which is expected since each matchmaker only holds partial knowledge of the global order book. In particular, a matchmaker might not be aware of an offer that could improve his proposed matching. This effect can be reduced by synchronizing orderbooks between matchmakers, at the cost of additional required network communication but increased matching efficiency.
 
-### TrustChain experiments
+### TrustChain Experiments
 
 We have implemented TrustChain and the scalable consensus mechanism discussed in Section x. This section will focus on experimentation to assess the global transaction throughput and consensus duration. It is assumed that every node generates two transactions per second. We investigate the effect of the number of facilitators in the network; due to implementation-specific constraints, our network can host at most 32 facilitators. The size of each transaction is approximately 500 bytes. It is assumed that every user knows the IP address and identity of all other users. All experiments are executed on the DAS-5 supercomputer.
 
@@ -325,7 +311,7 @@ The global throughput of the mechanism is displayed in Figure x. On the horizont
 Figure x indicates that we have indeed created a scalable consensus mechanism, not bounded by a wasteful, expensive consensus mechanism like Proof-of-Work. With only a few servers, our consensus mechanism is able to reach global throughput rates surpassing that of Visa or SWIFT. Together with components higher in our technology stack, we enabled trusted trade at a large scale.
 
 
-### Conclusions
+## Conclusions
 
 Over the past few years, blockchain technology has attracted a significant amount of media attention. The adoption and growth of blockchain-powered platforms like Ethereum and Bitcoin raised questions whether blockchain is able to provide value within economic processes like trading, banking and the value chain. Besides illegal trading and various security weaknesses resulting in compromised digital assets, there are to date few real-world results demonstrating long-term viability of blockchain technology in our legal systems. We believe this is caused by a fundamental lack of ties to any real-world, legal system.
 
