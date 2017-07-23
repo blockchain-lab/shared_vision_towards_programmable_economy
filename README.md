@@ -200,70 +200,104 @@ Building open infrastructures with self-governance is costly (our key funding wa
 
 ## Land Registration Application
 
-Recently the World Bank indicated that 70% of the world’s population still lacks access to proper land titling or demarcation [[REF](http://ieg.worldbankgroup.org/blog/why-land-administration-matters-development)]. A digital land registration system using blockchain technology requires re-designing existing procedures for submission and verification of records and claims.
+Recently the World Bank indicated that 70% of the world’s population still lacks access to proper land titling or demarcation services [[REF](http://ieg.worldbankgroup.org/blog/why-land-administration-matters-development)].
+A digital land registration system using blockchain technology requires a re-design of existing procedures for submission and verification of records and claims.
 It is most likely to demand changes to legal frameworks.
 
 Obtaining agreement from numerous parties during several of the stages of a property transactions, detecting errors, and to preserve tamper-proof logging is a significant challenge.
 Central keepers of records are often entrusted with this critical coordination task.
-Blockchains clearly have potential here, offering transparency, reduce overhead, and especially the single-source-of-truth aspect.
+Blockchains clearly have potential here, offering transparency, reducing overhead, and especially providing a single-source-of-truth.
 Various reports support this opinion [[REF](https://www2.deloitte.com/content/dam/Deloitte/uk/Documents/Innovation/deloitte-uk-blockchain-app-in-public-sector.pdf).
 
-Our presented architecture for the programmable economy is designed to greatly simplify critical public infrastructure such as land ownership. As technology experts we are unable to judge if laws of various countries are ready to transition to a world where analog printouts hold less authority and the digital world is the authoritative source of truth. To date it seems no country recognizes the electronic signatures created using self-sovereign identity systems.
+Our presented architecture for the programmable economy is designed to greatly simplify critical public infrastructure such as land ownership.
+As technology experts we are unable to judge if laws of various countries are ready to transition to a world where analog printouts hold less authority and the digital world is the authoritative source of truth.
+To date it seems no country recognizes the electronic signatures created using self-sovereign identity systems.
 
 The blockchain technology of today is sufficiently mature to start prototyping and understanding the (possible) advantages for land registration. 
-This technology is not yet sufficiently understood to underpin such an essential public service. 
-But it will be soon.
+This technology is not yet sufficiently understood to underpin such an essential public service, but it will be soon.
 Similar to self-driving cars, it is likely that legal issues will decelerate technological progress.
 
 ## Open Market for Mortgage Finance
 
-We created a minimal prototype to offer mortgage financing on a global, decentralized, blockchain-regulated and open market. This system enables financial service providers like banks to offer consumers mortgage products and obtain the required capital investments from the global market. This enables external investors such as foreign pension funds to invest in real-estate of financially solid countries with predictable return-on-investment and low risk. Traditionally the mortgage market is not unpermissioned or transparent. A screenshot of the developed application can be found in Figure x where the user interface is shown from the perspective of a financial institution. After providing the necessary documents, users looking for mortgage financing are able to negotiate one with a bank on our open platform.
+We created a minimal prototype to offer mortgage financing on an open, decentralized and blockchain-regulated market.
+Our application enables financial service providers like banks to offer consumers mortgage products and obtain the required capital investments from the global market.
+This enables external investors like foreign pension funds to invest in real-estate of financially solid countries with predictable return-on-investment and low risk.
+Traditionally the mortgage market is permissioned or nontransparent.
+This prototype aims to explore a viable and open alternative to decrease overhead of mortgage processes and offers a mortgage aftermarket where investors can negotiate agreements and trade.
+A screenshot of the developed application is presented in Figure x, displaying the user interface from the perspective of a financial institution.
 
-Every agreement reached between users in the market are stored as a double-signed contract on an unpermissioned and public blockchain. We distinguish between three different types of contracts in our market:
-- Mortage contracts: these contracts represent the initial mortgage agreement between a requester and a bank. This contracts contains all relevant information about the agreed mortgage, like the house address, mortgage rate and redemption.
-- Investment contracts: this type of contract is created when (a part of) a mortgage is sold to an investor. It describes properties the resold mortgage.
+Each agreement reached between individuals in the market are stored as a double-signed contract on an unpermissioned and public blockchain. The mortgage financing platform distinguishes between three different types of contracts:
+- Mortage contracts: this contract represent the initial mortgage agreement between a user and a mortgage provider, containing all relevant information about the agreed mortgage (i.e. the house address, mortgage rate and redemption agreements).
+- Investment contracts: this type of contract is created when (a part of) a mortgage is sold to an investor. It describes properties of the resold mortgage.
 - Transaction contracts: when a mortgage is transferred from one investor to another investor, a transaction contract is created.
-Investment and transaction contracts must have at least one contract where they depend on. For investment contracts, this should be a mortgage contract. Transaction contracts should have a investment contract as dependency. Contract dependencies, originating from a single mortgage contract, yields an overview of all owner transferrals since the existance of the mortgage.
+Investment and transaction contracts are expected to have at least one depending contract.
+For investment contracts, this should be a mortgage contract whereas transaction contracts should have a investment contract as dependency.
+Contract dependencies, originating from a mortgage contract, provide a public overview of all mortgage ownership transferrals since the existance of the mortgage contract.
 
-We designed a blockchain specifically for transactions that transfer ownership of assets between entities, in this scenario, mortgages. After a contract has been signed by both involved parties, both transaction participants send the contract to all banks (we assume that financial institutions are always connected to the market). Periodically, banks will try to create a new block, containing one or more received contracts. Contracts can only be appended to a transaction block if all of the contract's dependencies are already published on the blockchain. The adopted consensus mechanism here is proof-of-work: while the scalability of this mechanism is limited, it is viable for our prototype since mortgages won't be created and traded at a high rate. A dynamic difficulty target mechanism assures that on average, one block is added to the chain every three minutes.
+To store contractual agreements, a blockchain specifically for transactions that transfer ownership of assets between entities, in this scenario, mortgages, has been designed and implemented.
+After a contract has been digitally signed by both involved parties, both transaction participants send the contract to all banks (we assume that financial institutions are always available and connected on our platform).
+Periodically, banks will try to publish a new block, containing one or more received contracts, on the blockchain.
+Contracts can only be appended to a transaction block if all of the contract's dependencies are already available on the blockchain.
+The adopted consensus mechanism here is proof-of-work: while the scalability of this mechanism is limited, it is viable for our prototype since mortgages won't be created and traded at a high rate.
+A dynamic difficulty target mechanism assures that on average, one new block is added to the chain every three minutes.
 
-## Trust creation technology portfolio
+## Technology Portfolio for Trust Creation
 
-We now expand on each of the four layers of our envisioned architecture for a programmable economy, see Figure X.
-We now go into additional detail for each of the economic primitives: identity, trust, money, and markets.
+We now expand on each of the four layers of our envisioned architecture for a programmable economy, introduced in Figure X.
+The detailled architecture of the economic primitives digital identity, trust, programmable money, and marketplaces will be elaborated and is presented in Figure x.
 
 ![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/tech_stack.png)
 
 ### Physical Unclonable Functions
 
-The foundations of security are based on the laws of physics, we specifically avoid software and the risk of implementation bugs. For numerous years scientists have searched for a secure basis for critical infrastructure.
+The foundations of security are based on the laws of physics.
+We specifically avoid using software and the risk of implementation bugs or security weaknesses.
+For numerous years scientists have searched for a secure basis for critical infrastructure and we believe physical devices provide the desired basis.
 
-A physical uncloneable function (PUF) is a physical device that is easy and cheap to manufactor but practically infeasible to duplicate, due to process variation of the integrated circuit in the device. Their typical usage can be found in applications, requiring a high level of security, for instance, self-sovereign identity. The devices offers tamper-proof and safe storage of cryptographic keys. Each PUF device contains an unique fingerprint, determined by the randomness of embedded components. A PUF responds to challenges and leads to unique but unpredictable responses, together forming a challenge-response pair (CRP).
+A Physical Uncloneable Function (PUF) is a device that is easy and cheap to manufactor but practically infeasible to duplicate, due to minor variations in the manufactoring process of the hardware [[REF](Modeling SRAM start-up behavior for physical unclonable functions](http://ce-publications.et.tudelft.nl/publications/1298_modeling_sram_startup_behavior_for_physical_unclonable_fun.pdf)].
+Their typical usage can be found in applications that require a high level of security, for instance, self-sovereign identity solutions.
+The devices offers tamper-proof and safe storage of cryptographic keys.
+Each PUF device contains an unique fingerprint, determined by the randomness of embedded components.
+A PUF responds to challenges and leads to unique but unpredictable responses, together forming a challenge-response pair.
 
 ![image](https://user-images.githubusercontent.com/325224/27855788-122137a2-616c-11e7-8a8e-32f6a08f8b92.png)
 
-A key-storage system based on a PUF can be built in the following way. The mechanism proceeds in two phases, the enrollment phase, where a key, based on a PUF fingerprint is generated and stored and the reconstruction phase, which restores the secret key that was generated during the enrollment phase. This process is displayed in Figure x.
-* Enrollment phase: first, the reference response of the targeted PUF is measured. This response is used as input for the Fuzzy Extractor, which consists of a privacy amplification module and ECC encoding. The privacy amplification module converts the PUF reference response to a usable cryptographic key. Additionally, helper data is computed using error-correcting code (ECC) encoding and stored in memory attached to the device. This helper data itself is not sufficient to restore the secret key and is used during the reconstruction phase.
-* Reconstruction phase: reconstruction starts by measuring the PUF response, which is used as input for the Fuzzy Extractor. The helper data, generated during enrollment, is used to perform the information reconciliation and generates the PUF reference response. After privacy amplification, the programmed key is restored.
+A secure process for key storage based on a PUF device proceeds in two phases: the enrollment phase, where a key, based on a PUF fingerprint is generated and stored and the reconstruction phase, which restores the secret key that was generated during the enrollment phase.
+Each phase will now be elaborated according to the Figure x.
+- Enrollment phase: first, a so-called reference response of the targeted PUF is measured. This reference response is used as input for the Fuzzy Extractor, which consists of a privacy amplification module and Error-Correcting Code (ECC) encoding. The privacy amplification module converts the PUF reference response to a usable cryptographic key. Additionally, some helper data is computed and saved in storage attached to the device. This helper data itself is not sufficient to restore the secret key and is used during the reconstruction phase.
+- Reconstruction phase: reconstruction starts by measuring the PUF response, which is used as input for the Fuzzy Extractor. The helper data, generated during enrollment, is used to perform information reconciliation and generates the PUF reference response. After privacy amplification, the programmed cryptographic key is restored and ready for usage.
 
-PUFs can also be used for identification purposes. An authentication mechanism based on CRPs works as follows. The entity that aims to verify users based on a PUF, produces the device and stores an initial set of CRPs securely in his database. Next, the device is given to the user. When the user wishes to authenticate himself, he presents the PUF and the verifying party, in possession of a set of CRPs unique to this device, sends a random challenge to the device. If the PUF provides the correct response, the user is authenticated. Since cloning or mathematical modeling of the device is non-trivial, this is a secure mechanism to use for authentication.
-
-For TUDelft publication on PUF technology: "[Modeling SRAM start-up behavior for physical unclonable functions](http://ce-publications.et.tudelft.nl/publications/1298_modeling_sram_startup_behavior_for_physical_unclonable_fun.pdf)"
+PUFs can also be utilized for identification purposes.
+An authentication mechanism based on PUFs works as follows: imagine a bank that wants to identity customers.
+For each customer, the bank produces a PUF device and stores an initial set of challenge-response pair securely in their database.
+Next, the device is given to the customer.
+When the customer wishes to authenticate himself, he presents the PUF and the bank, in possession of a set of challenge-response pairs unique to this device, sends a random challenge to the PUF.
+If the device provides a correct response, the customer is authenticated.
+Since cloning or mathematical modeling of the device is non-trivial, this is a secure mechanism to deploy for authentication purposes.
 
 ### Biometric-based Authentication
 
-We present a mobile biometric-based authentication system that does not involve any central authority or specialized, licensed hardware. An proof-of-principle mobile application has been developed for Android, capable of matching fingerprints using the built-in device camera. By using device-specific components like the camera, no permissioned or specialized, contractual hardware is needed. This work provides a solution for portable trust and our framework has been specifically designed to serve as a building block for a self-sovereign identity solution.
+We present a mobile biometric-based authentication prototype that does not involve any central authority [[REF](https://arxiv.org/abs/1706.03744)].
+A proof-of-principle mobile application has been developed for Android, capable of matching fingerprints using the built-in device camera.
+By only utilizing device-specific components like the camera, no permissioned or specialized, contractual hardware is needed.
 
 <img src="https://cloud.githubusercontent.com/assets/325224/24321615/e9771e18-1150-11e7-91bf-484d44906fea.png" width="350">
 
-The procedure for fingerprint acquisition is divided into three components. First, the user opens the application and takes a photo of his or her finger inside an elliptic-shaped area. Next, the captured photo is processed and analyzed using a skin detection algorithm, noise reduction and contrast enhancements. A local feature detector, Oriented FAST and rotated BRIEF (ORB), is used to detect feature points which are used during the matching phase of the fingerprint. This yields the data presented in Figure x where the feature points are indicated as small dots. Finally, the captured fingerprint is matched against known ones available in the embedded database. Devices such as the Google Pixel which are equipped with 128GB of storage space, can store up to ten million fingerprints.
+The procedure for fingerprint acquisition is divided in three steps.
+First, the user opens the application and takes a photo of his or her finger inside an elliptic-shaped area.
+Next, the captured photo is processed and analyzed using various algorithms to extract minutiae fingerprint details.
+This yields the data given in Figure x where indicating feature points are indicated as small dots.
+Finally, the captured fingerprint is matched against known fingerprints available in the embedded database of the mobile device.
+Smartphones such as the Google Pixel which are equipped with 128GB of storage space, can store up to ten million fingerprints.
 
- [https://arxiv.org/abs/1706.03744](https://arxiv.org/abs/1706.03744)
-Operational open source framework, with low accuracy (proof-of-principle).
+After conducting a small experiment using our prototype, we conclude that our mean fingerprint matching accuracy is 55% with the highest value of 67% for thumb fingers.
+These experimental results show that there is definitely room for improvement during the fingerprint processing and matching stage, however, we demonstrated the feasibility of this approach.
+The ability to capture, process and match fingerprints in mere seconds, makes this concept usable in various scenarios like remote regions with limited internet connectivity.
+This work provides a solution for portable trust and our framework has been specifically designed to serve as a building block for a self-sovereign identity solution.
 
 ### Self-sovereign Identity
 
-One of the earliest centralized identity authorities is attributed to the roman emperor August who initiated a basic civil register. This register was helpful to collect and keep track of payed. This mechanism is an example of a centralized identity system where there is a single authority in control. This trend continued when society adopted digital solutions: issuers of digital identities like IANA, ICANN, the organization responsible for domain name registration, were mostly centralized (ref: http://www.coindesk.com/path-self-sovereign-identity/). Some identity systems took a small step beyond the centralized approach and offered hierarchical solutions like certificate authorities (CAs). Still, such systems rely on root authorities which form a single point of failure.
+. This continued when society adopted digital solutions: issuers of digital identities like IANA, ICANN, the organization responsible for domain name registration, were mostly centralized (ref: http://www.coindesk.com/path-self-sovereign-identity/). Some identity systems took a small step beyond the centralized approach and offered hierarchical solutions like certificate authorities (CAs). Still, such systems rely on root authorities which form a single point of failure.
 
 As internet usage increased, more and more digital services became available with the need for users to create their digital identity. This leaded to identity  fragmentation where a user had to manage multiple identities for different services. Initiatives like OpenID, Facebook Connect and OAuth attempted to address this problem by providing a single identity service. Websites are able to implement this identity service without much effort and allow users to login using the implemented service identity provider. Unfortunately, this kind of identification is again regulated by mostly centralized authorities. Additionally, identity service providers are now able to track users across different digital services.
 
