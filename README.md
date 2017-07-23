@@ -50,42 +50,57 @@ In 2017 we mathematically proven that our blockchain technology, TrustChain, sca
 
 ## Problem Description
 
-Contracts, transactions, and the records of them are among the defining structures in our economic, legal, and political systems [REF](https://hbr.org/2017/01/the-truth-about-blockchain). They protect assets and set organizational boundaries. 
+Contracts, transactions, and the records of them are among the defining structures in our economic, legal, and political systems [REF](https://hbr.org/2017/01/the-truth-about-blockchain).
+They protect assets and set organizational boundaries.
 These authentic records create ownership, determine citizenship, and define partnerships between entities.
-It establishes a goverance layer in which states, economic actors, and citizens interact.
-They create trust.
+It establishes a governance layer in which states, economic actors, and citizens interact, effectively creating trust.
 
-For thousands of years trusted guardians kept authentic ownership records of land and assets in general. These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with self-driving cars, trucks, drones, and barges. 
-This difference in innovation speed is creating increasing levels of friction around data governance, for instance, the debate "Land registration systems: public, private or privately public?" [[REF](https://www.degruyter.com/view/j/eplj.2017.6.issue-1/eplj-2017-0001/eplj-2017-0001.xml)]. 
+For thousands of years trusted guardians kept authentic ownership records of land and assets in general.
+These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with autonomous cars, trucks, drones, and barges. 
+This difference in innovation speed is creating increasing levels of friction around data governance. 
 The legal world might be at the beginning of a transition towards full digitization, additional standardization, and further automation. 
-Already 22 years ago the book "Law in a Digital World" was published, however deeds of land transfer are rarely pure bits.
+Already 22 years ago the book "Law in a Digital World" was published, however deeds of land transfer are rarely pure in digital form.
 
-Blockchain enthousiasts claim this technology offers an alternative to any trusted guardian and central bank. It offers us another way to organise society, with a high degree of decentralisation. The resilience of Bitcoin together with the rising gig economy endorses this claim.
-The breakthrough that made the gig economy possible was the use of reputation systems to build trust between strangers. Reputation systems collect and process information about past interactions, to help people evaluate the trustworthiness of others [REF](http://www.emeraldinsight.com/doi/pdfplus/10.1016/S0278-0984%2802%2911030-3). However, an individual’s reputation on a platform such as eBay is owned by a profit-driven entity. This leads to the following problems for the social good:
+Blockchain enthousiasts claim this technology offers an alternative to any trusted guardian and central bank.
+It offers us another way to organise society, with a high degree of decentralisation.
+The resilience of Bitcoin together with the rising gig economy endorses this claim.
+The breakthrough that made the gig economy possible was the use of reputation systems to build trust between strangers.
+Reputation systems collect and process information about past interactions, to help people evaluate the trustworthiness of others [REF](http://www.emeraldinsight.com/doi/pdfplus/10.1016/S0278-0984%2802%2911030-3).
+However, an individual’s reputation on a platform such as eBay is owned by a profit-driven entity.
+This leads to the following problems for the social good:
 - Lock-in. A solid reputation on one platform is locked into that platform: you cannot move your reputation. Like other forms of lock-in, this inhibits competition and encourages monopoly behavior. Ironically, companies in the "sharing economy" do not share reputations. Users are increasingly being protected by European Union law from such data silos. The newly defined right to data portability allows individuals to obtain and reuse their personal data for their own purposes across different services. 
-- Fragmentation. Each company operates its own closed market, only accessible through their smarphone app. This leads to lower overall efficiency, compared to a single open market. For example, the taxi market is fragmented into numerous closed markets operated by companies such as Uber, Lyft, BlaBla Car, Didi Kuaidi, GrabTaxi, Karhoo, etc. Each isolated marketplace tries to match drivers and customers in real-time.
+- Fragmentation. Each company operates its own closed market, only accessible through their smarphone app. This leads to lower overall efficiency, compared to a single open market. For example, the ride-hailing market is fragmented into numerous closed markets operated by companies such as Uber, Lyft, BlaBla Car, Didi Kuaidi, GrabTaxi and Karhoo.
+- Each isolated marketplace tries to match drivers and customers in real-time and have to overcome similar challenges.
 
 Centralized approaches are ultimately always influenced by the goals and the reliability of the central entity or authority that controls them. 
-One economic model even predicts the rise of predatory platforms within two-sided markets [[REF](http://andras.niedermayer.ch/wp-content/uploads/2014/08/PFS-2016-06-27-AN-SL.pdf)].
-For these reasons central platforms can never be truly generic and universal. 
-With a decentralized approach, multiple independent individuals cooperate in some manner to build a single ecosystem and no one entity has control over the entire environment. This is the model we envision for the future programmable economy: trust relations are not locked to a single profit-driven entity.
+One economic model even predicts the rise of predatory, monopolistic platforms within two-sided markets [[REF](http://andras.niedermayer.ch/wp-content/uploads/2014/08/PFS-2016-06-27-AN-SL.pdf)].
+For this reason, central platforms can never be truly generic and universal. 
+With a decentralized approach, multiple independent individuals cooperate in some manner to build a single ecosystem and no one entity has control over the entire environment.
+This is the model we envision for the future programmable economy: trust relations are not locked to a single profit-driven entity.
 
-The cardinal problem is: "who owns trust"? Creating trust within a public infrastructure has proven to be a hard unsolved problem.
+The cardinal problem is: "who owns trust"?
+Creating and maintaining trust within a public, shared infrastructure has proven to be a hard problem.
+While there is much conducted research on this specific topic, a reliable, secure and real-world deployed trust mechanism stays out.
 
-In May 1962 the vision of a "[time-sharing computer system with many
-remote stations](http://dl.acm.org/citation.cfm?id=1460847)" was presented, known as The Internet today.
-Nobody owns The Internet. This has been a critical factor for its decades long success story. The Internet consists of numerous Autonomous Systems which are loosely coupled and have a common numbering mechanism.
-On top of this global communication infrastructure we build email, videoconferencing, entertainment platforms, search engines, marketplaces, countless cloud services, and essentially a digital economy. These examples often contain a single central point of control and authority.
-It has proven hard to create a decentralized governance layer for such vital public infrastructure.
+In May 1962 the vision of a "[time-sharing computer system with many remote stations](http://dl.acm.org/citation.cfm?id=1460847)" was presented, known as The Internet today.
+Nobody owns The Internet.
+This has been a critical factor for its decades long success story.
+The Internet consists of numerous Autonomous Systems which are loosely coupled and have a common numbering mechanism.
+On top of this global communication infrastructure we build email, videoconferencing, entertainment platforms, search engines, marketplaces, countless cloud services, and essentially a digital economy.
+However, these examples often contain a single central point of control and authority.
+It has proven to be hard to create a decentralized governance layer for such vital public infrastructure.
 
-Joseph Stiglitz co-authored the "Architecture of Economic Systems" in 1985, describing how decision making units can be organized together within a system. It presents a basic framework to compare the performance of decentralized and centralized economic systems. Centralized economic systems have given way to decentralized forms. The current challenge is to further refine the decentralized form: storage and governance 
-of authoritative answers to ownership questions use a public and transparent infrastructure.
+Joseph Stiglitz co-authored the "Architecture of Economic Systems" in 1985, describing how decision making units can be organized together within a system.
+It presents a basic framework to compare the performance of decentralized and centralized economic systems.
+Centralized economic systems have given way to decentralized forms.
+The current challenge is to further refine the decentralized form: storage and governance of authoritative answers to ownership questions use a public and transparent infrastructure.
 
 Trust, accountability, and reputation mechanisms are closely tied.
 Transparency can be used to make an authority accountable in order to establish trust. 
 It promotes integrity of operations by monitoring the correct behavior of economic actors [[REF](https://www.petsymposium.org/2017/papers/issue4/paper87-2017-4-source.pdf)].
 
-Creating trustworthy, public, transparent, and decentralized infrastructures is hard. We lack a decentral infrastructure for essential economic primitives such as: identity, money, trust, and markets. 
+Creating trustworthy, public, transparent, and decentralized infrastructures is hard.
+We lack a decentral infrastructure for essential economic primitives such as digital identities, money, trust, and marketplaces. 
 
 ## Architecture for Creating Trust
 
