@@ -335,35 +335,73 @@ Statement validation is a prime example of a Zero-Knowledge Proof in which the i
 This implies that an alcohol shop is able to verify that a customer reached the eligable age but is not exposed to the actual age of the customer.
 The described system is in particular useful when trading since sellers are able to specify trade-specific identity requirements that buyers have to fulfill before a transaction takes place (i.e. restrictions on age, residence or reputation).
 
-### TrustChain
+### Blockchain Layer (TrustChain)
 
-The TrustChain transaction fabric is designed around the notion of agents performing transactions with each other. In comparison to traditional blockchain constructions like Bitcoin or Ethereum, each agent in the TrustChain network maintains and grows their own chain of historical transactions. We now discuss the creation, storage and dissemination of transactions recorded on TrustChain.
+The TrustChain transaction fabric is designed around the notion of entities performing transactions with each other.
+Each user in the TrustChain network maintains and grows their own chain of historical transactions. 
+This is in contrast to traditional blockchain constructions like Bitcoin or Ethereum, where a single, global ledger is maintained, containing all transactions since the inception of the platform.
+We now discuss the creation, storage and dissemination of transactions recorded on TrustChain.
 
 ![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/trustchain_tutorial_1.png)
 
-Figure x shows a transaction record which is the output of an interaction between user A and B. Both users cryptographically sign this transaction, acknowledging that they agree with the transaction. After the signatures are placed, both users persist the transaction data to their local storage.
+Imagine two users that are performing a transaction with each other.
+This transaction can be transferral of money, exchanging data or a transfer of ownership of a specific asset.
+Figure x shows a record which is the output of a transaction between aforementioned users.
+Both users cryptographically sign this transaction, acknowledging that they agree with the content of this transaction.
+After the signatures are placed, both users persist the record to their local storage.
 
 ![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/trustchain_tutorial_2.png)
 
-A natural way to organize transactions is to chain them together. Transactions are stored in a blockchain data structure where each block contains exactly one transaction, both signatures of the interacting agents and a pointer to the prior block in the chain. This pointer is the hash value of the previous block in the chain (any secure hashing algorithm can be used for this purpose). This idea is illustrated in Figure x. Furthermore, each block is accompanied with a sequence number, uniquely identifying the specific block in the chain. Each user creates a genesis block and keeps track of their own transaction history. Every transaction block is present in the chain of both transaction participants.
+A possible way to organize transactions is to chain them together.
+Transactions are stored in a blockchain data structure where each block contains exactly one transaction, both signatures of the interacting agents and a pointer to the prior block in the blockchain.
+To be precise, this pointer is a description of the previous block in the form of a digital hash (any secure hashing mechanism can be used for this purpose).
+This idea is illustrated in Figure x.
+Furthermore, each block is accompanied with a sequence number, uniquely identifying a specific block in the chain.
+Each user creates a genesis block and keeps track of their own transaction history.
+Every transaction block is present in the chain of both transaction participants.
 
-The data structure in Figure x is void of any control by other users. As a consequence, a user is able to tamper with their chain of transactions by inserting, removing or reordering records, without being noticed. The integrity of this new transaction chain can be restored by recomputing all prior pointers. In this situation, users are unable to prove malicious modifications of one's chain. Users might also choose to not append a transaction to their local chain, i.e. if this transaction has a negative impact on this user.
+The data structure shown in Figure x is void of any control by other users. As a consequence, a user is able to tamper with their chain of transactions by inserting, removing or reordering records, without being noticed.
+The integrity of this new transaction chain can be restored by recomputing all prior pointers.
+In this situation, users are unable to prove malicious modifications of one's chain.
+Users might also choose to not append a transaction to their local chain which is tempting if the particular transaction has a negative impact on the standing of the involved user.
 
 ![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/trustchain_tutorial_3.png)
 
-This vulnerability is mitigated by including an additional pointer in each block, see Figure x. This pointer is a reference to the prior block in the chain of the other transaction participants. When two users are interacting, their chains get intertwined or entangled. This mechanism strenghtens the tamper-proof property of TrustChain. As presented in Figure x, each block has two incoming and two outgoing pointers. Note that this scheme can easily be extended to support transactions between more than two participants, by incrementing the amount of outgoing pointers in a block.
+This vulnerability is mitigated by adding an additional pointer in each block, see Figure x.
+This pointer references to the prior block in the chain of the other transaction participant.
+Now, when two users are interacting, their chains get intertwined or entangled.
+This mechanism strenghtens the tamper-proof property of TrustChain.
+As presented in Figure x, each block has two incoming and two outgoing pointers.
+Note that this scheme can easily be extended to support transactions between more than two participants, by increasing the amount of outgoing pointers of a block.
 
 ![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/trustchain.png)
 
-As users complete transactions with each other, they become quickly entangled with other users. Figure x shows a part of the distributed TrustChain ledger. Seven blocks, created by seven participants are displayed, together forming a directed acyclic graph (DAG). Again, note that each block contains exactly two incoming and two outgoing pointers.
+As entities perform transactions with each other, they become quickly entangled with others.
+Figure x shows a part of the distributed TrustChain ledger.
+Seven blocks, created by seven unique participants are displayed.
+Again, note that each block contains exactly two incoming and two outgoing pointers.
 
-Before a new block is added to a chain, a validation process takes place to verify the consistency and integrity of the local chain. This validation includes a verification of the pointers, hash values, transaction data, and signatures <CITE GITHUB>. Only if the aforementioned checks pass, the block is appended to the chain, committed to the local storage and optionally shared with other users.
+Before a new block is added to a chain, a validation process takes place to verify the consistency and integrity of the local chain.
+This validation includes a verification of the pointers, hash values, transaction data, and signatures [[REF](https://github.com/Tribler/tribler/blob/ec348729d8581499099be85804c143e6f671ffbf/Tribler/community/trustchain/block.py#L78)].
+Only if the aforementioned checks pass, the block is appended to the chain, committed to the local storage and optionally shared with other users.
 
-Our approach differs from second generation blockchains in various ways. Instead of a global, consistent and distributed ledger, every user maintains a personal history of interactions where in most blockchain-based systems, there exists one ledger which is acknowledged by a majority of the network participants. Consistency is achieved by a consensus mechanism like proof-of-work or proof-of-stake. While network consistency is essential for a cryptocurrency system to prevent the double spending attack, it is not a hard requirement for a generic transaction ledger. In essence, we do not aim to prevent fraudulent operations but rather be able to detect them afterwards during the verification stage when appending new transaction records to a local chain. The absence of a global consensus mechanism allows for superior scalability with regard to transaction throughput since parallel transaction processing is inherently possible in TrustChain.
+Our approach differs from traditional blockchain fabrics in various ways.
+Instead of a global, consistent and distributed ledger, every user maintains a personal history of interactions where in most blockchain-based systems, there exists one ledger which is acknowledged by a majority of the network participants.
+Consistency of the global ledger is achieved by a consensus mechanism like proof-of-work or proof-of-stake.
+While network consistency is essential for a cryptocurrency system to prevent the double spending attack, it is not a hard requirement for a generic transaction ledger like TrustChain.
+In essence, we do not aim to prevent fraudulent operations but rather be able to detect malicious activities afterwards.
+The absence of a global consensus mechanism allows for superior scalability with regard to transaction throughput since parallel transaction processing is inherently possible in TrustChain.
+Finally, at a minimum, network participants only have to store the transactions that they are involved in, significantly lowering the storage requirements compared to other blockchains.
 
-TrustChain blocks are designed to be disseminated and replicated in the network. In particular, this is important when using a transaction history as input for a reputation mechanism (see Section x). Additionally, this makes the system resistant against network churn where users go on- and offline at a fast rate. Each user operates on their own bulk storage of blocks, resulting in partial storage of the global graph. Collecting information of other users is challenging due to the vulnerability to various attacks, their limited resources and the burst of their interactions. Prior work investigates this problem and propose solutions for reliable and secure record collection <CITES>.
+TrustChain blocks are designed to be disseminated and replicated in the network.
+In particular, this is important when transaction history is used as input for a reputation mechanism (see Section x).
+Additionally, replication of blocks makes the system resistant against network churn where users go on- and offline at a fast rate.
+Each user operates on their own bulk storage of blocks, resulting in partial storage of the global ledger.
+Collecting information of other users is challenging due to the vulnerability to various attacks, their limited resources and the burst of their interactions.
+Prior work investigates this problem and propose solutions for reliable and secure block collection <CITES>.
 
-TODO: misschien hier nog wat afsluitende woorden over TrustChain? Bijv: we envision TrustChain as a generic transaction ledger, used on a large scale bla bla...
+We envision TrustChain as an essential building block in our programmable economy, providing the foundation for trustworthiness estimation and transaction recording.
+The superior scalability and reduced storage requirements makes our transaction ledger suitable in the context of identity management and trading.
 
 ### Scalable Consensus
 
