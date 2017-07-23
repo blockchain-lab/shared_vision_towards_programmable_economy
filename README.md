@@ -405,52 +405,139 @@ The superior scalability and reduced storage requirements makes our transaction 
 
 ### Scalable Consensus
 
-Most blockchain fabrics have a requirement for a consistent state which is agreed upon by (a part of) the network. This requirement holds in particular when considering digital money (cryptocurrencies) like Bitcoin or Ethereum. Consensus is usually in place to prevent the double-spending attack where users transfer the same digital asset twice in multiple transactions. Possibility of such an attack impacts reliability and trust of the system. Unfortunately, most consensus mechanisms are computationally expensive and limit the global transaction throughput of the system. For instance, the Proof-of-Work consensus mechanism implemented in the Bitcoin fabric limits the theoretical transaction throughput to around seven transactions per second which is by far not enough for a medium to large-sized trading platform. In comparison, Visa processes several hundreds of transactions every second. In April 2017, SWIFT recorded an average of 28.38 million FIN messages per day, around 328 per second. This motivates the need for scalability.
+Most blockchain fabrics have a requirement for a consistent state which is agreed upon by (a part of) the network.
+This requirement holds in particular when considering digital money (cybercurrencies) like Bitcoin or Ethereum.
+Consensus of the global ledger is necessary to prevent the double-spending attack where users transfer the same digital asset twice in multiple transactions.
+Possibility of such an attack impacts reliability and trust of the overall system, preventing community adoption.
+Unfortunately, most consensus mechanisms are computationally expensive and limit the global transaction throughput of the system.
+For instance, the proof-of-work consensus mechanism implemented in the Bitcoin fabric limits the theoretical transaction throughput to around seven transactions per second which is by far not enough for a medium to large-sized trading platform.
+In comparison, Visa processes several hundreds of transactions every second and in April 2017, SWIFT recorded an average of 28.38 million payments per day, around 328 per second.
+This motivates the need for scalability.
 
-We designed, implemented and evaluated a fault-tolerant, horizontal scalable consensus mechanism, capable of detecting malicious activities performed by users. As far as the authors are aware, this is the first horizontal scalable blockchain fabric. We built our system based on three important objectives:
+We designed, implemented and evaluated a fault-tolerant, horizontal scalable consensus mechanism on top of TrustChain, capable of detecting malicious activities like double-spending by users.
+As far as the authors are aware, this is the first horizontal scalable blockchain fabric.
+We built our system based on three important objectives:
 - Reaching global consensus on a global state: global consensus renders many types of malicious activities useless since the global state has consent of honest users in the network.
-- Fault tolerance: our consensus mechanism should be unaffected by the presence of adversaries, with or without purpose attempting to manipulate the outcome of the global consensus. Usually, these attacks are successful when the amount of adversary users reach a specific threshold. Additionally, each transaction must be verifiable after consensus is reached.
-- horizontal scalability: in this context, horizontal scalability means that as more users participate in the network, the global transaction throughput increases. Note that the Bitcoin system is not horizontal scalable since the global transaction throughput is not dependent on the amount of users in the network.
+- Resistance against malicious users: our consensus mechanism should be unaffected by the presence of malicious users, with or without purpose attempting to manipulate the outcome of the global consensus. Usually, these attacks are successful when the amount of malicious users reach a specific threshold.
+- horizontal scalability: in this context, horizontal scalability means that as more users join the TrustChain network, the global transaction throughput increases. Note that the Bitcoin system is not horizontal scalable since the global transaction throughput is not dependent on the amount of users in the network.
 
 ![image](https://github.com/blockchain-lab/shared_vision_towards_programmable_economy/blob/master/trustchain_cp.png)
 
-We extend the TrustChain data structure with a new type of block, called a checkpoint block. This is displayed in Figure x, showing a transaction block (described in Section x) and a checkpoint block. A checkpoint block consists of a pointer to a previous block in the same chain, a number indicating the consensus round after which the specific checkpoint block has been created, a cryptographic hash of the consensus result and a digital signature, generated by the owner of the chain. We modify the data structure such that the first block in a chain (the genesis block) is always a checkpoint block. The available checkpoint blocks in a chain are used during detection of malicious activities.
+First, the TrustChain data structure discussed in Section x is slightly modified by adding a new type of block, called a checkpoint block.
+This type of block is displayed in Figure x, presenting both a transaction block and a checkpoint block.
+A checkpoint block consists of a pointer to a previous block in the same chain, a number indicating the round of the consensus mechanism after which the specific checkpoint block has been created, a cryptographic description of the result of the consensus and a digital signature, generated by the owner of the chain.
+We modify the data structure such that the first block in a chain (the genesis block) is always a checkpoint block.
+The available checkpoint blocks in a chain are used during detection of malicious activities.
 
-Our consensus mechanism proceeds in rounds. The outcome of each round is a set of checkpoint blocks agreed by the facilitators of that round. Facilitators are special user, selected during the first phase in a round of consensus. These facilitators reach consensus not on the individual transactions like in Bitcoin or Ethereum but on the state of every chain. There are two scenarios. If a specific user is not a facilitator, it sends its most recent checkpoint block to all facilitators. When the facilitators received a sufficient number of checkpoint blocks, they start to reach consensus on all received checkpoint blocks using an Asynchronous Subset Consensus (ACS) algorithm. When this algorithm is finished, the facilitators send two messages to all nodes, first the consensus result and second a signature message where the facilitator signed the consensus result, adding authenticity to the consensus result. When a user receives the consensus result and a sufficient amount of valid facilitator signatures, a new checkpoint block is created and appended to the chain. Finally, the new set of facilitators is computed from the new consensus result and the round number is increased. The process starts over now.
-  
-### Trustworthiness and Reputation
-
-To quantity trustworthiness, a reputation mechanism is required. Fifteen years of research on generic distributed reputation systems has yielded a wide variety of proposed designs and possible solutions. However, none of them have proven to work in the real world. Prior work challenges the problem of reliable estimating reputation using graph flow algorithms. This mechanism is called BarterCast and has been verified by a real-world implementation in our file-sharing software named Tribler. The most challenging attack is the Sybil attack, where a malicious user manipulates his or her standing in the network by creating multiple fake identities (sybils) and initiating interactions with them. To date, the Sybil attack remains largely unsolved and solutions that prevent the effects of such an attack, are often complex.
-
-Building a reputation mechanism on top of TrustChain has several advantages. First, TrustChain records are light-weight and designed to be exchanged with other users. More importantly, the inherent tamper-proof property of TrustChain strenghtens the reputation system since it becomes infeasible to tamper with past interactions. This already addresses the misreport problem of BarterCast.
-
-Our reputation mechanism is based on PageRank, designed in 1998 by Larry Page and is called Temporal Pagerank since it encorporates the notion of time. PageRank is a very accurate model that captures user behaviour when browsing the web and yields a ranking of websites based on relevance for that user. The algorithm models websites and links between websites as a network and explores this network in a structured manner. Temporal Pagerank essentially functions in the same way, exploring the TrustChain data structure and analysing past transactions. Additionally, it is a relatively simple and cheap technique from a computational perspective, requiring only minimal computational resources. Temporal Pagerank determines trustworthiness scores for other users from the perspective of the user performing the computation and is somewhat resistant against Sybil attacks in a sense that attacks performed in the past have only a minor influence on the outcome of reputations.
-
-Temporal Pagerank has a weak property of transitive trust. Transitive trust means that trust is not only established between two users but is transferred upon further interactions. This means that if a specific person A trusts another person B well, he is also tempted to trust person C that is introduced to him by B, in other words, A trusts C to some extend since A trusts B and B trusts C. This is a situation that occurs often in the real world since we are tempted to trust individuals introduced by a trustworthy entity.
-
-To demonstrate the feasibility of Temporal Pagerank, we evaluated the mechanism using a real-world interaction trace, extracted from our file-sharing network Tribler for over a month. This trace consists of 917 different identities which are not necessarily unique users and around 200.000 unique transactions. The result of our experiment is displayed in Figure x. The horizontal axis displays the number of users in the trace and the vertical axis shows time it takes to compute a reputation score for all these users. For a network with 900 identities, we notice that it takes just under 12 seconds to compute reputations. It is often not necessary to determine reputation of all users in the network; in most scenarios, determining reputations of identities you are likely to interact with is sufficient. However, we have demonstrated that Temporal Pagerank is a feasible mechanism to use for trustworthiness estimation, even when the size of the network grows.
-
-### Decentralized Marketplace
-
-Our final piece of the architecture is an operational prototype for a generic, decentralized two-sided marketplace, capable of trading generic assets like houses, currencies or bonds. The platform facilitates trading without presence of a central clearinghouse performing matchmaking. Matchmaking, clearing and settlement proceeds in a completely decentralized fashion where autonomous entities are directly exchanging buy and sell offers. Every trader operates on their own orderbook and acts as a matchmaker, attempting to match buy and sell offers. Assets are stored in wallets which are used to query available assets or to transfer assets to others. When a trade between market participants has been settled, the transaction details like the type, quantity and price of the exchanged assets are stored on TrustChain (see Section x) and gossiped to other traders. This transaction history is used as input for trust estimation. Our market is secured against malicious behaviour and built to be operational in the presence of a large amount of traders. We build our decentralized marketplace and integrated it in Tribler. The initial release supports trading bandwidth against both crypto- and regular currencies, using the Internet-of-Money module discussed in Section x. Figure x shows the orderbook of a trader in the Tribler software. Information about installed wallets of a trader are present in the upper-right corner of the window. Finally, our market is void of any transaction fee, enabling  unrestricted and fair trading unlike most existing blockchain-based exchanges.
-
-To obtain insight in the real-world efficiency of our system, we evaluate matching efficiency of Uber taxi drives. Uber, one of the largest companies operating in the sharing economy, can be considered as a two-sided market where taxi drivers, offering a ride to a location, are matched against users requesting transportation. Since there is no public, reliable dataset provided by the Uber platform, we use historical information of taxi rides published by the government of New York instead <ref>. The dataset provides insights in time and location of pickup and dropoff location of each taxi ride. We assume that the dropoff location of a taxi ride is the location where the taxi driver waits for a new ride request. We assume a total of 1100 taxi drivers and 1000 users requesting transportation. It is also assumed that only the taxi drivers perform matching since they are likely to be connected to the network for a longer time whereas taxi requester most likely closes the application when a taxi has been located. Matching between taxi drivers and requesters is based on the mimimal distance between the driver and requester, determined by the great-circle distance.
-
-Figure x shows the relation between decentralization and efficiency. The horizontal axis denotes the percentage of taxi drivers performing matchmaking whereas the vertical axis represents the average distance between the matched driver and the requester. It is clear that decentralization negatively impacts matching efficiency which is expected since each matchmaker only holds partial knowledge of the global order book. In particular, a matchmaker might not be aware of an offer that could improve his proposed matching. This effect can be reduced by synchronizing orderbooks between matchmakers, at the cost of additional required network communication but increased matching efficiency.
+Our consensus mechanism proceeds in rounds and each round consists of two phases.
+The outcome of each round is a set of checkpoint blocks agreed on by the facilitators of that round.
+Facilitators are special user, selected during the first phase in a round of consensus.
+These facilitators reach consensus not on the individual transactions like in Bitcoin or Ethereum but on the state of every chain.
+There are two scenarios.
+If a specific user is not a facilitator, it sends its most recent checkpoint block to all facilitators.
+When the facilitators received a sufficient number of checkpoint blocks, they start to reach consensus on all received checkpoint blocks using an Asynchronous Subset Consensus (ACS) algorithm.
+When this algorithm is finished, the facilitators send two messages to all nodes, first the consensus result and second a signature message where the facilitator signed the consensus result, adding authenticity to the consensus result.
+When a user receives the consensus result and a sufficient amount of valid facilitator signatures, a new checkpoint block is created and appended to the chain.
+Finally, the new set of facilitators is elected and the round number is increased.
+The process starts over now.
 
 ### TrustChain Experiments
 
-We have implemented TrustChain and the scalable consensus mechanism discussed in Section x. This section will focus on experimentation to assess the global transaction throughput and consensus duration. It is assumed that every node generates two transactions per second. We investigate the effect of the number of facilitators in the network; due to implementation-specific constraints, our network can host at most 32 facilitators. The size of each transaction is approximately 500 bytes. It is assumed that every user knows the IP address and identity of all other users. All experiments are executed on the DAS-5 supercomputer.
+We have implemented TrustChain and the scalable consensus mechanism discussed in the previous sections.
+This section will focus on experimentation to assess the global transaction throughput and consensus duration.
+It is assumed that every user initiates two transactions per second.
+We investigate the effect of the number of facilitators in the network; due to implementation-specific constraints, our network can host at most 32 facilitators.
+The size of each transaction is approximately 500 bytes, resembling the average size of Bitcoint transactions.
+In this experiment, each user transacts with another user in a fixed set of other users.
 
 ![image](https://user-images.githubusercontent.com/1093806/28093480-c16898e2-6697-11e7-9c7b-3afd03374a21.png)
 
-The global throughput of the mechanism is displayed in Figure x. On the horizontal axis, the network size is shown as the amount of users whereas the vertical axis denotes the transaction throughput in transactions per second. In this experiment, each user transacts with another user in a fixed set of neighbours. As a first observation, note the linear relationship in the figure between the population size and transaction throughput; this strongly indicates the horizontal scalability property for a network up to 1400 users. The throughput rate lowers when the number of facilitators in increased. This is explained by the fact that more facilitators require additional network communication between users, introducing overhead and latency.
+The global throughput of TrustChain is displayed in Figure x.
+On the horizontal axis, the network size is shown as the amount of users whereas the vertical axis denotes the transaction throughput in transactions per second.
+As a first observation, note the linear relationship in the figure between the network size and transaction throughput; this strongly indicates the horizontal scalability property for a network up to 1400 users.
+The throughput rate lowers when the number of facilitators in increased. This is explained by the fact that more facilitators require additional network communication between users, introducing additional computational effort.
 
-Figure x indicates that we have indeed created a scalable consensus mechanism, not bounded by a wasteful, expensive consensus mechanism like Proof-of-Work. With only a few servers, our consensus mechanism is able to reach global throughput rates surpassing that of Visa or SWIFT. Together with components higher in our technology stack, we enabled trusted trade at a large scale.
+Figure x indicates that we have indeed designed a scalable consensus mechanism, not bounded by a wasteful, expensive consensus mechanism like Proof-of-Work.
+With only a few servers, our consensus mechanism is able to reach global throughput rates surpassing that of Visa or SWIFT.
+  
+### Trustworthiness and Reputation
 
+One way to quantity trustworthiness in an economic ecosystem, is by using a reputation mechanism.
+Reputation systems are widely used but the trust is often centered to a single authority.
+Fifteen years of research on generic distributed reputation systems has yielded a wide variety of proposed designs and possible solutions.
+Prior work by us challenges the problem of estimating reputation using network flow algorithms.
+This mechanism is called BarterCast and has been verified by a real-world implementation in our file-sharing software Tribler.
+The most challenging attack on decentralized reputation systems is the Sybil attack, where a malicious user manipulates his or her standing in the network by creating multiple fake identities (sybils) and initiating interactions with them.
+To date, the Sybil attack remains largely unsolved and solutions that prevent manifestation such an attack, are often complex.
+
+We have built and evaluated a distributed reputation mechanism, using irrefutable TrustChain records as foundation.
+Building a reputation mechanism on top of TrustChain has several advantages.
+First, TrustChain records are light-weight and designed to be exchanged with other users.
+More importantly, the inherent tamper-proof property of TrustChain strenghtens the reputation system since it becomes infeasible to tamper with past interactions.
+
+Our reputation mechanism is based on PageRank, designed in 1998 by Larry Page and is called Temporal Pagerank since it encorporates the notion of time.
+PageRank is an accurate model that captures user behaviour when browsing the web and yields a ranking of websites based on relevance for that user.
+The algorithm models websites and links between websites as a network and explores this network in a structured manner.
+Temporal Pagerank works in the same way, exploring the TrustChain data structure and analysing past transactions.
+Additionally, it is a relatively simple and cheap technique from a computational perspective, requiring only minimal computational resources.
+Temporal Pagerank determines trustworthiness scores for other users from the perspective of the user performing the computation and is somewhat resistant against Sybil attacks in a sense that such attacks performed in the past only have minor influence on the outcome.
+
+Temporal Pagerank incorporates a weak form of transitive trust.
+Transitive trust implies that trust is not only established between two users but is transferred upon further interactions.
+Specifically this indicates that if a specific entity A trusts another entity B well, he is also tempted to trust an entity C that is introduced to him by B.
+This is a situation that occurs frequently in the real world since we are inclined to trust individuals introduced by a trustworthy entity.
+
+To demonstrate the feasibility of Temporal Pagerank, we evaluated the mechanism using a real-world interaction trace, extracted from our file-sharing network Tribler for over a month.
+This trace includes 917 unique identities and around 200.000 unique transactions.
+The result of our experiment is displayed in Figure x.
+The horizontal axis displays the number of users in the trace and the vertical axis shows the time it takes to compute a reputation score for all these users.
+For a network with 900 identities, it seems that it takes just under 12 seconds to compute reputation scores.
+It is often not necessary to determine reputation of all users in the network; in most scenarios, determining reputations of identities you are likely to interact with is sufficient.
+However, we have demonstrated that Temporal Pagerank is a feasible mechanism to use for trustworthiness estimation, even when the amount of users in the network grows.
+
+### Real-time Clearance and Settlement
+
+### Decentralized Marketplace
+
+The final piece of our trust architecture is an operational prototype for a generic, decentralized two-sided marketplace, capable of trading generic assets like houses, currencies or bonds.
+The platform facilitates trading without presence of a central clearinghouse performing matchmaking and processing trades.
+Matchmaking, clearing and settlement proceeds in a completely decentralized fashion where autonomous entities are directly exchanging buy and sell offers.
+Every trader operates on their own orderbook and acts as a matchmaker for others, attempting to match buy and sell offers.
+Assets are stored in wallets which are used to query available balance or to transfer assets to others.
+When a trade between market participants has been settled, the transaction details including the type, quantity and price of the exchanged assets are stored on TrustChain (see Section x) and gossiped to other traders.
+This transaction history is used as input for trust estimation (see Section x).
+Our marketplace is secured against malicious behaviour and built to be operational in the presence of a large amount of traders.
+Finally, our market is void of any transaction fee, enabling unrestricted and fair trading unlike most existing blockchain-based exchanges.
+
+We built our decentralized marketplace and integrated it in Tribler.
+The initial release of the marketplace supports trading bandwidth against both crypto- and regulated currencies, using the Internet-of-Money module discussed in Section x.
+Figure x shows the orderbook of a trader in the Tribler software.
+Information about installed wallets of a trader are present in the upper-right corner of the window.
+
+To obtain insight in the real-world efficiency of our system, we evaluate matching efficiency of Uber taxi drives.
+Uber, one of the largest companies operating in the sharing economy, can be considered as a two-sided market where taxi drivers, offering a ride to a location, are matched against users requesting transportation.
+Since there is no public, reliable dataset provided by the Uber platform, we use historical information of taxi rides published by the government of New York instead <ref>.
+The dataset provides detailled temporal and geographical information of pickup and dropoff location of each taxi ride.
+We assume a total of 1100 taxi drivers and 1000 users requesting transportation.
+It is also assumed that only the taxi drivers perform matching since they are likely to be connected to the network for a longer time whereas passengers most likely close the application when a taxi is available for them.
+Taxi drivers and passengers are matched based on their geographical distance.
+
+Figure x shows the relation between rate of decentralization and efficiency during our evalution.
+The horizontal axis denotes the percentage of taxi drivers performing matchmaking whereas the vertical axis represents the average distance between the matched driver and the requester.
+The first data point in Figure x is equivalent to the situation where there is a central matching service, like Uber.
+It is clear that decentralization negatively impacts matching efficiency which is expected since each matchmaker only holds partial knowledge of the global order book.
+In particular, a matchmaker might not be aware of an offer that could improve his proposed matching.
+This effect can be reduced by synchronizing orderbooks between matchmakers, at the cost of additional required network communication but increased matching efficiency.
 
 ## Conclusions
 
-Over the past few years, blockchain technology has attracted a significant amount of media attention. The adoption and growth of blockchain-powered platforms like Ethereum and Bitcoin raised questions whether blockchain is able to provide value within economic processes like trading, banking and the value chain. Besides illegal trading and various security weaknesses resulting in compromised digital assets, there are to date few real-world results demonstrating long-term viability of blockchain technology in our legal systems. We believe this is caused by a fundamental lack of ties to any real-world, legal system.
+Over the past few years, blockchain technology has attracted a significant amount of media attention.
+The adoption and growth of blockchain-powered platforms like Ethereum and Bitcoin raised questions whether blockchain is able to provide value within economic processes like trading, banking and the value chain.
+Besides illegal trading and various security weaknesses resulting in compromised digital assets, there are to date few real-world results demonstrating long-term viability of blockchain technology in our legal systems.
+We believe this is caused by a fundamental lack of ties to any real-world, legal system.
 
-We proposed a novel architecture to create trust. Each component of our technology portfolio is designed and implemented based on the philosophy of the Internet itself: loosly coupled autonomous systems. The essential technology to cultivate trust within our decentralized technology platform is TrustChain, a blockchain built around the notion of transacting real-world entities. Extended with a mathematical-proven scalable consensus mechanism, TrustChain yields transaction throughputs surpassing that of most traditional blockchain fabrics and scales up to Visa or SWIFT-comparable performance levels. Our open-source infrastructure is shown to be viable in various real-world applications: trading mortgage finance, programming money flows and matching taxi drivers with passengers.
+We proposed a novel architecture to create trust.
+Each component of our technology portfolio is designed and implemented based on the philosophy of the Internet itself: self-governance and loosly coupled autonomous systems, interacting with each other.
+The essential technology to cultivate trust within our decentralized technology platform is TrustChain, a blockchain built around the notion of transacting real-world entities.
+Viability of our proposed technology portfolio is demonstrated in the real-world, with running code.
+Our aim is to adopt the programmable economy as a mean to decrease organizational barriers, increase trading efficiency and provide more transparancy and openness in existing and new economic ecosystems.
