@@ -297,17 +297,43 @@ This work provides a solution for portable trust and our framework has been spec
 
 ### Self-sovereign Identity
 
-. This continued when society adopted digital solutions: issuers of digital identities like IANA, ICANN, the organization responsible for domain name registration, were mostly centralized (ref: http://www.coindesk.com/path-self-sovereign-identity/). Some identity systems took a small step beyond the centralized approach and offered hierarchical solutions like certificate authorities (CAs). Still, such systems rely on root authorities which form a single point of failure.
+Most identity services are offered by a single authority like the govnerment, handing out, revoking and managing identities.
+This centralized approach continued when society adopted digital solutions: issuers of digital identities like IANA and ICANN, the organizations responsible for identification on the Internet, were and still are single, large organizations [[REF](http://www.coindesk.com/path-self-sovereign-identity/)].
+Some identity schemes took a small step beyond a centralized structure and offered hierarchical solutions like certificate authorities (CAs).
+However, such systems rely on root authorities which still form a single point of failure.
 
-As internet usage increased, more and more digital services became available with the need for users to create their digital identity. This leaded to identity  fragmentation where a user had to manage multiple identities for different services. Initiatives like OpenID, Facebook Connect and OAuth attempted to address this problem by providing a single identity service. Websites are able to implement this identity service without much effort and allow users to login using the implemented service identity provider. Unfortunately, this kind of identification is again regulated by mostly centralized authorities. Additionally, identity service providers are now able to track users across different digital services.
+As internet usage increased, more and more digital services became available with the need for users to create their digital identity.
+This leaded to identity  fragmentation where a user had to manage multiple identities for different services, sometimes closely related.
+Initiatives like OpenID, Facebook Connect and OAuth attempted to address this problem by providing a single identity service.
+Websites are able to implement such identity services without much effort to allow users to login using services of the adopted identity provider.
+Unfortunately, this type of user-centric identification is again regulated by mostly centralized authorities.
+In addition, identity service providers are able to track users across different digital services.
 
-While some of the described identity solutions are used by millions of users, they do not put the user owning that specific identity in control. Another issue is that cmopanies often want users to reveal more information about their identity than they actually need. This data can be used for analysis of user behaviour or data mining. This raises the question whether an identity system can be designed, void of any central authority and where users can decide which attributes they wish to reveal. Attribute requesters should be able to verify claims about statements without being dependent on a central authority.
+While some of the described identity solutions are used by millions of users, they do not put the user owning that specific identity in control.
+Another issue is that companies often want users to reveal more information about their identity than they actually need.
+Sometimes, this data is used for analysis of user behaviour or data mining.
+This raises the question whether an identity system can be designed, void of any central authority and where users can decide which attributes they wish to reveal.
+Entities in need of identity information should be able to verify statements without being dependent on a central authority.
 
-We present a self-sovereign identity (SSI) mechanism, capable of verifying statements, without any central authorization, point-of-failure or possibility of data tracking, giving users full control over their identity. Self-sovereign identity serves a purpose in a large range of applications, have the potential to speed up traditional, inefficient verification processes and enables inter-operability between companies, individuals and governments while respecting the privacy of identity owners. In a SSI system, civilians, legal entities and objects are able to prove statements such as "my age is at least 18" to entities that require verification of this claim, like alcoholic shops or car rental services. A reliable SSI mechanism is an indispensable building block to empower blockchain-based applications and sector-specific processes, operating at higher levels in our technology stack.
+We present a self-sovereign identity (SSI) mechanism, capable of verifying statements, without any central organization, point-of-failure or possibility of data tracking, giving users full control over their identity.
+Self-sovereign identity serves a purpose in a large range of applications, have the potential to speed up traditional, inefficient verification processes and enables inter-operability between companies, individuals and governments while respecting the privacy of identity owners.
+In a SSI system, civilians, legal entities and objects are able to prove statements such as "my age is at least 18" to others that legally require verification of this claim, like alcoholic shops or car rental services.
+A reliable SSI mechanism is an indispensable building block to empower blockchain-based applications and sector-specific processes, operating at higher levels in our technology stack.
 
-The only instance where the input of a centralized identity provider is necessary is when bootstrapping an identity. For instance, a civilian visit a townhall and get an identity in the form of a cryptographic key, used to encrypt and decrypt data. The identity issuer also generates a certificate belonging to the key that is given out so the civilian is able to prove that the identity has been verified by an authority. The identity owner consists of two type of actors: attestors and challengers. Attestors provide an attestation for a certain attribute, possibly for a (small) fee. Challengers wish to prove the validity of some statement of the identity owner. It is helpful to make attributes checked by challengers publicly available using TrustChain; this allows others to find challengers having a truth about a specific attribute.
+The only situation where the input of a centralized identity provider is required is when bootstrapping an identity.
+For instance, a civilian visit a townhall and get an identity in the form of a cryptographic key, used to encrypt and decrypt data.
+This key can be stored on a PUF device, discussed in Section x.
+The issuer of the identity also generates a certificate belonging to the key that is given out so the civilian is able to prove that the identity has been verified by an authority and is valid.
+Our proposed SSI mechanism consists of two type of actors: attestors and challengers.
+Attestors provide an attestation for a certain attribute, possibly for a (small) fee.
+Challengers wish to prove the validity of some statement of the identity owner.
+It is helpful to make attributes checked by challengers publicly available using TrustChain (discussed in Section x); this allows others to find challengers having a truth about a specific attribute.
 
-In our system, attribute values never leave the encrypted domain. Instead, all actions like attribute checks and attestations are operations on encrypted data using homomorphic encryption. Statement validation is a prime example of a Zero-Knowledge proof where the identity owner proves truth about a statment to a verifier, without actually revealing the value of the attribute in the statement. This implies that an alcohol shop is able to verify that a customer reached the eligable age but does not see the actual age of the customer. The described system is in particular useful when trading since sellers are able to specify trade-specific requirements that buyers have to fulfill before a transaction takes place.
+In our system, attribute values are encrypted and never leave the encrypted domain.
+Instead, all actions like statement validation and attestations are operations on encrypted data using homomorphic encryption.
+Statement validation is a prime example of a Zero-Knowledge Proof in which the identity owner proves truth about a statement to a challenger, without actually revealing the exact value of the attribute in the statement.
+This implies that an alcohol shop is able to verify that a customer reached the eligable age but is not exposed to the actual age of the customer.
+The described system is in particular useful when trading since sellers are able to specify trade-specific identity requirements that buyers have to fulfill before a transaction takes place (i.e. restrictions on age, residence or reputation).
 
 ### TrustChain
 
