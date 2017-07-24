@@ -7,6 +7,8 @@
 \usepackage{graphicx}
 \usepackage[style=oscola]{biblatex}
 \usepackage{csquotes}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \bibliography{references.bib}
 
@@ -140,7 +142,7 @@ We are applying ideas fundamentally concerned with freedom of individuals, embed
 The threath of being banned forever from an ecosystem may seem to lack compassion and decency, but boosts trust. 
 Game theory shows that the "shadow of the future" removes cheating incentives.
 Note that fraud differs from blunders by economic actors, which merely impact their reputation (e.g. star rating).
-In our architecture we apply the grim trigger defined in 1971 to punish dishonesty, lying, cheating, and fraud [[REF](https://www.jstor.org/stable/2296617)].
+In our architecture we apply the grim trigger defined in 1971 to punish dishonesty, lying, cheating, and fraud\footcite{friedman1971non}.
 In other words, mistakes can be forgiven, but intentional digital manipulations are not.
 
 Our work establishes a blueprint for creating a trustworthy, programmable economy.
@@ -243,6 +245,13 @@ Similar to self-driving cars, it is likely that legal issues will decelerate tec
 
 \section{Open Market for Mortgage Finance}
 
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=1\columnwidth]{assets/mortgagemarket}
+	\caption{The user interface of our mortgage finance market prototype, from the perspective of an investor.}
+	\label{fig:mortgage_market_interface}
+\end{figure}
+
 We created a minimal prototype to offer mortgage financing on an open, decentralized and blockchain-regulated market.
 Our application enables financial service providers like banks to offer consumers mortgage products and obtain the required capital investments from the global market.
 This enables external investors like foreign pension funds to invest in real-estate of financially solid countries with predictable return-on-investment and low risk.
@@ -289,7 +298,23 @@ The devices offers tamper-proof and safe storage of cryptographic keys.
 Each PUF device contains an unique fingerprint, determined by the randomness of embedded components.
 A PUF responds to challenges and leads to unique but unpredictable responses, together forming a challenge-response pair.
 
-![image](https://user-images.githubusercontent.com/325224/27855788-122137a2-616c-11e7-8a8e-32f6a08f8b92.png)
+\begin{figure}
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\linewidth]{assets/puf_enrollment}
+		\caption{Enrollment phase}
+		\label{fig:puf_enrollment}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\linewidth]{assets/puf_reconstruction}
+		\caption{Reconstruction phase}
+		\label{fig:puf_reconstruction}
+	\end{subfigure}
+	\caption{Procedure to store and restore a cryptographic key with a PUF device.}
+	\label{fig:puf_key_storage}
+\end{figure}
 
 A secure process for key storage based on a PUF device proceeds in two phases: the enrollment phase, where a key, based on a PUF fingerprint is generated and stored and the reconstruction phase, which restores the secret key that was generated during the enrollment phase.
 Each phase will now be elaborated according to the Figure x.
@@ -306,11 +331,16 @@ Since cloning or mathematical modelling of the device is non-trivial, this is a 
 
 \subsection{Biometric-based Authentication}
 
-We present a mobile biometric-based authentication prototype that does not involve any central authority [[REF](https://arxiv.org/abs/1706.03744)].
+We present a mobile biometric-based authentication prototype that does not involve any central authority\footcite{hammudoglu2017portable}.
 A proof-of-principle mobile application has been developed for Android, capable of matching fingerprints using the built-in device camera.
 By only utilizing device-specific components like the camera, no permissioned or specialized, contractual hardware is needed.
 
-<img src="https://cloud.githubusercontent.com/assets/325224/24321615/e9771e18-1150-11e7-91bf-484d44906fea.png" width="350">
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=.5\columnwidth]{assets/fingerprint}
+	\caption{Extracted minutiae details from a fingerprint.}
+	\label{fig:fingerprint}
+\end{figure}
 
 The procedure for fingerprint acquisition is divided in three steps.
 First, the user opens the application and takes a photo of his or her finger inside an elliptic-shaped area.
@@ -319,15 +349,15 @@ This yields the data given in Figure x where indicating feature points are indic
 Finally, the captured fingerprint is matched against known fingerprints available in the embedded database of the mobile device.
 Smartphones such as the Google Pixel which are equipped with 128GB of storage space, can store up to ten million fingerprints.
 
-After conducting a small experiment using our prototype, we conclude that our mean fingerprint matching accuracy is 55% with the highest value of 67% for thumb fingers.
+After conducting a small experiment using our prototype, we conclude that our mean fingerprint matching accuracy is 55\% with the highest value of 67\% for thumb fingers.
 These experimental results show that there is definitely room for improvement during the fingerprint processing and matching stage, however, we demonstrated the feasibility of this approach.
 The ability to capture, process and match fingerprints in mere seconds, makes this concept usable in various scenarios like remote regions with limited internet connectivity.
 This work provides a solution for portable trust and our framework has been specifically designed to serve as a building block for a self-sovereign identity solution.
 
 \subsection{Self-sovereign Identity}
 
-Most identity services are offered by a single authority like the govnerment, handing out, revoking and managing identities.
-This centralized approach continued when society adopted digital solutions: issuers of digital identities like IANA and ICANN, the organizations responsible for identification on the Internet, were and still are single, large organizations [[REF](http://www.coindesk.com/path-self-sovereign-identity/)].
+Most identity services are offered by a single authority like the government, handing out, revoking and managing identities.
+This centralized approach continued when society adopted digital solutions: issuers of digital identities like IANA and ICANN, the organizations responsible for identification on the Internet, were and still are single, large organizations\footcite{pathtossi}.
 Some identity schemes took a small step beyond a centralized structure and offered hierarchical solutions like certificate authorities (CAs).
 However, such systems rely on root authorities which still form a single point of failure.
 
@@ -344,13 +374,13 @@ Sometimes, this data is used for analysis of user behaviour or data mining.
 This raises the question whether an identity system can be designed, void of any central authority and where users can decide which attributes they wish to reveal.
 Entities in need of identity information should be able to verify statements without being dependent on a central authority.
 
-We present a self-sovereign identity (SSI) mechanism, capable of verifying statements, without any central organization, point-of-failure or possibility of data tracking, giving users full control over their identity.
+We present a Self-Sovereign Identity (SSI) mechanism, capable of verifying statements, without any central organization, point-of-failure or possibility of data tracking, giving users full control over their identity.
 Self-sovereign identity serves a purpose in a large range of applications, have the potential to speed up traditional, inefficient verification processes and enables inter-operability between companies, individuals and governments while respecting the privacy of identity owners.
 In a SSI system, civilians, legal entities and objects are able to prove statements such as "my age is at least 18" to others that legally require verification of this claim, like alcoholic shops or car rental services.
 A reliable SSI mechanism is an indispensable building block to empower blockchain-based applications and sector-specific processes, operating at higher levels in our technology stack.
 
 The only situation where the input of a centralized identity provider is required is when bootstrapping an identity.
-For instance, a civilian visit a townhall and get an identity in the form of a cryptographic key, used to encrypt and decrypt data.
+For instance, a civilian visit a town hall and get an identity in the form of a cryptographic key, used to encrypt and decrypt data.
 This key can be stored on a PUF device, discussed in Section x.
 The issuer of the identity also generates a certificate belonging to the key that is given out so the civilian is able to prove that the identity has been verified by an authority and is valid.
 Our proposed SSI mechanism consists of two type of actors: attestors and challengers.
@@ -361,7 +391,7 @@ It is helpful to make attributes checked by challengers publicly available using
 In our system, attribute values are encrypted and never leave the encrypted domain.
 Instead, all actions like statement validation and attestations are operations on encrypted data using homomorphic encryption.
 Statement validation is a prime example of a Zero-Knowledge Proof in which the identity owner proves truth about a statement to a challenger, without actually revealing the exact value of the attribute in the statement.
-This implies that an alcohol shop is able to verify that a customer reached the eligable age but is not exposed to the actual age of the customer.
+This implies that an alcohol shop is able to verify that a customer reached the eligible age but is not exposed to the actual age of the customer.
 The described system is in particular useful when trading since sellers are able to specify trade-specific identity requirements that buyers have to fulfill before a transaction takes place (i.e. restrictions on age, residence or reputation).
 
 \subsection{Blockchain Layer (TrustChain)}
@@ -504,7 +534,12 @@ We investigate the effect of the number of facilitators in the network; due to i
 The size of each transaction is approximately 500 bytes, resembling the average size of Bitcoint transactions.
 In this experiment, each user transacts with another user in a fixed set of other users.
 
-![image](https://user-images.githubusercontent.com/1093806/28093480-c16898e2-6697-11e7-9c7b-3afd03374a21.png)
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.7\columnwidth]{assets/trustchain_scalability}
+	\caption{The TrustChain scalability experiment with a varying amount of facilitators. The horizontal axis indicates the number of users in the network and the vertical axis represents the global transaction throughput.}
+	\label{fig:trustchain_scalability_experiment}
+\end{figure}
 
 The global throughput of TrustChain is displayed in Figure x.
 On the horizontal axis, the network size is shown as the amount of users whereas the vertical axis denotes the transaction throughput in transactions per second.
@@ -527,9 +562,9 @@ To date, the Sybil attack remains largely unsolved and solutions that prevent ma
 We have built and evaluated a distributed reputation mechanism, using irrefutable TrustChain records as foundation.
 Building a reputation mechanism on top of TrustChain has several advantages.
 First, TrustChain records are light-weight and designed to be exchanged with other users.
-More importantly, the inherent tamper-proof property of TrustChain strenghtens the reputation system since it becomes infeasible to tamper with past interactions.
+More importantly, the inherent tamper-proof property of TrustChain strengthens the reputation system since it becomes infeasible to tamper with past interactions.
 
-Our reputation mechanism is based on PageRank, designed in 1998 by Larry Page and is called Temporal Pagerank since it encorporates the notion of time.
+Our reputation mechanism is based on PageRank, designed in 1998 by Larry Page and is called Temporal Pagerank since it incorporates the notion of time.
 PageRank is an accurate model that captures user behaviour when browsing the web and yields a ranking of websites based on relevance for that user.
 The algorithm models websites and links between websites as a network and explores this network in a structured manner.
 Temporal Pagerank works in the same way, exploring the TrustChain data structure and analysing past transactions.
@@ -540,6 +575,13 @@ Temporal Pagerank incorporates a weak form of transitive trust.
 Transitive trust implies that trust is not only established between two users but is transferred upon further interactions.
 Specifically this indicates that if a specific entity A trusts another entity B well, he is also tempted to trust an entity C that is introduced to him by B.
 This is a situation that occurs frequently in the real world since we are inclined to trust individuals introduced by a trustworthy entity.
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.6\columnwidth]{assets/pagerank_times}
+	\caption{Performance of Temporal Pagerank. The horizontal axis shows the number of users in the network and the vertical axis denotes the time it takes to estimate trustworthiness scores for all users.}
+	\label{fig:pagerank_performance}
+\end{figure}
 
 To demonstrate the feasibility of Temporal Pagerank, we evaluated the mechanism using a real-world interaction trace, extracted from our file-sharing network Tribler for over a month.
 This trace includes 917 unique identities and around 200.000 unique transactions.
@@ -563,6 +605,13 @@ This transaction history is used as input for trust estimation (see Section x).
 Our marketplace is secured against malicious behaviour and built to be operational in the presence of a large amount of traders.
 Finally, our market is void of any transaction fee, enabling unrestricted and fair trading unlike most existing blockchain-based exchanges.
 
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=.9\columnwidth]{assets/tribler_market}
+	\caption{An orderbook on the decentralized marketplace, implemented in Tribler.}
+	\label{fig:tribler_market}
+\end{figure}
+
 We built our decentralized marketplace and integrated it in Tribler.
 The initial release of the marketplace supports trading bandwidth against both crypto- and regulated currencies, using the Internet-of-Money module discussed in Section x.
 Figure x shows the orderbook of a trader in the Tribler software.
@@ -571,12 +620,19 @@ Information about installed wallets of a trader are present in the upper-right c
 To obtain insight in the real-world efficiency of our system, we evaluate matching efficiency of Uber taxi drives.
 Uber, one of the largest companies operating in the sharing economy, can be considered as a two-sided market where taxi drivers, offering a ride to a location, are matched against users requesting transportation.
 Since there is no public, reliable dataset provided by the Uber platform, we use historical information of taxi rides published by the government of New York instead <ref>.
-The dataset provides detailled temporal and geographical information of pickup and dropoff location of each taxi ride.
+The dataset provides detailed temporal and geographical information of pick-up and drop-off location of each taxi ride.
 We assume a total of 1100 taxi drivers and 1000 users requesting transportation.
 It is also assumed that only the taxi drivers perform matching since they are likely to be connected to the network for a longer time whereas passengers most likely close the application when a taxi is available for them.
 Taxi drivers and passengers are matched based on their geographical distance.
 
-Figure x shows the relation between rate of decentralization and efficiency during our evalution.
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.8\columnwidth]{assets/matching_efficiency}
+	\caption{The effect of decentralization on matching efficiency when emulating the taxi network of New York. The horizontal axis shows the percentage of taxi drivers performing matchmaking and the vertical axis denotes the average distance between matched taxi driver and passenger.}
+	\label{fig:matching_efficiency}
+\end{figure}
+
+Figure x shows the relation between rate of decentralization and efficiency during our evaluation.
 The horizontal axis denotes the percentage of taxi drivers performing matchmaking whereas the vertical axis represents the average distance between the matched driver and the requester.
 The first data point in Figure x is equivalent to the situation where there is a central matching service, like Uber.
 It is clear that decentralization negatively impacts matching efficiency which is expected since each matchmaker only holds partial knowledge of the global order book.
