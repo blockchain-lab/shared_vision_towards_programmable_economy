@@ -605,10 +605,10 @@ However, we have demonstrated that Temporal PageRank is a feasible mechanism to 
 \subsection{Decentralized Marketplace}
 
 The final piece of our trust architecture is an operational prototype for a generic, decentralized two-sided marketplace, capable of trading generic assets like houses, currencies or bonds.
-The platform facilitates trading without presence of a central clearinghouse performing matchmaking and processing trades.
-Matchmaking, clearing and settlement proceeds in a completely decentralized fashion where autonomous entities are directly exchanging buy and sell offers.
+The platform facilitates trading without presence of a central clearing house, responsible for matchmaking and trade processing.
+Matchmaking, clearing and settlement proceeds in a completely decentralized way where autonomous entities are directly exchanging buy and sell offers.
 Every trader operates on their own orderbook and acts as a matchmaker for others, attempting to match buy and sell offers.
-Assets are stored in wallets which are used to query available balance or to transfer assets to others.
+Assets are stored in wallets which are used to query available balances or to transfer assets to others.
 When a trade between market participants has been settled, the transaction details including the type, quantity and price of the exchanged assets are stored on TrustChain (see Section \ref{sec:trustchain}) and gossiped to other traders.
 This transaction history is used as input for trust estimation (see Section \ref{sec:reputation}).
 Our marketplace is secured against malicious behaviour and built to be operational in the presence of a large amount of traders.
@@ -617,26 +617,26 @@ Finally, our market is void of any transaction fee, enabling unrestricted and fa
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=.9\columnwidth]{assets/tribler_market}
-	\caption{An orderbook on the decentralized marketplace, implemented in Tribler.}
+	\caption{An orderbook on the decentralized marketplace, implemented in Tribler. Wallet information is presented in the upper-right corner of the screenshot.}
 	\label{fig:tribler_market}
 \end{figure}
 
 We built our decentralized marketplace and integrated it in Tribler.
-The initial release of the marketplace supports trading bandwidth against both crypto- and regulated currencies, using the Internet-of-Money module discussed in Section \ref{sec:internet_of_money}.
+The initial release of the marketplace supports trading bandwidth against both cyber- and regulated currencies, using the Internet-of-Money module discussed in Section \ref{sec:internet_of_money}.
 Figure \ref{fig:tribler_market} shows the orderbook of a trader in the Tribler software.
 Information about installed wallets of a trader are present in the upper-right corner of the window.
 
 To obtain insight in the real-world efficiency of our system, we evaluate matching efficiency of Uber taxi drives.
 Uber, one of the largest companies operating in the sharing economy, can be considered as a two-sided market where taxi drivers, offering a ride to a location, are matched against users requesting transportation.
-Since there is no public, reliable dataset provided by the Uber platform, we use historical information of taxi rides published by the government of New York instead <ref>.
+Since there is no public, reliable dataset provided by the Uber platform, we use historical information of taxi rides published by the government of New York instead\footcite{newyorktaxi}.
 The dataset provides detailed temporal and geographical information of pick-up and drop-off location of each taxi ride.
-We assume a total of 1100 taxi drivers and 1000 users requesting transportation.
+We assume a total of 1100 taxi drivers and 1000 users requesting transportation, which is also close to the limitations of the hardware on which the experiment is executed.
 It is also assumed that only the taxi drivers perform matching since they are likely to be connected to the network for a longer time whereas passengers most likely close the application when a taxi is available for them.
 Taxi drivers and passengers are matched based on their geographical distance.
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.8\columnwidth]{assets/matching_efficiency}
+	\includegraphics[width=0.9\columnwidth]{assets/matching_efficiency}
 	\caption{The effect of decentralization on matching efficiency when emulating the taxi network of New York. The horizontal axis shows the percentage of taxi drivers performing matchmaking and the vertical axis denotes the average distance between matched taxi driver and passenger.}
 	\label{fig:matching_efficiency}
 \end{figure}
@@ -644,9 +644,9 @@ Taxi drivers and passengers are matched based on their geographical distance.
 Figure \ref{fig:matching_efficiency} shows the relation between rate of decentralization and efficiency during our evaluation.
 The horizontal axis denotes the percentage of taxi drivers performing matchmaking whereas the vertical axis represents the average distance between the matched driver and the requester.
 The first data point in Figure \ref{fig:matching_efficiency} is equivalent to the situation where there is a central matching service, like Uber.
-It is clear that decentralization negatively impacts matching efficiency which is expected since each matchmaker only holds partial knowledge of the global order book.
+It is clear that decentralization negatively impacts matching efficiency which is expected since each matchmaker only holds partial knowledge of the global orderbook.
 In particular, a matchmaker might not be aware of an offer that could improve his proposed matching.
-This effect can be reduced by synchronizing orderbooks between matchmakers, at the cost of additional required network communication but increased matching efficiency.
+This effect can be reduced by synchronizing orderbooks between matchmakers, at the cost of additional required network communication.
 
 \section{Conclusions}
 
@@ -659,7 +659,7 @@ We proposed a novel architecture to create trust.
 Each component of our technology portfolio is designed and implemented based on the philosophy of the Internet itself: self-governance and loosly coupled autonomous systems, interacting with each other.
 The essential technology to cultivate trust within our decentralized technology platform is TrustChain, a blockchain built around the notion of transacting real-world entities.
 Viability of our proposed technology portfolio is demonstrated in the real-world, with running code.
-Our aim is to adopt the programmable economy as a mean to decrease organizational barriers, increase trading efficiency and provide more transparancy and openness in existing and new economic ecosystems.
+Our aim is to adopt the programmable economy as a mean to decrease organizational barriers, increase trading efficiency and provide more transparancy and openness in existing and new economic systems.
 
 
 %\bibliographystyle{oscola}
