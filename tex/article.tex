@@ -157,7 +157,7 @@ They describe it as ``the programmable economy, enabled by metacoin platforms an
 	\label{fig:tech_stack_simple}
 \end{figure}
 
-Figure x shows the four layers which define our architecture.
+Figure \ref{fig:tech_stack_simple} shows the four layers which define our architecture.
 First we need to address the digital identity problem, shown as the bottom layer.
 A wealth of applications require strong authentication and long-lived secure identities.
 The Internet requires a common continuously evolving strong identity layer.
@@ -204,7 +204,7 @@ Another option is use representatives and appoint professionals responsible for 
 However, this goes against the prevailing anti-authority culture within operational blockchain ecosystems.
 Distributed systems with self-governance have no external overseers and no central controlling servers.
 
-The third layer in Figure x transforms our usage of money.
+The third layer in Figure \ref{fig:tech_stack_simple} transforms our usage of money.
 Our proposed approach there is again the opposite of the cybercurrency community.
 We believe building a trustworthy and reliable financial infrastructure from scratch is unwise.
 By reengineering and building upon existing bank-based payment systems we provide a realistic, legally compliant, and efficient overlay.
@@ -257,7 +257,7 @@ Our application enables financial service providers like banks to offer consumer
 This enables external investors like foreign pension funds to invest in real-estate of financially solid countries with predictable return-on-investment and low risk.
 Traditionally the mortgage market is permissioned or nontransparent.
 This prototype aims to explore a viable and open alternative to decrease overhead of mortgage processes and offers a mortgage aftermarket where investors can negotiate agreements and trade.
-A screenshot of the developed application is presented in Figure x, displaying the user interface from the perspective of a financial institution.
+A screenshot of the developed application is presented in Figure \ref{fig:mortgage_market_interface}, displaying the user interface from the perspective of a financial institution.
 
 Each agreement reached between individuals in the market are stored as a double-signed contract on an unpermissioned and public blockchain. The mortgage financing platform distinguishes between three different types of contracts:
 - Mortage contracts: this contract represent the initial mortgage agreement between a user and a mortgage provider, containing all relevant information about the agreed mortgage (i.e. the house address, mortgage rate and redemption agreements).
@@ -276,9 +276,6 @@ A dynamic difficulty target mechanism assures that on average, one new block is 
 
 \section{Technology Portfolio for Trust Creation}
 
-We now expand on each of the four layers of our envisioned architecture for a programmable economy, introduced in Figure X.
-The detailed architecture of the economic primitives digital identity, trust, programmable money, and marketplaces will be elaborated and is presented in Figure x.
-
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=1\columnwidth]{assets/tech_stack}
@@ -286,8 +283,11 @@ The detailed architecture of the economic primitives digital identity, trust, pr
 	\label{fig:tech_stack}
 \end{figure}
 
-\subsection{Physical Unclonable Functions}
+We now expand on each of the four layers of our envisioned architecture for a programmable economy, introduced in Figure \ref{fig:tech_stack_simple}.
+The detailed architecture of the economic primitives digital identity, trust, programmable money, and marketplaces will be elaborated and is presented in Figure \ref{fig:tech_stack}.
 
+\subsection{Physical Unclonable Functions}
+\label{sec:pufs}
 The foundations of security are based on the laws of physics.
 We specifically avoid using software and the risk of implementation bugs or security weaknesses.
 For numerous years scientists have searched for a secure basis for critical infrastructure and we believe physical devices provide the desired basis.
@@ -316,8 +316,8 @@ A PUF responds to challenges and leads to unique but unpredictable responses, to
 	\label{fig:puf_key_storage}
 \end{figure}
 
-A secure process for key storage based on a PUF device proceeds in two phases: the enrollment phase, where a key, based on a PUF fingerprint is generated and stored and the reconstruction phase, which restores the secret key that was generated during the enrollment phase.
-Each phase will now be elaborated according to the Figure x.
+A secure process for key storage based on a PUF device proceeds in two phases: the enrollment phase (Figure \ref{fig:puf_enrollment}), where a key, based on a PUF fingerprint is generated and stored and the reconstruction phase (Figure \ref{fig:puf_reconstruction}), which restores the secret key that was generated during the enrollment phase.
+Each phase will now be elaborated according to the Figure \ref{fig:puf_key_storage}.
 - Enrollment phase: first, a so-called reference response of the targeted PUF is measured. This reference response is used as input for the Fuzzy Extractor, which consists of a privacy amplification module and Error-Correcting Code (ECC) encoding. The privacy amplification module converts the PUF reference response to a usable cryptographic key. Additionally, some helper data is computed and saved in storage attached to the device. This helper data itself is not sufficient to restore the secret key and is used during the reconstruction phase.
 - Reconstruction phase: reconstruction starts by measuring the PUF response, which is used as input for the Fuzzy Extractor. The helper data, generated during enrollment, is used to perform information reconciliation and generates the PUF reference response. After privacy amplification, the programmed cryptographic key is restored and ready for usage.
 
@@ -345,7 +345,7 @@ By only utilizing device-specific components like the camera, no permissioned or
 The procedure for fingerprint acquisition is divided in three steps.
 First, the user opens the application and takes a photo of his or her finger inside an elliptic-shaped area.
 Next, the captured photo is processed and analyzed using various algorithms to extract minutiae fingerprint details.
-This yields the data given in Figure x where indicating feature points are indicated as small dots.
+This yields the data given in Figure \ref{fig:fingerprint} where indicating feature points are indicated as small dots.
 Finally, the captured fingerprint is matched against known fingerprints available in the embedded database of the mobile device.
 Smartphones such as the Google Pixel which are equipped with 128GB of storage space, can store up to ten million fingerprints.
 
@@ -381,12 +381,12 @@ A reliable SSI mechanism is an indispensable building block to empower blockchai
 
 The only situation where the input of a centralized identity provider is required is when bootstrapping an identity.
 For instance, a civilian visit a town hall and get an identity in the form of a cryptographic key, used to encrypt and decrypt data.
-This key can be stored on a PUF device, discussed in Section x.
+This key can be stored on a PUF device, discussed in Section \ref{sec:pufs}.
 The issuer of the identity also generates a certificate belonging to the key that is given out so the civilian is able to prove that the identity has been verified by an authority and is valid.
 Our proposed SSI mechanism consists of two type of actors: attestors and challengers.
 Attestors provide an attestation for a certain attribute, possibly for a (small) fee.
 Challengers wish to prove the validity of some statement of the identity owner.
-It is helpful to make attributes checked by challengers publicly available using TrustChain (discussed in Section x); this allows others to find challengers having a truth about a specific attribute.
+It is helpful to make attributes checked by challengers publicly available using TrustChain (discussed in Section \ref{sec:trustchain}); this allows others to find challengers having a truth about a specific attribute.
 
 In our system, attribute values are encrypted and never leave the encrypted domain.
 Instead, all actions like statement validation and attestations are operations on encrypted data using homomorphic encryption.
@@ -395,7 +395,7 @@ This implies that an alcohol shop is able to verify that a customer reached the 
 The described system is in particular useful when trading since sellers are able to specify trade-specific identity requirements that buyers have to fulfill before a transaction takes place (i.e. restrictions on age, residence or reputation).
 
 \subsection{Blockchain Layer (TrustChain)}
-
+\label{sec:trustchain}
 The TrustChain transaction fabric is designed around the notion of entities performing transactions with each other.
 Each user in the TrustChain network maintains and grows their own chain of historical transactions. 
 This is in contrast to traditional blockchain constructions like Bitcoin or Ethereum, where a single, global ledger is maintained, containing all transactions since the inception of the platform.
@@ -410,7 +410,7 @@ We now discuss the creation, storage and dissemination of transactions recorded 
 
 Imagine two users that are performing a transaction with each other.
 This transaction can be transferral of money, exchanging data or a transfer of ownership of a specific asset.
-Figure x shows a record which is the output of a transaction between aforementioned users.
+Figure \ref{fig:trustchain_tutorial_1} shows a record which is the output of a transaction between aforementioned users.
 Both users cryptographically sign this transaction, acknowledging that they agree with the content of this transaction.
 After the signatures are placed, both users persist the record to their local storage.
 
@@ -424,12 +424,12 @@ After the signatures are placed, both users persist the record to their local st
 A possible way to organize transactions is to chain them together.
 Transactions are stored in a blockchain data structure where each block contains exactly one transaction, both signatures of the interacting agents and a pointer to the prior block in the blockchain.
 To be precise, this pointer is a description of the previous block in the form of a digital hash (any secure hashing mechanism can be used for this purpose).
-This idea is illustrated in Figure x.
+This idea is illustrated in Figure \ref{fig:trustchain_tutorial_2}.
 Furthermore, each block is accompanied with a sequence number, uniquely identifying a specific block in the chain.
 Each user creates a genesis block and keeps track of their own transaction history.
 Every transaction block is present in the chain of both transaction participants.
 
-The data structure shown in Figure x is void of any control by other users. As a consequence, a user is able to tamper with their chain of transactions by inserting, removing or reordering records, without being noticed.
+The data structure shown in Figure \ref{fig:trustchain_tutorial_2} is void of any control by other users. As a consequence, a user is able to tamper with their chain of transactions by inserting, removing or reordering records, without being noticed.
 The integrity of this new transaction chain can be restored by recomputing all prior pointers.
 In this situation, users are unable to prove malicious modifications of one's chain.
 Users might also choose to not append a transaction to their local chain which is tempting if the particular transaction has a negative impact on the standing of the involved user.
@@ -441,11 +441,11 @@ Users might also choose to not append a transaction to their local chain which i
 	\label{fig:trustchain_tutorial_3}
 \end{figure}
 
-This vulnerability is mitigated by adding an additional pointer in each block, see Figure x.
+This vulnerability is mitigated by adding an additional pointer in each block, see Figure \ref{fig:trustchain_tutorial_3}.
 This pointer references to the prior block in the chain of the other transaction participant.
 Now, when two users are interacting, their chains get intertwined or entangled.
 This mechanism strenghtens the tamper-proof property of TrustChain.
-As presented in Figure x, each block has two incoming and two outgoing pointers.
+As presented in Figure \ref{fig:trustchain_tutorial_3}, each block has two incoming and two outgoing pointers.
 Note that this scheme can easily be extended to support transactions between more than two participants, by increasing the amount of outgoing pointers of a block.
 
 \begin{figure}[h!]
@@ -456,7 +456,7 @@ Note that this scheme can easily be extended to support transactions between mor
 \end{figure}
 
 As entities perform transactions with each other, they become quickly entangled with others.
-Figure x shows a part of the distributed TrustChain ledger.
+Figure \ref{fig:trustchain} shows a part of the distributed TrustChain ledger.
 Seven blocks, created by seven unique participants are displayed.
 Again, note that each block contains exactly two incoming and two outgoing pointers.
 
@@ -473,7 +473,7 @@ The absence of a global consensus mechanism allows for superior scalability with
 Finally, at a minimum, network participants only have to store the transactions that they are involved in, significantly lowering the storage requirements compared to other blockchains.
 
 TrustChain blocks are designed to be disseminated and replicated in the network.
-In particular, this is important when transaction history is used as input for a reputation mechanism (see Section x).
+In particular, this is important when transaction history is used as input for a reputation mechanism (see Section \ref{sec:reputation}).
 Additionally, replication of blocks makes the system resistant against network churn where users go on- and offline at a fast rate.
 Each user operates on their own bulk storage of blocks, resulting in partial storage of the global ledger.
 Collecting information of other users is challenging due to the vulnerability to various attacks, their limited resources and the burst of their interactions.
@@ -483,7 +483,7 @@ We envision TrustChain as an essential building block in our programmable econom
 The superior scalability and reduced storage requirements makes our transaction ledger suitable in the context of identity management and trading.
 
 \subsection{Scalable Consensus}
-
+\label{sec:scalable_consensus}
 Most blockchain fabrics have a requirement for a consistent state which is agreed upon by (a part of) the network.
 This requirement holds in particular when considering digital money (cybercurrencies) like Bitcoin or Ethereum.
 Consensus of the global ledger is necessary to prevent the double-spending attack where users transfer the same digital asset twice in multiple transactions.
@@ -507,8 +507,8 @@ We built our system based on three important objectives:
 	\label{fig:trustchain_cp}
 \end{figure}
 
-First, the TrustChain data structure discussed in Section x is slightly modified by adding a new type of block, called a checkpoint block.
-This type of block is displayed in Figure x, presenting both a transaction block and a checkpoint block.
+First, the TrustChain data structure discussed in Section \ref{sec:trustchain} is slightly modified by adding a new type of block, called a checkpoint block.
+This type of block is displayed in Figure \ref{fig:trustchain_cp}, presenting both a transaction block and a checkpoint block.
 A checkpoint block consists of a pointer to a previous block in the same chain, a number indicating the round of the consensus mechanism after which the specific checkpoint block has been created, a cryptographic description of the result of the consensus and a digital signature, generated by the owner of the chain.
 We modify the data structure such that the first block in a chain (the genesis block) is always a checkpoint block.
 The available checkpoint blocks in a chain are used during detection of malicious activities.
@@ -526,7 +526,7 @@ Finally, the new set of facilitators is elected and the round number is increase
 The process starts over now.
 
 \subsection{TrustChain Experiments}
-
+\label{sec:trustchain_experiments}
 We have implemented TrustChain and the scalable consensus mechanism discussed in the previous sections.
 This section will focus on experimentation to assess the global transaction throughput and consensus duration.
 It is assumed that every user initiates two transactions per second.
@@ -541,16 +541,16 @@ In this experiment, each user transacts with another user in a fixed set of othe
 	\label{fig:trustchain_scalability_experiment}
 \end{figure}
 
-The global throughput of TrustChain is displayed in Figure x.
+The global throughput of TrustChain is displayed in Figure \ref{fig:trustchain_scalability_experiment}.
 On the horizontal axis, the network size is shown as the amount of users whereas the vertical axis denotes the transaction throughput in transactions per second.
 As a first observation, note the linear relationship in the figure between the network size and transaction throughput; this strongly indicates the horizontal scalability property for a network up to 1400 users.
 The throughput rate lowers when the number of facilitators in increased. This is explained by the fact that more facilitators require additional network communication between users, introducing additional computational effort.
 
-Figure x indicates that we have indeed designed a scalable consensus mechanism, not bounded by a wasteful, expensive consensus mechanism like Proof-of-Work.
+Figure \ref{fig:trustchain_scalability_experiment} indicates that we have indeed designed a scalable consensus mechanism, not bounded by a wasteful, expensive consensus mechanism like Proof-of-Work.
 With only a few servers, our consensus mechanism is able to reach global throughput rates surpassing that of Visa or SWIFT.
 
 \subsection{Trustworthiness and Reputation}
-
+\label{sec:reputation}
 One way to quantity trustworthiness in an economic ecosystem, is by using a reputation mechanism.
 Reputation systems are widely used but the trust is often centered to a single authority.
 Fifteen years of research on generic distributed reputation systems has yielded a wide variety of proposed designs and possible solutions.
@@ -585,13 +585,14 @@ This is a situation that occurs frequently in the real world since we are inclin
 
 To demonstrate the feasibility of Temporal Pagerank, we evaluated the mechanism using a real-world interaction trace, extracted from our file-sharing network Tribler for over a month.
 This trace includes 917 unique identities and around 200.000 unique transactions.
-The result of our experiment is displayed in Figure x.
+The result of our experiment is displayed in Figure \ref{fig:pagerank_performance}.
 The horizontal axis displays the number of users in the trace and the vertical axis shows the time it takes to compute a reputation score for all these users.
 For a network with 900 identities, it seems that it takes just under 12 seconds to compute reputation scores.
 It is often not necessary to determine reputation of all users in the network; in most scenarios, determining reputations of identities you are likely to interact with is sufficient.
 However, we have demonstrated that Temporal Pagerank is a feasible mechanism to use for trustworthiness estimation, even when the amount of users in the network grows.
 
 \subsection{Real-time Clearance and Settlement}
+\label{sec:internet_of_money}
 
 \subsection{Decentralized Marketplace}
 
@@ -600,8 +601,8 @@ The platform facilitates trading without presence of a central clearinghouse per
 Matchmaking, clearing and settlement proceeds in a completely decentralized fashion where autonomous entities are directly exchanging buy and sell offers.
 Every trader operates on their own orderbook and acts as a matchmaker for others, attempting to match buy and sell offers.
 Assets are stored in wallets which are used to query available balance or to transfer assets to others.
-When a trade between market participants has been settled, the transaction details including the type, quantity and price of the exchanged assets are stored on TrustChain (see Section x) and gossiped to other traders.
-This transaction history is used as input for trust estimation (see Section x).
+When a trade between market participants has been settled, the transaction details including the type, quantity and price of the exchanged assets are stored on TrustChain (see Section \ref{sec:trustchain}) and gossiped to other traders.
+This transaction history is used as input for trust estimation (see Section \ref{sec:reputation}).
 Our marketplace is secured against malicious behaviour and built to be operational in the presence of a large amount of traders.
 Finally, our market is void of any transaction fee, enabling unrestricted and fair trading unlike most existing blockchain-based exchanges.
 
@@ -613,8 +614,8 @@ Finally, our market is void of any transaction fee, enabling unrestricted and fa
 \end{figure}
 
 We built our decentralized marketplace and integrated it in Tribler.
-The initial release of the marketplace supports trading bandwidth against both crypto- and regulated currencies, using the Internet-of-Money module discussed in Section x.
-Figure x shows the orderbook of a trader in the Tribler software.
+The initial release of the marketplace supports trading bandwidth against both crypto- and regulated currencies, using the Internet-of-Money module discussed in Section \ref{sec:internet_of_money}.
+Figure \ref{fig:tribler_market} shows the orderbook of a trader in the Tribler software.
 Information about installed wallets of a trader are present in the upper-right corner of the window.
 
 To obtain insight in the real-world efficiency of our system, we evaluate matching efficiency of Uber taxi drives.
@@ -632,9 +633,9 @@ Taxi drivers and passengers are matched based on their geographical distance.
 	\label{fig:matching_efficiency}
 \end{figure}
 
-Figure x shows the relation between rate of decentralization and efficiency during our evaluation.
+Figure \ref{fig:matching_efficiency} shows the relation between rate of decentralization and efficiency during our evaluation.
 The horizontal axis denotes the percentage of taxi drivers performing matchmaking whereas the vertical axis represents the average distance between the matched driver and the requester.
-The first data point in Figure x is equivalent to the situation where there is a central matching service, like Uber.
+The first data point in Figure \ref{fig:matching_efficiency} is equivalent to the situation where there is a central matching service, like Uber.
 It is clear that decentralization negatively impacts matching efficiency which is expected since each matchmaker only holds partial knowledge of the global order book.
 In particular, a matchmaker might not be aware of an offer that could improve his proposed matching.
 This effect can be reduced by synchronizing orderbooks between matchmakers, at the cost of additional required network communication but increased matching efficiency.
