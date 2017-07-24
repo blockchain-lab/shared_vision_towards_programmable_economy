@@ -592,10 +592,10 @@ This is a situation that occurs frequently in the real world since we are inclin
 \end{figure}
 
 To demonstrate the feasibility of Temporal PageRank, we evaluated the mechanism using a real-world interaction trace, extracted from our file-sharing network Tribler for over a month.
-This trace includes 917 unique identities and around 200.000 unique transactions.
+This trace includes 917 identities and around 200.000 unique transactions.
 The result of our experiment is displayed in Figure \ref{fig:pagerank_performance}.
-The horizontal axis displays the number of users in the trace and the vertical axis shows the time it takes to compute a reputation score for all these users.
-For a network with 900 identities, it seems that it takes just under 12 seconds to compute reputation scores.
+The horizontal axis displays the number of users in the network and the vertical axis shows the time it takes to compute a reputation score for all these users.
+For a network with 900 identities, it seems that the total duration of Temporal Pagerank is just under 12 seconds.
 It is often not necessary to determine reputation of all users in the network; in most scenarios, determining reputations of identities you are likely to interact with is sufficient.
 However, we have demonstrated that Temporal PageRank is a feasible mechanism to use for trustworthiness estimation, even when the amount of users in the network grows.
 
