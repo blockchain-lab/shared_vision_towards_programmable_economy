@@ -6,6 +6,7 @@
 \usepackage{microtype}
 \usepackage{graphicx}
 \usepackage[style=oscola]{biblatex}
+\usepackage{csquotes}
 
 \bibliography{references.bib}
 
@@ -67,7 +68,7 @@ In 2017 we have mathematically proven that our blockchain technology, TrustChain
 
 \section{Problem Description}
 
-Contracts, transactions, and the records of them are among the defining structures in our economic, legal, and political systems [REF](https://hbr.org/2017/01/the-truth-about-blockchain).
+Contracts, transactions, and the records of them are among the defining structures in our economic, legal, and political systems\footcite{harvardbusinessblockchain}.
 They protect assets and set organizational boundaries.
 These authentic records create ownership, determine citizenship, and define partnerships between entities.
 It establishes a governance layer in which states, economic actors, and citizens interact, effectively creating trust.
@@ -82,7 +83,7 @@ Blockchain enthousiasts claim this technology offers an alternative to any trust
 It offers us another way to organise society, with a high degree of decentralisation.
 The resilience of Bitcoin together with the rising gig economy endorses this claim.
 The breakthrough that made the gig economy possible was the use of reputation systems to build trust between strangers.
-Reputation systems collect and process information about past interactions, to help people evaluate the trustworthiness of others [REF](http://www.emeraldinsight.com/doi/pdfplus/10.1016/S0278-0984%2802%2911030-3).
+Reputation systems collect and process information about past interactions, to help people evaluate the trustworthiness of others\footcite{resnick2002trust}.
 However, an individual’s reputation on a platform such as eBay is owned by a profit-driven entity.
 This leads to the following problems for the social good:
 - Lock-in. A solid reputation on one platform is locked into that platform: you cannot move your reputation. Like other forms of lock-in, this inhibits competition and encourages monopoly behavior. Ironically, companies in the "sharing economy" do not share reputations. Users are increasingly being protected by European Union law from such data silos. The newly defined right to data portability allows individuals to obtain and reuse their personal data for their own purposes across different services. 
@@ -90,7 +91,7 @@ This leads to the following problems for the social good:
 - Each isolated marketplace tries to match drivers and customers in real-time and have to overcome similar challenges.
 
 Centralized approaches are ultimately always influenced by the goals and the reliability of the central entity or authority that controls them. 
-One economic model even predicts the rise of predatory, monopolistic platforms within two-sided markets [[REF](http://andras.niedermayer.ch/wp-content/uploads/2014/08/PFS-2016-06-27-AN-SL.pdf)].
+One economic model even predicts the rise of predatory, monopolistic platforms within two-sided markets\footcite{loertscher2016predatory}.
 For this reason, central platforms can never be truly generic and universal. 
 With a decentralized approach, multiple independent individuals cooperate in some manner to build a single ecosystem and no one entity has control over the entire environment.
 This is the model we envision for the future programmable economy: trust relations are not locked to a single profit-driven entity.
@@ -99,22 +100,22 @@ The cardinal problem is: "who owns trust"?
 Creating and maintaining trust within a public, shared infrastructure has proven to be a hard problem.
 While there is much conducted research on this specific topic, a reliable, secure and real-world deployed trust mechanism stays out.
 
-In May 1962 the vision of a "[time-sharing computer system with many remote stations](http://dl.acm.org/citation.cfm?id=1460847)" was presented, known as The Internet today.
+In May 1962 the vision of a time-sharing computer system with many remote stations was presented, known as The Internet today\footcite{licklider1962line}.
 Nobody owns The Internet.
 This has been a critical factor for its decades long success story.
 The Internet consists of numerous Autonomous Systems which are loosely coupled and have a common numbering mechanism.
-On top of this global communication infrastructure we build email, videoconferencing, entertainment platforms, search engines, marketplaces, countless cloud services, and essentially a digital economy.
+On top of this global communication infrastructure we build email, video conferencing, entertainment platforms, search engines, marketplaces, countless cloud services, and essentially a digital economy.
 However, these examples often contain a single central point of control and authority.
 It has proven to be hard to create a decentralized governance layer for such vital public infrastructure.
 
-Joseph Stiglitz co-authored the "Architecture of Economic Systems" in 1985, describing how decision making units can be organized together within a system.
+Joseph Stiglitz co-authored the "Architecture of Economic Systems" in 1985, describing how decision making units can be organized together within a system\footcite{sah1985architecture}.
 It presents a basic framework to compare the performance of decentralized and centralized economic systems.
 Centralized economic systems have given way to decentralized forms.
 The current challenge is to further refine the decentralized form: storage and governance of authoritative answers to ownership questions use a public and transparent infrastructure.
 
 Trust, accountability, and reputation mechanisms are closely tied.
 Transparency can be used to make an authority accountable in order to establish trust. 
-It promotes integrity of operations by monitoring the correct behavior of economic actors [[REF](https://www.petsymposium.org/2017/papers/issue4/paper87-2017-4-source.pdf)].
+It promotes integrity of operations by monitoring the correct behaviour of economic actors\footcite{troncoso2017systematizing}.
 
 Creating trustworthy, public, transparent, and decentralized infrastructures is hard.
 We lack a decentral infrastructure for essential economic primitives such as digital identities, money, trust, and marketplaces. 
@@ -135,7 +136,7 @@ Upcoming sections present how we applied and validated our architecture by creat
 
 We believe that blockchain technology enables decentralized economies of higher efficiency and stability then currently known. 
 This work broadens the applications of the organisational principle behind The Internet, offering full sovereignty to all decision making entities, full transparency on their past performance, and openness in general.
-We are applying ideas fundamentally concerned with freedom of individuals, embedding humanities natural disposition to trust [[REF](www.socsci.uci.edu/~duffy/papers/trustamongstrangers.pdf)], and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism. 
+We are applying ideas fundamentally concerned with freedom of individuals, embedding humanities natural disposition to trust, and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism\footcite{bicchieri2004trust}. 
 The threath of being banned forever from an ecosystem may seem to lack compassion and decency, but boosts trust. 
 Game theory shows that the "shadow of the future" removes cheating incentives.
 Note that fraud differs from blunders by economic actors, which merely impact their reputation (e.g. star rating).
@@ -145,7 +146,7 @@ In other words, mistakes can be forgiven, but intentional digital manipulations 
 Our work establishes a blueprint for creating a trustworthy, programmable economy.
 The term programmable economy was introduced by consultancy firm Gartner Inc. in 2015. 
 We expand upon their ideas with various architectural details, propose feasible rules, show operational prototypes, and in general mature this concept.
-They describe it as ``the programmable economy, enabled by metacoin platforms and smart technologies, will support new forms of value exchange, new kinds of markets (including dynamically defined on-demand markets), and new kinds of economies such as the attention economy, the reputation economy, the on-demand economy and the resource optimization economy.'' [[REF](http://www.gartner.com/newsroom/id/3146018)]
+They describe it as ``the programmable economy, enabled by metacoin platforms and smart technologies, will support new forms of value exchange, new kinds of markets (including dynamically defined on-demand markets), and new kinds of economies such as the attention economy, the reputation economy, the on-demand economy and the resource optimization economy.''\footcite{gartnerprogrammableeconomy}
 
 \begin{figure}[t]
 	\centering
@@ -161,11 +162,12 @@ The Internet requires a common continuously evolving strong identity layer.
 This would make the Internet safer, better and more efficient.
 A single common identity layer also needs full decentralisation and self-governance.
 This blocks progress, for instance, a single standard for globally legally valid electronic signatures which does not yet exist.
+This work is motivated by the lack of control over our identity, as formulated within the proposed WebDHT documentation\footcite{webdhtproposal}: 
 
-This work is motivated by the lack of control over our identity, as formulated [within the proposed WebDHT documentation](https://opencreds.org/specs/source/webdht/): "The Web currently does not have a mechanism where people and organizations can claim identifiers that they have sole ownership over. Identifiers, such as those rooted in domain names like emails addresses and website addresses, are effectively rented by people and organizations rather than owned. Therefore, their use as long-term identifiers is dependent upon parameters outside of their control. One danger is that if the rent is not paid, all data associated with the identifier can be made temporarily or permanently inaccessible. This document specifies a mechanism where people and organizations can cryptographically claim ownership over identifiers such that they control them and the documents that they refer to."
+\blockquote{The Web currently does not have a mechanism where people and organizations can claim identifiers that they have sole ownership over. Identifiers, such as those rooted in domain names like emails addresses and website addresses, are effectively rented by people and organizations rather than owned. Therefore, their use as long-term identifiers is dependent upon parameters outside of their control. One danger is that if the rent is not paid, all data associated with the identifier can be made temporarily or permanently inaccessible. This document specifies a mechanism where people and organizations can cryptographically claim ownership over identifiers such that they control them and the documents that they refer to.}
 
 Self-sovereign identities require that users are the rulers of their own identity.
-This idea was presented in 2012 by Moxie Marlinspike [[REF](http://www.moxytongue.com/2012/02/what-is-sovereign-source-authority.html)].
+This idea was presented in 2012 by Moxie Marlinspike\footcite{sovereignsource}.
 With this concept people and businesses can store their own identity data on their own devices, and present it efficiently to anyone who wants to validate it.
 The decentralized storage within the concept removes the need for any central database of identity data.
 This might be increasingly important with the upcoming European Union General Data Protection Regulation.
@@ -178,7 +180,7 @@ A large list of worldwide claimed identities by citizens could replace all centr
 
 Being the ruler of your own identity is closely related to the core concept of Bitcoin.
 Bitcoin creates money without banks, but also provides users with an exceptional level of control.
-The novelty of Bitcoin is that is provides a system where nobody can stop a specific entity from spending their money. [REF](http://www.r3cev.com/blog/2016/4/4/introducing-r3-corda-a-distributed-ledger-designed-for-financial-services)
+The novelty of Bitcoin is that is provides a system where nobody can stop a specific entity from spending their money\footcite{r3corda}.
 Identity autonomy provides a new level of citizen empowerment and enables financial sovereignty\footcite{matouk2009financial}.
 
 The second layer is our TrustChain fabric, a blockchain design with loose coupling and linear scalability of transaction throughput. 
@@ -195,7 +197,7 @@ We define a self-governance system as a distributed system in which autonomous i
 Self-governance implies a mechanism for peaceful transfer of power. 
 Users may directly vote on new laws, changes to rules, routine maintenance updates, and key changes in principles. 
 This approach has proven to be usable, but occasionally leads to fascinating outcomes.
-On 20 July 2016 the Ethereum community split apart because a majority voted to revert a completely valid transaction, created by faulty user software (known as the DAO hack) [[REF](https://www.cryptocompare.com/coins/guides/the-dao-the-hack-the-soft-fork-and-the-hard-fork/)].
+On 20 July 2016 the Ethereum community split apart because a majority voted to revert a completely valid transaction, created by faulty user software (known as the DAO hack)\footcite{cryptocomparedao}.
 Another option is use representatives and appoint professionals responsible for the daily administration of the community through some voting process.
 However, this goes against the prevailing anti-authority culture within operational blockchain ecosystems.
 Distributed systems with self-governance have no external overseers and no central controlling servers.
@@ -222,14 +224,14 @@ Building open infrastructures with self-governance is costly (our key funding wa
 
 \section{Land Registration Application}
 
-Recently the World Bank indicated that 70% of the world’s population still lacks access to proper land titling or demarcation services [[REF](http://ieg.worldbankgroup.org/blog/why-land-administration-matters-development)].
+Recently the World Bank indicated that 70\% of the world’s population still lacks access to proper land titling or demarcation services\footcite{ieglandadministration}.
 A digital land registration system using blockchain technology requires a re-design of existing procedures for submission and verification of records and claims.
 It is most likely to demand changes to legal frameworks.
 
 Obtaining agreement from numerous parties during several of the stages of a property transactions, detecting errors, and to preserve tamper-proof logging is a significant challenge.
 Central keepers of records are often entrusted with this critical coordination task.
 Blockchains clearly have potential here, offering transparency, reducing overhead, and especially providing a single-source-of-truth.
-Various reports support this opinion [[REF](https://www2.deloitte.com/content/dam/Deloitte/uk/Documents/Innovation/deloitte-uk-blockchain-app-in-public-sector.pdf).
+Various reports support this opinion\footcite{deloitteblockchain}.
 
 Our presented architecture for the programmable economy is designed to greatly simplify critical public infrastructure such as land ownership.
 As technology experts we are unable to judge if laws of various countries are ready to transition to a world where analog printouts hold less authority and the digital world is the authoritative source of truth.
@@ -271,7 +273,7 @@ The detailed architecture of the economic primitives digital identity, trust, pr
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=1\columnwidth]{assets/tech_stack}
-	\caption{Our detailled technology portfolio for trust creation.}
+	\caption{Our detailed technology portfolio for trust creation.}
 	\label{fig:tech_stack}
 \end{figure}
 
@@ -300,7 +302,7 @@ For each customer, the bank produces a PUF device and stores an initial set of c
 Next, the device is given to the customer.
 When the customer wishes to authenticate himself, he presents the PUF and the bank, in possession of a set of challenge-response pairs unique to this device, sends a random challenge to the PUF.
 If the device provides a correct response, the customer is authenticated.
-Since cloning or mathematical modeling of the device is non-trivial, this is a secure mechanism to deploy for authentication purposes.
+Since cloning or mathematical modelling of the device is non-trivial, this is a secure mechanism to deploy for authentication purposes.
 
 \subsection{Biometric-based Authentication}
 
