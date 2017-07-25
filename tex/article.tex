@@ -41,7 +41,7 @@ The Uber mobile application asks both drivers and passengers to provide feedback
 The software averages the one to five-star ratings of the most recent 500 trips.\footcite{uberratinghelp}
 If this average long-term quality rating of a driver drops below a certain level, it automatically triggers contract termination.\footcite{forbesuserfiring}
 The traditional dynamics of trust are altered on such platforms.
-Employment regulations are under pressure: some courts found that Uber violated local taxi regulations.\footcite{ftuberregulation}\footcite{reutersuberdanish}\footcite{reutersubersouthkorea}
+Employment regulations are under pressure: some courts found that Uber violated local taxi regulations.\footcite{ftuberregulation}\,\footcite{reutersuberdanish}\,\footcite{reutersubersouthkorea}
 For the United Kingdom these platforms are responsible for lowering unemployment levels, reducing fixed employment contracts by a few percent, enforce the trend towards zero-hour contracts and self-employment.
 A 2017 United Kingdom government report states that currently 1.1 million people work within this gig economy.\footcite{goodgigs}
 The laws which govern trust, employment terminations, and access to marketplaces are no longer the exclusive domain of national law.
@@ -50,22 +50,22 @@ Laws of trust are now partly inside commercial software.
 This work aims to help transform the gig economy.
 We aim to institutionalize the empowerment of workers and small businesses with our software, rules and architectural principles.
 
-First, we designed and created an operational open source prototype of the core Uber functionality, matching drivers and passengers on a two-sided market.
-Our non-profit alternative aims to be more transparent, fair, and open.
-Second, we devised an alternative set of rules and principles for the emergence of trust, using only repeated interactions between strangers.
+First, we design and create a generic, decentralized matchmaking platform for two-sided markets.
+Our non-profit proof-of-concept application aims to be more transparent, fair, and open.
+Second, we devise an alternative set of rules and principles for the emergence of trust, using only repeated interactions between strangers.
 Third, we present a blueprint for a public infrastructure and prototypes for each part of this blueprint for the gig economy.
-Our proposed public infrastructure in principle should be able to offer non-profit alternative to current matchmaking platforms (e.g. Uber, TaskRabbit, Amazon, Expedia, Booking, etc.).
+Our proposed public infrastructure in principle should be able to offer a generic non-profit alternative to current matchmaking platforms (e.g. Uber, TaskRabbit, Amazon, Expedia, Booking, etc.).
 Finally, we hint at how such an infrastructure might be used to realise what has become known as the \emph{programmable economy}.
 
 Blockchain technology is at the core of our proposed Uber alternative and blueprint for a public gig economy.
-However, Bitcoin and Ethereum are in our opinion unsuitable for this task or other legal processes such as land registration.
-We do not consider cybercurrency research in the remainder of this work.
+However, cybercurrency-oriented ledgers such as Bitcoin and Ethereum are in our opinion unsuitable for this task or other legal processes such as land registration.
 Our reason is that all current work based on coin creation, blockchain consensus like proof-of-work or variants thereof lack robust and effective ties to any legal system, or even the real world in general.
-The current generation of cybercurrency-based blockchain technology lacks a durable governance structure.
+Additionally, the current generation of cybercurrency-based blockchain technology lacks a durable governance structure.
 Severe disagreements exists within these communities, as various factions battle for control of ecosystems worth billions.
 The cybercurrency ecosystem is unsuitable for land registration as it occasionally has periods dubbed civil war by the media.\footcite{bloombergbitcoinsplinter}
+While there has been promising advances in the field of cybercurrency, we do not consider this research in the remainder of this work.
 We also do not consider private or consortium blockchains, as they do not offer any significant advantage over classical distributed databases.
-We focus on the tamper-proof leaderless database type of solutions.
+Instead, we focus on the tamper-proof leaderless database type of solutions.
 The statements and opinions in this paper are based on our decade-long experience of deploying and gradually improving our own ledger, installed by 1.8 million users.
 We deployed a very primitive fully distributed ledger in August 2007, pre-dating the launch of Bitcoin.\footcite{bbcnewstribler}
 In 2017 we have mathematically proven that our blockchain technology, TrustChain, scales linear and surpasses a transaction throughput of 10.000 transactions per second.\footcite{githubissueconsensus}
@@ -78,7 +78,7 @@ These authentic records create ownership, determine citizenship, and define part
 It establishes a governance layer in which states, economic actors, and citizens interact, effectively creating trust.
 
 For thousands of years trusted guardians kept authentic ownership records of land and assets in general.
-These centralized bureaucracies which govern these records have not changed much, while the world is slowly being filled with autonomous cars, trucks, drones, and barges. 
+These centralized bureaucracies which govern these records have not changed much, while technological innovations like autonomous vehicles and virtual reality are changing the world at a fast pace. %the world is slowly being filled with autonomous vehicles, . 
 This difference in innovation speed is creating increasing levels of friction around data governance. 
 The legal world might be at the beginning of a transition towards full digitization, additional standardization, and further automation. 
 Already 22 years ago the book "Law in a Digital World" was published, however deeds of land transfer are rarely pure in digital form.\footcite{katsh1995law}
@@ -97,8 +97,8 @@ This leads to the following problems for the social good:
 Centralized approaches are ultimately always influenced by the goals and the reliability of the central entity or authority that controls them. 
 One economic model even predicts the rise of predatory, monopolistic platforms within two-sided markets.\footcite{loertscher2016predatory}
 For this reason, central platforms can never be truly generic and universal. 
-With a decentralized approach, multiple independent individuals cooperate in some manner to build a single ecosystem and no one entity has control over the entire environment.
-This is the model we envision for the future programmable economy: trust relations are not locked to a single profit-driven entity.
+With a decentralized approach, multiple independent individuals cooperate to build a single ecosystem and no one entity has control over the entire environment.
+This is the model we envision for the future programmable economy: trust relations are not locked in a single profit-driven entity.
 
 The cardinal problem is: \emph{who owns trust}?
 Creating and maintaining trust within a public, shared infrastructure has proven to be a hard problem.
@@ -108,37 +108,45 @@ In May 1962 the vision of a time-sharing computer system with many remote statio
 Nobody owns the Internet.
 This has been a critical factor for its decades long success story.
 The Internet consists of numerous Autonomous Systems which are loosely coupled and have a common numbering mechanism.
-On top of this global communication infrastructure we built email, video conferencing, entertainment platforms, search engines, marketplaces, countless cloud services, and essentially a digital economy.
+On top of this global communication infrastructure we have built email, video conferencing, entertainment platforms, search engines, marketplaces, countless cloud services, and essentially a digital economy.
 However, these examples often contain a single central point of control and authority.
 It has proven to be hard to create a decentralized governance layer for such vital public infrastructure.
 
 Joseph Stiglitz co-authored the "Architecture of Economic Systems" in 1985, describing how decision making units can be organized together within a system.\footcite{sah1985architecture}
 It presents a basic framework to compare the performance of decentralized and centralized economic systems.
 Centralized economic systems have given way to decentralized forms.
-The current challenge is to further refine the decentralized form: storage and governance of authoritative answers to ownership questions using a public and transparent infrastructure.
+The current challenge is to further refine this form: storage and governance of authoritative answers to ownership questions using a public and transparent infrastructure.
 
 Trust, accountability, and reputation mechanisms are closely tied.
 Transparency can be used to make an authority accountable in order to establish trust. 
 It promotes integrity of operations by monitoring the correct behaviour of economic actors.\footcite{troncoso2017systematizing}
 
 Creating trustworthy, public, transparent, and decentralized infrastructures is non-trivial.
-We lack a decentral solution for essential economic primitives such as digital identities, money, trust, and marketplaces. 
+We lack a decentralized, open solution for essential economic primitives. 
 
 \section{Architecture for Creating Trust}
 
-We propose an architecture to create a trustworthy decentralized infrastructure for four economic primitives.
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=1\columnwidth]{assets/tech_stack_simple}
+	\caption{Our four-layered architecture for creating trust.}
+	\label{fig:tech_stack_simple}
+\end{figure}
+
+We propose an architecture to create a trustworthy decentralized infrastructure for four economic primitives: digital identities, money, trust and marketplaces.
+Figure \ref{fig:tech_stack_simple} shows the four layers which define our architecture.
 The novelty of our work is the application of the Internet architecture throughout our architecture, owned by both everybody and nobody
 Our work is academically pure: it relies on self-governance, and weak coupling between autonomous entities. 
-Each of the four economic primitives are meticulously designed without relying on any middleman, they are void of any central authority, make traditional intermediaries optional, do not require any central server, remove the need for central databases, and even do not depend on Internet connectivity.
+Each of the four economic primitives are meticulously designed without relying on any middleman, they are void of any central authority, make traditional intermediaries optional, do not require any central server, remove the need for centralized databases, and even do not depend on Internet connectivity.
 
 Our blueprint builds heavily on the concepts proven within the gig economy and combines it with blockchain technology.
-It contains four layers: strong digital identities, sub-second programmable money transfers, digital trust, and blockchain-regulated marketplaces.
-We believe our proposal is the first proposal with real-world viability, as it is the only detailed proposal based on rigorous experimental science: running code.
+It contains four primitives: strong digital identities, sub-second programmable money transfers, digital trust, and blockchain-regulated marketplaces.
+We believe our proposal is the first blueprint with real-world viability, as it is the only detailed proposal based on rigorous experimental science: running code.
 This work is based on a decade of experimentation: for each component within our architecture we crafted various generations of operational prototypes and conducted Internet-deployment tests.
-Each of the four layers in our proposed economic architectural blueprint is designed to reinforce the strength, usability and efficiency of the other layers. 
+Each of the four primitives in our proposed economic architectural blueprint is designed to reinforce the strength, usability and efficiency of the other primitives. 
 Upcoming sections present how we applied and validated our architecture by creating a decentralized alternative for Uber and an open, shared market for mortgage financing.
 
-We believe that blockchain technology enables decentralized economies of higher efficiency and stability then currently known. 
+We believe that blockchain technology enables decentralized economies of higher efficiency and stability than currently known. 
 This work broadens the applications of the organisational principle behind the Internet, offering full sovereignty to all decision making entities, full transparency on their past performance, and openness in general.
 We are applying ideas fundamentally concerned with freedom of individuals, embedding humanities natural disposition to trust, and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism.\footcite{bicchieri2004trust}
 The threat of being banned forever from an ecosystem may seem to lack compassion and decency, but boosts trust. 
@@ -152,15 +160,7 @@ The term programmable economy was introduced by consultancy firm Gartner Inc. in
 We expand upon their ideas with various architectural details, propose feasible rules, show operational prototypes, and in general mature this concept.
 They describe it as ``the programmable economy, enabled by metacoin platforms and smart technologies, will support new forms of value exchange, new kinds of markets (including dynamically defined on-demand markets), and new kinds of economies such as the attention economy, the reputation economy, the on-demand economy and the resource optimization economy.''\footcite{gartnerprogrammableeconomy}
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=1\columnwidth]{assets/tech_stack_simple}
-	\caption{Our four-layered architecture for creating trust.}
-	\label{fig:tech_stack_simple}
-\end{figure}
-
-Figure \ref{fig:tech_stack_simple} shows the four layers which define our architecture.
-First we need to address the digital identity problem, shown as the bottom layer.
+First we need to address the digital identity problem, shown as the bottom layer in Figure \ref{fig:tech_stack_simple}.
 A wealth of applications require strong authentication and long-lived secure identities.
 The Internet requires a common continuously evolving strong identity layer.
 This would make the Internet safer, better and more efficient.
@@ -178,9 +178,9 @@ This might be increasingly important with the European Union General Data Protec
 
 This approach to identity is a complete overhaul to the approach used today by governments using central controlled identity administration frameworks.
 Users become autonomous by using self-sovereign identities and are free to store their digital passport inside their own smartphone device.
-Instead of your government assigning you citizen number "0013" or your telecommunication provider renting you cell phone number "0-013" you can claim ownership of cryptographic key "8A4D48B" as you worldwide identity.
-Together with cryptographic techniques it becomes possible to identify and authenticate people, members of organisations and objects without even requiring Internet access.
-A large list of worldwide claimed identities by citizens could replace all central identity administration frameworks, increasing efficiency and data portability.
+Instead of your government assigning you citizen number "0013" or your telecommunication provider renting you cell phone number "0-013" you can claim ownership of cryptographic key "8A4D48B" as your worldwide identity.
+Together with novel cryptographic techniques it becomes possible to identify and authenticate people, members of organisations and objects without even requiring Internet access.
+A shared list of worldwide claimed identities by citizens could replace all central identity administration frameworks, increasing efficiency and data portability.
 
 Being the ruler of your own identity is closely related to the core concept of Bitcoin.
 Bitcoin creates money without banks, but also provides users with an exceptional level of control.
@@ -224,7 +224,7 @@ Furthermore they challenge existing revenue models and incumbents's market power
 Little experience, evidence, and knowledge exists for devising this fourth layer.
 We are currently conducting trials with various businesses to expand our understanding.
 This is a new, developing area of research, however, we believe too few research teams have the resources for the learn-by-doing methodology required to make serious scientific progress.
-Building open infrastructures with self-governance is costly (our key funding was the EU FP7 project P2P-Next of 19.500.000 Euro and QLectives of 6.900.000 Euro).\footcite{p2pnextfunding}\footcite{qlectivefunding}
+Building open infrastructures with self-governance is costly (our key funding was the EU FP7 project P2P-Next of 19.500.000 Euro and QLectives of 6.900.000 Euro).\footcite{p2pnextfunding}\,\footcite{qlectivefunding}
 
 \section{Land Registration Application}
 
@@ -272,11 +272,11 @@ Investment and transaction contracts are expected to depend on another contract.
 For investment contracts, this should be a mortgage contract whereas transaction contracts should have a investment contract as dependency.
 Contract dependencies, originating from a single mortgage contract, provide a public overview of all mortgage ownership transferrals since the existence of the mortgage contract.
 
-To store contractual agreements, a blockchain specifically suitable for transactions that transfer ownership of assets between entities, in this scenario, mortgages, has been designed and implemented.
+To store contractual agreements, a blockchain has been designed and implemented, specifically suitable for transactions that transfer ownership of assets between entities, in this scenario, mortgages.
 After a contract has been digitally signed by both involved parties, both transaction participants send the contract to all banks (we assume that financial institutions are always available and connected on our platform).
 Periodically, banks will try to add a new block, containing one or more received contracts, to the blockchain.
 Contracts can only be appended to a transaction block if all of the contract's dependencies are already available on the blockchain.
-The adopted consensus mechanism here is proof-of-work: while the scalability of this mechanism is limited, it is viable for our prototype since mortgages won't be created and traded at a high rate.
+The adopted consensus mechanism here is proof-of-work: while the scalability of this mechanism is limited, it is viable for our prototype since mortgages are usually not negotiated and traded at a high rate.
 A dynamic difficulty target mechanism assures that on average, one new block is added to the chain every three minutes.
 
 \section{Technology Portfolio for Trust Creation}
@@ -290,13 +290,14 @@ A dynamic difficulty target mechanism assures that on average, one new block is 
 
 We now expand on each of the four layers of our envisioned architecture, introduced in Figure \ref{fig:tech_stack_simple}, for a programmable economy.
 The detailed architecture of the economic primitives digital identity, trust, programmable money, and marketplaces will be elaborated and is presented in Figure \ref{fig:tech_stack}.
+Most of the defined elements of Figure \ref{fig:tech_stack} are briefly evaluated by conducting a small experiment with an engineered prototype.
 
 \subsection{Physical Unclonable Functions}
 \label{sec:pufs}
 Some foundations of security are based on the laws of physics.
 For numerous years scientists have searched for a secure basis for critical infrastructure and we believe physical devices provide the desired basis.
 We specifically avoid using software and the risk of implementation bugs or weaknesses.
-Physical devices for security purposes are already widely used in the cooperate world, mainly as mean to implement a two-factor authentication system.
+Physical devices for security purposes are already widely used, mainly as mean to implement a two-factor authentication system.
 
 A Physical Unclonable Function (PUF) is a device that is easy and cheap to produce but practically infeasible to duplicate, due to minor variations in the manufacturing process of the hardware.\footcite{cortez2012modeling}
 Their typical usage can be found in applications that require a high level of security, for instance, self-sovereign identity solutions.
@@ -330,7 +331,7 @@ Each phase will now be explained according to the Figure \ref{fig:puf_key_storag
 	\item Reconstruction phase: reconstruction of a stored key starts by measuring the PUF response, which is used as input for the Fuzzy Extractor. The helper data, generated during enrollment, is used to perform information reconciliation and generates the PUF reference response. After privacy amplification, the programmed cryptographic key is restored and ready for usage.
 \end{itemize}
 
-PUF devices can also be utilized for identification purposes.
+PUF devices can also be utilized for identification purposes\footcite{vskoric2005robust}.
 An authentication mechanism based on PUFs works as follows: imagine a bank that needs to identity customers.
 For each customer, the bank produces a PUF device and stores an initial set of challenge-response pairs securely in their database.
 Next, the device is given to the customer.
@@ -360,7 +361,8 @@ Finally, the captured fingerprint is matched against known fingerprints availabl
 Smartphones such as the Google Pixel which are equipped with 128GB of storage space, can store up to ten million fingerprints.
 
 After conducting a small experiment with our prototype, we conclude that the mean fingerprint matching accuracy is 55\% with the highest value of 67\% for thumb fingers.
-These experimental results show that there is definitely room for improvement during the fingerprint processing and matching stages, however, we demonstrated the feasibility of this approach.
+While modern computerized systems are able to accurately match fingerprints more that 99\% of the time, these systems are often patented, closed-source and expensive\footcite{nistfingerprint}.
+We demonstrated the feasibility of an open-source fingerprint recognition framework, requiring minimal resources.
 The ability to capture, process and match fingerprints in mere seconds, renders this concept usable in various scenarios like in remote regions with limited Internet connectivity.
 This work provides a solution for portable trust and our framework has been specifically designed to serve as a building block for a self-sovereign identity solution.
 
@@ -499,7 +501,7 @@ Consensus of the global ledger is necessary to prevent the double-spending attac
 Possibility of such an attack impacts reliability and trust of the overall system, preventing community adoption.
 Unfortunately, most consensus mechanisms are computationally expensive and limit the global transaction throughput of the system.
 For instance, the proof-of-work consensus mechanism implemented in the Bitcoin fabric limits the theoretical transaction throughput to around seven transactions per second which is by far not enough for a medium to large-sized trading platform.\footcite{duebitcoinscale}
-In comparison, Visa processes several hundreds of transactions every second and in April 2017, SWIFT recorded an average of 28.38 million payments per day or around 328 per second.\footcite{visatransactions}\footcite{swifttransactions}
+In comparison, Visa processes several hundreds of transactions every second and in April 2017, SWIFT recorded an average of 28.38 million payments per day or around 328 per second.\footcite{visatransactions}\,\footcite{swifttransactions}
 This motivates the need for a scalable blockchain.
 
 We designed, implemented and evaluated a fault-tolerant, horizontal scalable consensus mechanism on top of TrustChain, capable of detecting malicious activities performed by users like double-spending.
@@ -557,13 +559,13 @@ As a first observation, note the linear relationship in the figure between the a
 The throughput rate lowers when the number of facilitators in increased. This is explained by the fact that more facilitators require additional network communication between users, introducing additional computational effort.
 
 Figure \ref{fig:trustchain_scalability_experiment} indicates that we have indeed designed a scalable consensus mechanism, not bounded by a wasteful, expensive consensus mechanism like proof-of-work.
-With only a few servers, our consensus mechanism is able to reach global throughput rates surpassing that of Visa or SWIFT.
+With only a few servers, our consensus mechanism is able to reach global throughput rates surpassing that of Visa or the SWIFT payment networks\footcite{visatransactions}\,\footcite{swifttransactions}.
 
 \subsection{Trustworthiness and Reputation}
 \label{sec:reputation}
-One way to quantity trustworthiness in an economic system, is by using a reputation mechanism.
+One way to quantity trustworthiness in an economic environment, is by using a reputation mechanism.
 Reputation systems are widely used within the gig economy but the trust is often centred to a single authority.
-Fifteen years of research on generic distributed reputation systems has yielded a wide variety of proposed designs and possible solutions.\footcite{delaviz2010improving}\footcite{delaviz2012sybilres}\footcite{kamvar2003eigentrust}
+Fifteen years of research on generic distributed reputation systems has yielded a wide variety of proposed designs and possible solutions.\footcite{delaviz2010improving}\,\footcite{delaviz2012sybilres}\,\footcite{kamvar2003eigentrust}
 Prior work by us challenges the problem of estimating reputation using network flow algorithms.
 This mechanism is called BarterCast and has been verified by a real-world implementation in our file-sharing software Tribler.\footcite{meulpolder2009bartercast}
 The most challenging attack on decentralized reputation systems is the Sybil attack, where a malicious user manipulates his or her standing in the network by creating multiple fake identities (sybils) and initiating interactions with them.
@@ -574,7 +576,7 @@ Building a reputation mechanism on top of TrustChain has several advantages.
 First, TrustChain records are light-weight and designed to be exchanged with other users.
 More importantly, the inherent tamper-proof property of TrustChain strengthens the reputation system since it becomes infeasible to tamper with past interactions.
 
-Our reputation mechanism is based on PageRank, designed in 1998 by Larry Page and is called Temporal PageRank since it incorporates the notion of time.\footcite{page1999pagerank}\footcite{otte2016sybil}
+Our reputation mechanism is based on PageRank, designed in 1998 by Larry Page and is called Temporal PageRank since it incorporates the notion of time.\footcite{page1999pagerank}\,\footcite{otte2016sybil}
 PageRank is an accurate model that captures user behaviour when browsing the web and yields a ranking of websites based on relevance for that user.
 The algorithm models websites and links between websites as a network and explores this network in a structured manner.
 Temporal PageRank works in the same way, exploring the TrustChain data structure and analysing past transactions, including connections between them.
@@ -623,7 +625,7 @@ Finally, our market is void of any transaction fee, enabling unrestricted and fa
 	\label{fig:tribler_market}
 \end{figure}
 
-We built our decentralized marketplace and integrated it in Tribler.
+We created our decentralized marketplace and integrated it in Tribler.
 The initial release of the marketplace supports trading bandwidth against both cyber- and regulated currencies, using the Internet-of-Money module discussed in Section \ref{sec:internet_of_money}.
 Figure \ref{fig:tribler_market} shows the orderbook of a trader in the Tribler software.
 Information about installed wallets of a trader are present in the upper-right corner of the window.
@@ -657,11 +659,16 @@ The adoption and growth of blockchain-powered platforms like Ethereum and Bitcoi
 Besides illegal trading and various security weaknesses resulting in compromised digital assets, there are to date few real-world results demonstrating long-term viability of blockchain technology in our legal systems.
 We believe this is caused by a fundamental lack of ties to any real-world, legal system.
 
-We proposed a novel architecture to create trust.
-Each component of our technology portfolio is designed and implemented based on the philosophy of the Internet itself: self-governance and loosly coupled autonomous systems, interacting with each other.
+We propose a novel architecture to create trust.
+Each component of our technology portfolio is designed and implemented based on the philosophy of the Internet itself: self-governance and loosely coupled autonomous systems, interacting with each other.
 The essential technology to cultivate trust within our decentralized technology platform is TrustChain, a blockchain built around the notion of transacting real-world entities.
 Viability of our proposed technology portfolio is demonstrated in the real-world, with running code.
-Our aim is to adopt the programmable economy as a mean to decrease organizational barriers, increase trading efficiency and provide more transparancy and openness in existing and new economic systems.
+Our aim is to adopt the programmable economy as a mean to decrease organizational barriers, increase trading efficiency and provide more transparency and openness in existing and new economic systems.
+
+While real-world viability of our blueprint has been proven, there is future work to consider.
+Some elements should be expanded, like the Internet-of-Money and our self-sovereign identity solution, to unlock their full potential.
+Additionally, we are unsure how our proposed technology exactly impacts existing legal, political and economic systems.
+For this, we reach out to companies to get insights in the implications of our systems, retrieve feedback on our architectural design and broaden our knowledge in general.
 
 
 %\bibliographystyle{oscola}
