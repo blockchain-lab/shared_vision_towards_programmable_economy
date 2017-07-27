@@ -250,8 +250,26 @@ As technology experts we are unable to judge if laws of various countries are re
 To date it seems no country recognizes the electronic signatures created using self-sovereign identity systems.
 
 The blockchain technology of today is sufficiently mature to start prototyping and understanding the (possible) advantages for land registration. 
-This technology is not yet sufficiently understood to underpin such an essential public service, but it will be soon.
+% RV: Expand a bit on how blockchains could be used for land registration:
+Deeds that currently are stored in a centralized cadastral register,
+  such as land purchases, mortgages and splits,
+could easily be mapped onto transactions in a blockchain.
+Things like inheritance rights or easements could be implemented through smart contracts % RV: Any nice reference that could be cited here?
+which could rely on, e.g., the existence of attribute attestation transactions~(Section~\label{sec:trustchain}).
+% RV: About query support:
+In addition to recording the aforementioned transactions,
+  land registration also requires its registers to be queryable and thus to be robust and highly available
+  in order to provide services and certainty to citizens.
+% RV: Please proofread the next few sentences and cite relevant references
+Support for queries,
+  such as ``what are the exact boundaries of my plot?''
+  or ``what are the plots in this particular area?'',
+  can be realized through a distributed search index on top of the blockchain.
+An example of a real-world highly available distributed search index can be found in Tribler~(INCLUDE MOST RECENT RELEVANT TRIBLER PAPER HERE). % RV: Please add a citation here
+%
+While this technology is not yet sufficiently understood to fully underpin such an essential public service, it will be soon.
 Similar to self-driving cars, it is likely that legal issues will decelerate technological progress.
+
 
 \section{Open Market for Mortgage Finance}
 
