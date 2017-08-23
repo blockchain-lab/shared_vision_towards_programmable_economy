@@ -236,15 +236,29 @@ A digital land registration system using blockchain technology requires a re-des
 Obtaining agreement from numerous parties during several of the stages of property transactions, detecting errors, and to preserve tamper-proof logging is a significant challenge.
 Central keepers of records are often entrusted with this critical coordination task.
 Blockchains clearly have potential here, offering transparency, reducing overhead, and especially providing a single-source-of-truth.
-Various reports support this opinion.\footcite{deloitteblockchain}\,\footcite{coindesklandregistration}
+Various reports support this opinion and several countries are already exploring the possibilities to store land transferral transactions on a global ledger.\footcite{deloitteblockchain}\,\footcite{coindesklandregistration},\footcite{forbeslandtiles}
+The importance of transparency that blockchains offer is even more apparent when one considers regions in which public's trust has been damaged, e.g., in war-torn Colombia, and land registration requires the involvement of its citizens.\footcite{landrightscolumbia}
 
 Our presented architecture for the programmable economy is designed to greatly simplify critical public infrastructure such as land ownership.
-As technology experts we are unable to judge if laws of various countries are ready to transition to a world where analog printouts hold less authority and the digital world is the authoritative source of truth.
-To date it seems no country recognizes the electronic signatures created using self-sovereign identity systems.
+As technology experts we are unable to judge if laws of various countries are ready to transition to a world where analogue printouts hold less authority and the digital world is the authoritative source of truth.
+To date it seems countries have difficulties recognizing the electronic signatures created using self-sovereign identity systems.
 
 The blockchain technology of today is sufficiently mature to start prototyping and understanding the (possible) advantages for land registration. 
-This technology is not yet sufficiently understood to underpin such an essential public service, but it will be soon.
-Similar to self-driving cars, it is likely that legal issues will decelerate technological progress.
+Deeds that currently are stored in a centralized cadastral register, such as land purchases, mortgages and splits, could easily be mapped onto transactions in a blockchain.
+Things like inheritance rights or easements could be implemented through smart contracts which could rely on, e.g., the existence of attribute attestation transactions (see Section \ref{subsec:ssi}).
+In addition to recording the aforementioned transactions, land registration also requires its registers to be searchable and thus to be robust and highly available in order to provide services and certainty to citizens.
+Support for queries, such as ``what are the exact boundaries of my plot?'' or ``what are the plots in this particular area?'', can be realized through a distributed search index on top of the blockchain.
+An example of a real-world highly available distributed search index can be found in the Tribler file-sharing software.\footcite{pouwelse2008tribler}
+
+While there are possibilities for a blockchain capable of recording land transferral, the adoption of this technology gives raise to complicated regulatory issues, elaborated in the 2016 report of law firm Clyde \& Co.\footcite{clydeco2016blockchainlaw}
+One of the key issues involves the geographical location of data storage, which is under subject of national law.
+Since the blockchain is an inherent decentralized mechanism, pinpointing the exact location of a specific piece of data (and taking the appropriate cross-border action) might be challenging.
+Another issue is that computer code often does not contain any notion of law.
+This questions legal enforceability of smart contracts since a contract involves concepts like acceptance, certainty and consideration, involving human decision making.
+The digital world does not consider or follow these contractual concepts.
+
+While this technology is not yet sufficiently understood to fully underpin such an essential public service, it will be soon.
+Similar to self-driving cars, it is likely that legal issues will decelerate adoption of blockchain technology until an adequate legal foundation has been developed.
 
 \section{Open Market for Mortgage Finance}
 
@@ -369,6 +383,7 @@ The ability to capture, process and match fingerprints in mere seconds, renders 
 This work provides a solution for portable trust and our framework has been specifically designed to serve as a building block for a self-sovereign identity solution.
 
 \subsection{Self-sovereign Identity}
+\label{subsec:ssi}
 
 Most identity services are offered by a single authority, handing out, revoking and managing identities.
 This trend continued when society adopted digital solutions: issuers of digital identities like Internet Assigned Numbers Authority (IANA) and Internet Corporation for Assigned Names and Numbers (ICANN), the organizations responsible for coordination of digital namespaces on the Internet, were and still are single, large organizations that have a large influence on the layout of the Internet landscape.\footcite{pathtossi}
