@@ -236,7 +236,7 @@ A digital land registration system using blockchain technology requires a re-des
 Obtaining agreement from numerous parties during several of the stages of property transactions, detecting errors, and to preserve tamper-proof logging is a significant challenge.
 Central keepers of records are often entrusted with this critical coordination task.
 Blockchains clearly have potential here, offering transparency, reducing overhead, and especially providing a single-source-of-truth.
-Various reports support this opinion and several countries are already exploring the possibilities to store land transferral transactions on a global ledger.\footcite{deloitteblockchain}\,\footcite{coindesklandregistration},\footcite{forbeslandtiles}
+Various reports support this opinion and several countries are already exploring the possibilities to store land transferral transactions on a global ledger.\footcite{deloitteblockchain}\,\footcite{coindesklandregistration}\,\footcite{forbeslandtiles}
 The importance of transparency that blockchains offer is even more apparent when one considers regions in which public's trust has been damaged, e.g., in war-torn Colombia, and land registration requires the involvement of its citizens.\footcite{landrightscolumbia}
 
 Our presented architecture for the programmable economy is designed to greatly simplify critical public infrastructure such as land ownership.
@@ -294,12 +294,12 @@ Contracts can only be appended to a transaction block if all of the contract's d
 The adopted consensus mechanism here is proof-of-work: while the scalability of this mechanism is limited, it is viable for our prototype since mortgages are usually not negotiated and traded at a high rate.
 A dynamic difficulty target mechanism assures that on average, one new block is added to the chain every three minutes.
 
-\section{Technology Portfolio for Trust Creation}
+\section{Technology Portfolio for Identities and Trust}
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=1\columnwidth]{assets/tech_stack}
-	\caption{Our detailed technology portfolio for trust creation.}
+	\caption{Our technology portfolio for trust creation. This figure provides a detailed overview of our technology portfolio as compared to Figure \ref{fig:tech_stack_simple}.}
 	\label{fig:tech_stack}
 \end{figure}
 
@@ -421,7 +421,7 @@ Statement validation is a prime example of a Zero-Knowledge Proof in which the i
 This implies that an alcohol shop is able to verify that a customer reached the eligible age but is not exposed to the actual age of the customer.
 The described system is in particular useful when trading in the programmable economy since sellers are able to specify trade-specific identity requirements that buyers have to meet before a transaction takes place (i.e. restrictions on age, residence or reputation).
 
-\subsection{Blockchain Layer (TrustChain)}
+\section{Blockchain Layer (TrustChain)}
 \label{sec:trustchain}
 The TrustChain transaction fabric is designed around the notion of entities performing transactions with each other.
 Each user in the TrustChain network maintains and grows their own chain of historical transactions. 
@@ -619,13 +619,18 @@ For a network with 900 identities, the total duration of Temporal Pagerank is ju
 It is often not necessary to determine reputation of all users in the network; in most scenarios, determining reputations of identities you are likely to interact with is sufficient.
 However, we have demonstrated that Temporal PageRank is a feasible mechanism to use for trustworthiness estimation, even when the amount of users in the network grows.
 
+\section{Programmable Money}
+We now present our vision and work on programmable money.
+First, a novel overlay capable of performing real-time clearing and settlement will be explained.
+Next, we show how to use primitives in this layer to build powerful business logic to perform conditional payments and build smart contracts.
+
 \subsection{Real-time Clearing and Settlement}
 \label{sec:internet_of_money}
 
 \subsection{Conditional Payments and Smart Contracts}
 \label{sec:smart_contracts}
 
-\subsection{Decentralized Marketplace}
+\section{Decentralized Marketplace}
 
 The final piece of our trust architecture is an operational prototype for a generic, decentralized two-sided marketplace, capable of trading generic assets like houses, currencies or bonds.
 The platform facilitates trading without presence of a central clearing house, responsible for matchmaking and trade processing.
