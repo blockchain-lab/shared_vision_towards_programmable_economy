@@ -64,7 +64,8 @@ Additionally, the current generation of cybercurrency-based blockchain technolog
 Severe disagreements exist within these communities, as various factions battle for control of ecosystems worth billions.
 The cybercurrency ecosystem is unsuitable for land registration as it occasionally has periods dubbed civil war by the media.\footcite{bloombergbitcoinsplinter}
 While there have been promising advances in the field of cybercurrency, we do not consider this research in the remainder of this work.
-We also do not consider private or consortium blockchains, as they do not offer any significant advantage over classical distributed databases.
+We also do not consider private or consortium blockchains like R3 Corda, as they do not offer any significant advantage over classical distributed databases.\footcite{r3corda}
+While digital signatures and a block structure increases the security of a private blockchain, it lacks the security, irreversibility and censorship-resistance provided by public blockchains.\footcite{privateblockchainnarayanan}
 Instead, we focus on the tamper-proof leaderless database type of solutions.
 The statements and opinions in this paper are based on our decade-long experience of deploying and gradually improving our own ledger, installed by 1.8 million users.
 We deployed a very primitive fully distributed ledger in August 2007, pre-dating the launch of Bitcoin.\footcite{bbcnewstribler}
@@ -92,8 +93,8 @@ Reputation systems collect and process information about past interactions, to h
 An individual’s reputation on a platform such as eBay, however, is owned by a profit-driven entity.
 This leads to the following problems for the social good:
 \begin{itemize}
-	\item Lock-in: a solid reputation on one platform is locked into that platform: you cannot move your reputation. Like other forms of lock-in, this inhibits competition and encourages monopoly behaviour. Ironically, companies in the \enquote{sharing economy} do not share reputations. Users are increasingly being protected by European Union law from such data silos.\footcite{eudataprotection} The newly defined right to data portability allows individuals to obtain and reuse their personal data for their own purposes across different services.\footcite{dataportabilityeu}
-	\item Fragmentation: each company operates its own closed market, only accessible through their (mobile) application. This leads to lower overall efficiency, compared to a single open market. For example, the ride-hailing market is fragmented into numerous closed markets operated by companies such as Uber, Lyft, BlaBla Car, Didi Kuaidi, GrabTaxi and Karhoo. Each isolated marketplace tries to match drivers and customers in real-time and has to overcome similar challenges.
+	\item \emph{Lock-in}: a solid reputation on one platform is locked into that platform: you cannot move your reputation. Like other forms of lock-in, this inhibits competition, encourages monopoly behaviour and reputation manipulation. Ironically, companies in the \enquote{sharing economy} do not share reputations. Users are increasingly being protected by European Union law from such data silos.\footcite{eudataprotection} The newly defined right to data portability allows individuals to obtain and reuse their personal data for their own purposes across different services.\footcite{dataportabilityeu} The ability to move reputation allows for new incentives: for instance, an insurance company can provide discounts for a household insurance if a customer has a high no-claim car insurance bonus with another company. On the other hand, providing a usable, open standard for reputation is challenging.
+	\item \emph{Fragmentation}: each company operates its own closed market, only accessible through their (mobile) application. This leads to lower overall efficiency, compared to a single open market. For example, the ride-hailing market is fragmented into numerous closed markets operated by companies such as Uber, Lyft, BlaBla Car, Didi Kuaidi, GrabTaxi and Karhoo. Each isolated marketplace tries to match drivers and customers in real-time and has to overcome similar challenges.
 \end{itemize}
 Centralized approaches are ultimately influenced by the goals and the reliability of the central entity or authority that controls them. 
 One economic model even predicts the rise of predatory, monopolistic platforms within two-sided markets.\footcite{loertscher2016predatory}
@@ -121,6 +122,7 @@ The current challenge is to further refine this form: storage and governance of 
 Trust, accountability, and reputation mechanisms are closely tied.
 Transparency can be used to make an authority accountable in order to establish trust. 
 It promotes integrity of operations by monitoring the correct behaviour of economic actors.\footcite{troncoso2017systematizing}
+
 
 Creating trustworthy, public, transparent, and decentralized infrastructures is non-trivial.
 We lack a decentralized, open solution for essential economic primitives. 
@@ -185,7 +187,7 @@ A shared list of worldwide claimed identities by citizens could replace all cent
 
 Being the ruler of your own identity is closely related to the core concept of Bitcoin.
 Bitcoin creates money without banks, but also provides users with an exceptional level of control.
-The novelty of Bitcoin is that is provides a system where nobody can stop a specific entity from spending their money.\footcite{r3corda}
+The novelty of Bitcoin is that is provides a system where nobody can stop a specific entity from spending their money.
 Identity autonomy provides a new level of citizen empowerment and enables financial sovereignty.\footcite{matouk2009financial}
 
 The second layer is our TrustChain fabric, a blockchain design with loose coupling and linear scalability of transaction throughput. 
@@ -212,7 +214,7 @@ Our proposed approach there is again the opposite of the cybercurrency community
 We believe building a trustworthy and reliable financial infrastructure from scratch is unwise.
 By re-engineering and building upon existing bank-based payment systems we provide a realistic, legally compliant, and efficient overlay.
 We re-use the existing infrastructure and transform it into loosely coupled autonomous entities.
-We provide a proof-of-principle prototype for making international money transfers with sub-second speed, near-zero commissions, instant clearing, and real-time settlement. 
+We provide a proof-of-principle prototype for making international money transfers with sub-second speed, near-zero commissions, instant clearing, real-time settlement and high availability. 
 Steps towards a programmable economy necessitate a transformation of the expensive transaction network built in 1970s (SWIFT) using a programming language from the 1950s (COBOL).\footcite{scott2017society}
 
 Our fourth layer consists of a generic value exchange marketplace and coordination mechanism.
@@ -242,6 +244,7 @@ The importance of transparency that blockchains offer is even more apparent when
 Our presented architecture for the programmable economy is designed to greatly simplify critical public infrastructure such as land ownership.
 As technology experts we are unable to judge if laws of various countries are ready to transition to a world where analogue printouts hold less authority and the digital world is the authoritative source of truth.
 To date it seems countries have difficulties recognizing the electronic signatures created using self-sovereign identity systems.
+While there are various established parties that benefit from uncertainty in land registration, a transparent and searchable infrastructure is key for realising an efficient land allocation mechanism and reducing costs.
 
 The blockchain technology of today is sufficiently mature to start prototyping and understanding the (possible) advantages for land registration. 
 Deeds that currently are stored in a centralized cadastral register, such as land purchases, mortgages and splits, could easily be mapped onto transactions in a blockchain.
@@ -286,6 +289,10 @@ The mortgage financing platform distinguishes between three different types of c
 Investment and transaction contracts are expected to depend on another contract.
 For investment contracts, this should be a mortgage contract whereas transaction contracts should have a investment contract as dependency.
 Contract dependencies, originating from a single mortgage contract, provide a public overview of all mortgage ownership transferrals since the existence of the mortgage contract.
+
+While our prototype only stores basic attributes of the property like address and price, a future milestone can be to store a material passport of a house.
+A material passport stores all used materials of a building and acts as a key component in the \emph{circular economy}.
+The circular economy is about preventing the use of new resources while reusing materials by recycling them.\footcite{madasterpassport}
 
 To store contractual agreements, a blockchain has been designed and implemented, specifically suitable for transactions that transfer ownership of assets between entities, in this scenario, mortgages.
 After a contract has been digitally signed by both involved parties, both transaction participants send the contract to all banks (we assume that financial institutions are always available and connected on our platform).
@@ -377,8 +384,8 @@ Smartphones such as the Google Pixel which are equipped with 128GB of storage sp
 
 We conducted a small experiment with our prototype to estimate how accurately fingerprints are matched.
 We conclude that the mean fingerprint matching accuracy is 55\% with the highest value of 67\% for thumb fingers.
+While this accuracy is not high enough yet for critical authentication purposes, it demonstrates the feasibility of an open-source fingerprint recognition framework, requiring minimal resources.
 While modern computerized systems are able to accurately match fingerprints more that 99\% of the time, these systems are often patented, closed-source and expensive\footcite{nistfingerprint}.
-We demonstrated the feasibility of an open-source fingerprint recognition framework, requiring minimal resources.
 The ability to capture, process and match fingerprints in mere seconds, renders this concept usable in various scenarios like in remote regions with limited Internet connectivity.
 This work provides a solution for portable trust and our framework has been specifically designed to serve as a building block for a self-sovereign identity solution.
 
@@ -402,6 +409,10 @@ Another issue is that companies often want users to reveal more information abou
 Sometimes, this data is used for analysis of user behaviour or data mining.
 This raises the question whether an identity system can be designed, void of any central authority and where users can decide which attributes they wish to reveal.
 Entities in need of identity information should be able to verify statements without being dependent on a central authority.
+In addition, modification of (personal) data must be possible without relying on a trusted third party.
+Some laws dictate that users are able to control their data and make decisions about availability, like the right to be forgotten.\footcite{dataportabilityeu}
+Companies that refuse such a request are likely to suffer from reputation damage.
+This is a prime example of institutional pressure where companies are forced to act in line with the law, without supervision of a central authority.
 
 We present a Self-Sovereign Identity (SSI) mechanism, capable of verifying statements, without any central organization, point-of-failure or possibility of data tracking, giving users full control over their identity.
 Self-sovereign identity serves a purpose in a large range of applications, have the potential to speed up traditional, inefficient verification processes and enables inter-operability between companies, individuals and governments while respecting the privacy of identity owners.
@@ -411,9 +422,10 @@ A reliable SSI mechanism is an indispensable building block to empower blockchai
 The only situation where the input of a centralized identity provider is required is when bootstrapping an identity.
 Since a cryptographic key on itself does not have much legal basis, the identity should be endorsed by a public authority, like a government.
 Our proposed SSI mechanism consists of two type of actors: attestors and challengers.
-Attestors provide an attestation for a certain attribute, possibly for a (small) fee.
-Challengers wish to prove the validity of a specific statement of the identity owner.
-It is helpful to make attributes checked by challengers publicly available on a blockchain construction (discussed in Section \ref{sec:trustchain}); this allows others to find challengers that have knowledge about a specific attribute.
+\begin{enumerate}
+	\item \emph{Attestors}: they provide an attestation for a certain attribute, possibly for a fee. Attestations have a weight, indicating the trustworthiness of the specific attestation. For instance, an age attestation performed by a government has a higher value than the same attestation provided by a financial institution since a government is the authoritative data source of a birth certificate. Optionally, each attestor could be assigned a reputation to prevent abuse of their authority. This reputation should be lowered when the attestor provides a wrong or malicious attestation. Attestors with a low reputation should be excluded from the system.
+	\item \emph{Challengers}: Challengers wish to prove the validity of a specific statement of the identity owner. It is helpful to make attributes checked by challengers publicly available on a blockchain construction (discussed in Section \ref{sec:trustchain}); this allows others to find challengers that have knowledge about a specific attribute.
+\end{enumerate}
 
 In our system, attribute values are encrypted and never leave the encrypted domain.
 Instead, all actions like statement validation and attestations are operations on encrypted data using homomorphic encryption.
@@ -468,7 +480,7 @@ Users might also decide to not append a transaction to their local chain which i
 	\label{fig:trustchain_tutorial_3}
 \end{figure}
 
-In TrustChain, this vulnerability is mitigated by adding an additional pointer in each block, see Figure \ref{fig:trustchain_tutorial_3}.
+In TrustChain, this vulnerability is fixed by adding an additional pointer in each block, see Figure \ref{fig:trustchain_tutorial_3}.
 This pointer references the prior block in the chain of the other transaction participant.
 Now, when two users are interacting, their chains get intertwined or \enquote{entangled}.
 This mechanism strengthens the tamper-proof property of TrustChain.
@@ -572,7 +584,7 @@ This experiment is conducted on our DAS-5 supercomputer.\footcite{bal2016medium}
 The global throughput of TrustChain is displayed in Figure \ref{fig:trustchain_scalability_experiment}.
 On the horizontal axis, the network size is shown as the amount of users whereas the vertical axis denotes the transaction throughput in transactions per second.
 As a first observation, note the linear relationship in the figure between the amount of users in the network and the transaction throughput; this strongly indicates the horizontal scalability property for a network up to 1400 users.
-The throughput rate lowers when the number of facilitators in increased. This is explained by the fact that more facilitators require additional network communication between users, introducing additional computational effort.
+The throughput rate lowers when the number of facilitators is increased. This is explained by the fact that more facilitators require additional network communication between users, introducing additional computational effort.
 
 Figure \ref{fig:trustchain_scalability_experiment} indicates that we have indeed designed a scalable consensus mechanism, not bounded by a wasteful, expensive consensus mechanism like proof-of-work.
 With only a few servers, our consensus mechanism is able to reach global throughput rates surpassing that of Visa or the SWIFT payment networks\footcite{visatransactions}\,\footcite{swifttransactions}.
@@ -585,12 +597,14 @@ Fifteen years of research on generic distributed reputation systems has yielded 
 Prior work by us challenges the problem of estimating reputation using network flow algorithms.
 This mechanism is called BarterCast and has been verified by a real-world implementation in our file-sharing software Tribler.\footcite{meulpolder2009bartercast}
 The most challenging attack on decentralized reputation systems is the Sybil attack, where a malicious user manipulates his or her standing in the network by creating multiple fake identities (sybils) and initiating interactions with them.
+Our recent research addresses the Sybil attack by proposing a trust mechanism, NetFlow, that bounds the profitability of such an attack.
+However, this mechanism is computationally expensive and requires significant resources when the size of the network grows.
 To date, the Sybil attack remains largely unsolved and solutions that prevent manifestation of such an attack are often complex.
 
 We have built and evaluated a distributed reputation mechanism, using irrefutable TrustChain records as foundation.
 Building a reputation mechanism on top of TrustChain has several advantages.
 First, TrustChain records are light-weight and designed to be exchanged with other users.
-More importantly, the inherent tamper-proof property of TrustChain strengthens the reputation system since it becomes infeasible to tamper with past interactions.
+More importantly, the inherent tamper-proof property of TrustChain strengthens the reputation system since it becomes infeasible to tamper with past interactions, a major weakness of BarterCast.
 
 Our reputation mechanism is based on PageRank, designed in 1998 by Larry Page, and is called Temporal PageRank since it incorporates the notion of time.\footcite{page1999pagerank}\,\footcite{otte2016sybil}
 PageRank is an accurate model that captures user behaviour when browsing the web and yields a ranking of websites based on relevance for that user.
@@ -603,6 +617,7 @@ Temporal PageRank incorporates a weak form of transitive trust.
 Transitive trust implies that trust is not only established between two entities but is transferred upon further interactions.
 Specifically this indicates that if a specific entity A trusts another entity B well, he is also tempted to trust an entity C that is introduced to him by B.
 This is a situation that occurs frequently in the real world since we are inclined to trust individuals introduced by a trustworthy entity.
+Note that the property of transitive trust alone does not guarantee a defence against the Sybil Attack: techniques in the trust estimation mechanism should address this attack.
 
 \begin{figure}[t]
 	\centering
