@@ -170,10 +170,11 @@ Upcoming sections present how we apply and validate our architecture by creating
 We believe that blockchain technology enables decentralized economies of higher efficiency and stability than currently known. 
 This work broadens the applications of the organisational principle behind the Internet, offering full sovereignty to all decision making entities, full transparency on their past performance, and openness in general.
 We are applying ideas fundamentally concerned with freedom of individuals, embedding humanities natural disposition to trust, and combining it with a very unforgiving blockchain-based mechanism for rule-breaking economic actors: digital ostracism.\footcite{bicchieri2004trust}
-The threat of being banned forever from an ecosystem may seem to lack compassion and decency, but boosts trust. 
-Game theory shows that the "shadow of the future" removes cheating incentives.\footcite{friedman1971non}
-Note that fraud differs from blunders by economic actors, which merely impact their reputation (e.g. star rating).
-In our architecture we apply the grim trigger defined in 1971 to punish dishonesty, lying, cheating, and fraud.
+The threat of being banned forever from an ecosystem may seem to lack compassion and decency, but boosts trust.
+This threat is also referred to as \enquote{shadow of the future} and game theory has shown that it helps to remove cheating incentives.\footcite{friedman1971non}
+%Game theory shows that the "shadow of the future" removes cheating incentives.\footcite{friedman1971non}
+%Note that fraud differs from blunders by economic actors, which merely impact their reputation (e.g. star rating).
+In our architecture we apply the shadow of the future to punish dishonesty, lying, cheating, and fraud.
 In other words, mistakes can be forgiven, but intentional digital manipulations are not.
 
 Our work establishes a blueprint for creating a trustworthy, programmable economy.
@@ -316,6 +317,7 @@ To store contractual agreements, a blockchain has been designed and implemented,
 After a contract has been digitally signed by both involved parties, both transaction participants send the contract to all banks (we assume that financial institutions are always available and connected on our platform).
 Periodically, banks will try to add a new block, containing one or more received contracts, to the blockchain.
 Contracts can only be appended to a transaction block if all of the contract's dependencies are already available on the blockchain.
+Invalid contracts will not be added to the blockchain, i.e. a contract that defines a new mortgage on an address already coupled to another mortgage (double-spending).
 The adopted consensus mechanism here is proof-of-work: while the scalability of this mechanism is limited, it is viable for our prototype since mortgages are usually not negotiated and traded at a high rate.
 A dynamic difficulty target mechanism assures that on average, one new block is added to the chain every three minutes.
 
@@ -526,8 +528,9 @@ Consistency of the global ledger is achieved by a consensus mechanism like proof
 While network consistency is essential for a cybercurrency system to prevent the double spending attack, it is not a hard requirement for a generic transaction ledger like TrustChain.
 Some form of consensus is reached however, namely between the involved parties of a transaction.
 We do not aim to prevent fraudulent operations but rather be able to detect malicious activities afterwards.
-The absence of a global consensus mechanism allows for superior scalability with regard to transaction throughput since parallel transaction processing is inherently possible in TrustChain.
-However, this does not mean that a consensus mechanism is not beneficial for TrustChain and as such, we present a novel consensus model in Section \ref{sec:scalable_consensus}.
+While one might argue that this is a major limitation, it allows for superior scalability with regard to transaction throughput since parallel transaction processing is inherently possible in TrustChain.
+In addition, there are many scenarios where the requirement for global consistency leads to an unnecessary layer of complexity and inferior scalability.
+However, this does not mean that a global consensus mechanism is not beneficial for TrustChain and as such, we present a novel consensus model in Section \ref{sec:scalable_consensus}.
 Finally, at a minimum, network participants only have to store the transactions that they are involved in, significantly lowering the storage requirements compared to other blockchains.
 
 TrustChain blocks are designed to be disseminated and replicated throughout the network.
@@ -734,8 +737,8 @@ This effect can be reduced by synchronizing orderbooks between matchmakers, at t
 
 Over the past few years, blockchain technology has attracted a significant amount of media attention.
 The adoption and growth of blockchain-powered platforms like Ethereum and Bitcoin raised questions whether blockchain is able to provide value within economic processes like trading, banking and the value chain.
-Besides illegal trading and various security weaknesses resulting in compromised digital assets, there are to date few real-world results demonstrating long-term viability of blockchain technology in our legal systems.
-We believe this is caused by a fundamental lack of ties to any real-world, legal system.
+Besides illegal trading and various security weaknesses resulting in compromised digital assets, there are to date few real-world results demonstrating long-term viability of blockchain technology in our legal frameworks.
+%We believe this is caused by a fundamental lack of ties to any real-world, legal system.
 
 We propose a novel architecture to create trust.
 Each component of our technology portfolio is designed and implemented based on the philosophy of the Internet itself: self-governance and loosely coupled autonomous systems, interacting with each other.
