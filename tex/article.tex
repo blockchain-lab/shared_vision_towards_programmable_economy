@@ -677,12 +677,33 @@ Finally, our market is void of any transaction fee, enabling unrestricted and fa
 
 \begin{figure}[t]
 	\centering
+	\includegraphics[width=.9\columnwidth]{assets/tradechain}
+	\caption{The TradeChain data structure, recording trades between two users.}
+	\label{fig:tradechain}
+\end{figure}
+
+All transactions performed in the market are recorded on TradeChain, a data structure that is based on TrustChain (see Section \ref{sec:trustchain}).
+The data structure is presented in Figure \ref{fig:tradechain}.
+When a trader creates a new sell or buy offer, a new block is created, containing the order specification, and is signed by a random witness trader.
+This witness validates the order and after signing, it sends the block to other traders.
+When this offer has been matched against another offer, both traders publicly commit to the upcoming transaction: this is indicated by the \emph{tx\_init} block in Figure \ref{fig:tradechain}.
+Next, the traders start exchanging assets.
+For every exchange, a new block (named \emph{payment}) will be created, specifying the volume of assets that have been transferred during that specific payment.
+Note that when both parties digitally sign this block, they agree that the assets have settled.
+When all assets have been exchanged, a new block that completes the transaction is created and signed (named \emph{tx\_done}).
+
+The structure displayed in Figure \ref{fig:tradechain} allows to detect disputes during transactions.
+If a large amount of time has passed since a payment and the transaction has not been completed yet, it is possible to derive which trader should have transferred assets next.
+This shows that TradeChain provides adequate evidence to resolve transaction disputes off-chain.
+
+\begin{figure}[t]
+	\centering
 	\includegraphics[width=.9\columnwidth]{assets/tribler_market}
 	\caption{An orderbook on the decentralized marketplace, implemented in Tribler. Wallet information is presented in the upper-right corner of the screenshot.}
 	\label{fig:tribler_market}
 \end{figure}
 
-We created our decentralized marketplace and integrated it into Tribler.\footcite{pouwelse2008tribler}
+We implemented our decentralized marketplace and integrated it into Tribler.\footcite{pouwelse2008tribler}
 The initial release of the marketplace supports trading bandwidth against both cyber- and regulated currencies, using the Internet-of-Money module discussed in Section \ref{sec:internet_of_money}.
 Figure \ref{fig:tribler_market} shows the orderbook of a trader in the Tribler software.
 Information about installed wallets of a trader are present in the upper-right corner of the window.
