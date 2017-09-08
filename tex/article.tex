@@ -668,11 +668,10 @@ Next, we show how to use primitives in this layer to build powerful business log
 
 The final piece of our trust architecture is an operational prototype for a generic, decentralized two-sided marketplace, capable of trading generic assets like houses, currencies or bonds.
 The platform facilitates trading without presence of a central clearing house, responsible for matchmaking and trade processing.
+Every trader keeps track of their own set of buy and sell offers in an orderbook and acts as a matchmaker for others, attempting to match offers.
 Matchmaking, clearing and settlement proceeds in a completely decentralized way where autonomous entities are directly exchanging buy and sell offers.
-Every trader operates on their own orderbook and acts as a matchmaker for others, attempting to match buy and sell offers.
-Assets are stored in wallets which are used to query available balances or to transfer assets to others.
-When a trade between market participants has been settled, the transaction details including the type, quantity and price of the exchanged assets are stored on TrustChain (see Section \ref{sec:trustchain}) and gossiped to other traders.
-This transaction history is used as input for trust estimation (see Section \ref{sec:reputation}).
+Assets are stored in unique wallets.
+A wallet provides functionality to query balances, mutations and allows automated asset transfers to other traders.
 Our marketplace is secured against malicious behaviour and built to be operational in the presence of a large number of traders.
 Finally, our market is void of any transaction fee, enabling unrestricted and fair trading unlike most existing blockchain-based exchanges.
 
@@ -683,19 +682,19 @@ Finally, our market is void of any transaction fee, enabling unrestricted and fa
 	\label{fig:tradechain}
 \end{figure}
 
-All transactions performed in the market are recorded on TradeChain, a data structure that is based on TrustChain (see Section \ref{sec:trustchain}).
-The data structure is presented in Figure \ref{fig:tradechain}.
-When a trader creates a new sell or buy offer, a new block is created, containing the order specification, and is signed by a random witness trader.
-This witness validates the order and after signing, it sends the block to other traders.
-When this offer has been matched against another offer, both traders publicly commit to the upcoming transaction: this is indicated by the \emph{tx\_init} block in Figure \ref{fig:tradechain}.
+All transactions performed in the market are recorded on TradeChain, a distributed ledger that is based on TrustChain (see Section \ref{sec:trustchain}).
+The TradeChain data structure is presented in Figure \ref{fig:tradechain}, showing offer creation and a transaction between two users.
+When a trader creates a new sell or buy offer, a new block with offer details is created.
+This block is validated and signed by a random trader, called a \emph{witness}.
+A witness validates the correctness of the offer and after signing the block, it disseminates the block to other traders.
+When this offer has been matched against another offer, a transaction is initiated and both traders publicly commit to this transaction by signing and storing a block (shown in Figure \ref{fig:tradechain} as a \emph{tx\_init} block).
 Next, the traders start exchanging assets.
-For every exchange, a new block (named \emph{payment}) will be created, specifying the volume of assets that have been transferred during that specific payment.
-Note that when both parties digitally sign this block, they agree that the assets have settled.
-When all assets have been exchanged, a new block that completes the transaction is created and signed (named \emph{tx\_done}).
-
-The structure displayed in Figure \ref{fig:tradechain} allows to detect disputes during transactions.
-If a large amount of time has passed since a payment and the transaction has not been completed yet, it is possible to derive which trader should have transferred assets next.
-This shows that TradeChain provides adequate evidence to resolve transaction disputes off-chain.
+For every asset exchange, a new block (named \emph{payment}) will be created, specifying the amount of assets that have been transferred during a specific payment.
+Note that when both traders digitally sign this block, it becomes irrefutable that assets have been sent and received by both parties.
+When the transaction is complete, a block created and signed (named \emph{tx\_done}).
+TradeChain provides a tamper-proof history of transactions and is designed to detect disputes and malicious activities during transactions.
+External parties can query the chain of specific traders and verify whether transactions has been completed successfully (indicated by the presence of a \emph{tx\_done} record).
+In the scenario of a dispute, TradeChain provides adequate information to resolve the issue off-chain.
 
 \begin{figure}[t]
 	\centering
@@ -709,27 +708,30 @@ The initial release of the marketplace supports trading bandwidth against both c
 Figure \ref{fig:tribler_market} shows the orderbook of a trader in the Tribler software.
 Information about installed wallets of a trader are present in the upper-right corner of the window.
 
-To obtain insight in the real-world efficiency of our system, we evaluate matching efficiency of Uber taxi drives.
-Uber, one of the largest companies operating in the sharing economy, can be considered as a two-sided market where taxi drivers, offering a ride to a location, are matched against users requesting transportation.
+To obtain insight in the real-world efficiency of our system, we created an open alternative to the proprietary Uber taxi marketplace.
+Uber, one of the largest companies operating in the sharing economy, is a two-sided market where taxi drivers, offering a ride to a location (a sell offer), are matched against users requesting transportation (a buy offer).
 Since there is no public, reliable dataset provided by the Uber platform, we use historical information of taxi rides published by the government of New York instead.\footcite{newyorktaxi}
-The dataset provides detailed temporal and geographical information of pick-up and drop-off location of each taxi ride.
-We assume a total of 1100 taxi drivers and 1000 users requesting transportation, which is also close to the limitations of the hardware on which the experiment is executed.
-It is also assumed that only the taxi drivers perform matching since they are likely to be connected to the network for a longer time whereas passengers most likely close the application when a taxi is available for them.
-Taxi drivers and passengers are matched based on their geographical distance.
+The dataset provides temporal and geographical information of pick-up and drop-off location of each taxi ride.
+The experiment is executed in real-time on a 42 node cluster of the DAS-5 supercomputer where we assume a total of 1100 taxi drivers and 1000 users requesting transportation.\footcite{bal2016medium}
+During the experiment, each trader creates exactly one buy or sell offer and is connected to at least ten other matchmakers in the network.
+When a new buy or sell offer is created, the offer is disseminated to at most other 100 traders.
+It is also assumed that only taxi drivers perform matching since they are likely to be connected to the network for a longer time whereas passengers probably close the application when a taxi is available for them.
+Taxi drivers and passengers are matched based on their geographical Euclidean distance.
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.9\columnwidth]{assets/matching_efficiency}
-	\caption{The effect of decentralization on matching efficiency when emulating the taxi network of New York. The horizontal axis shows the percentage of taxi drivers performing matchmaking and the vertical axis denotes the average distance between matched taxi driver and passenger.}
+	\caption{The effect of decentralization on matching efficiency when emulating the taxi network of New York.}
 	\label{fig:matching_efficiency}
 \end{figure}
 
-Figure \ref{fig:matching_efficiency} shows the relation between rate of decentralization and efficiency during our evaluation.
-The horizontal axis denotes the percentage of taxi drivers performing matchmaking whereas the vertical axis represents the average distance between the matched driver and the requester.
-The first data point in Figure \ref{fig:matching_efficiency} is equivalent to the situation where there is a central matching service, like Uber.
-It is clear that decentralization negatively impacts matching efficiency which is expected since each matchmaker only holds partial knowledge of the global orderbook.
-In particular, a matchmaker might not be aware of an offer that could improve his proposed matching.
-This effect can be reduced by synchronizing orderbooks between matchmakers, at the cost of additional required network communication.
+To study market efficiency between a market with a central clearinghouse and a fully decentralized network, we varied the percentage of taxi drivers performing matchmaking.
+The results are presented in Figure \ref{fig:matching_efficiency}, showing matching efficiency as the network becoming increasingly decentralized.
+The horizontal axis denotes the percentage of taxi drivers performing matchmaking whereas the vertical axis represents the average distance between the matched driver and the passenger.
+The left-most data point in Figure \ref{fig:matching_efficiency} corresponds to the situation where there is exactly one central matching server, like Uber.
+A higher rate of decentralization negatively impacts matching efficiency.
+This can be explained by the fact that each taxi driver only holds partial knowledge of the global orderbook.
+In particular, a matchmaker might not be aware of an existing offer that is better than a match he proposes.
 
 \section{Conclusions}
 
