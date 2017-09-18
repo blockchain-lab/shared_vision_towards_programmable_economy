@@ -730,20 +730,20 @@ Taxi drivers and passengers are matched based on their great circle distance.
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=1\columnwidth]{assets/matching_efficiency.pdf}
-	\caption{The effect of decentralization on matching efficiency when emulating the taxi network of New York, where we vary the reach of a new offer.}
+	\caption{The effect of decentralization on matching efficiency when emulating the taxi network of New York, where we vary the message broadcast range.}
 	\label{fig:matching_efficiency}
 \end{figure}
 
-To study differences in matching efficiency between a market with a central clearinghouse and a fully decentralized network, we varied the percentage of taxi drivers performing matchmaking and the broadcast range of a new offer.
+To study differences in matching efficiency between a market with a central clearinghouse and a fully decentralized network, we varied the percentage of taxi drivers performing matchmaking and the broadcast range of messages.
 The results are presented in Figure \ref{fig:matching_efficiency}, showing matching efficiency as the network becoming increasingly decentralized.
 The horizontal axis denotes the percentage of taxi drivers performing matchmaking whereas the vertical axis represents the average distance between a matched driver and passenger.
-The left-most data point of each line in Figure \ref{fig:matching_efficiency} corresponds to the situation where there is exactly one central matching server, like Uber.
+The points on each line in Figure \ref{fig:matching_efficiency} correspond to a network where 10\%, 20\%, 30\% etc. of the taxi drivers are performing matchmaking, except for points near zero percentage on the horizontal axis: they resemble the situation where there is exactly one entity performing matchmaking, like an Uber server.
 
 As a first observation, note that matching efficiency decreases when we decentralize the network, however, this performance loss is relatively minor.
 The differences in average matching distance between a fully centralized and decentralized market are only 30, 124 and 203 meters when a new offer reaches 30, 72 and 110 matchmakers respectively.
 When we increase the number of matchmakers in our market, the global orderbook is divided amongst more traders, explaining the loss in matching efficiency.
 Note that in this context, the global orderbook refers to the set of all unfilled offers available on the market.
-Additionally, increasing the reach of a new offer increases the matching performance.
+Additionally, increasing the broadcast range increases the matching performance.
 This can be explained by the fact that when new information is disseminated to more traders, each individual trader has increased knowledge about the global orderbook, resulting in improved matching.
 
 \section{Conclusions}
