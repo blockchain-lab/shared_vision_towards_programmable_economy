@@ -9,10 +9,15 @@
 \usepackage{csquotes}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{blindtext}
 
 \bibliography{references.bib}
 
 \begin{document}
+	
+	\setlength{\fboxsep}{0pt}%
+	%\setlength{\fboxrule}{1pt}%
 
   \articletype{Research Article}
   
@@ -284,7 +289,7 @@ Similar to self-driving cars, it is likely that legal issues will decelerate ado
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=1\columnwidth]{assets/mortgagemarket}
+	\fcolorbox{lightgray}{white}{\includegraphics[width=1\columnwidth]{assets/mortgagemarket}}
 	\caption{The user interface of our mortgage market prototype, from the perspective of an investor.}
 	\label{fig:mortgage_market_interface}
 \end{figure}
