@@ -461,6 +461,10 @@ The described system is in particular useful when trading in the programmable ec
 The TrustChain transaction fabric is designed around the notion of entities performing transactions with each other.\footcite{otte2017trustchain}
 Each user in the TrustChain network maintains and grows their own chain of historical transactions. 
 This is in contrast to traditional blockchain constructions like Bitcoin or Ethereum, where a single, global ledger is maintained, containing all transactions since the inception of the platform.
+%NOW, explain why the readers will be presented with lot of engineering details on
+%signatures etc.
+TrustChain is significantly faster than Bitcoin or Ethereum and is specifically designed to scale.\footcite{githubissueconsensus}.
+TrustChain is simpler, does not have miners, relaxes the need for global replication of transactions, and removes the need for grouping transactions in blocks.
 We now discuss the creation, storage and dissemination of transactions recorded on TrustChain.
 
 \begin{figure}[h!]
@@ -558,7 +562,7 @@ In comparison, Visa processes several hundreds of transactions every second and 
 This motivates the need for a scalable blockchain.
 
 We have designed, implemented and evaluated a fault-tolerant, horizontally scalable consensus mechanism on top of TrustChain, capable of detecting malicious activities performed by users like double-spending\footcite{ren2017implicit}.
-As far as the authors are aware, this is the first horizontally scalable blockchain fabric.
+As far as the authors are aware, this is the first true horizontally scalable blockchain fabric.
 We have built our system based on three important objectives:
 \begin{enumerate}
 	\item Reaching global consensus on a global state: global consensus renders many types of malicious activities useless since the consistent state has consent of honest users in the network.
@@ -615,8 +619,8 @@ With only a few servers, our consensus mechanism is able to reach global through
 
 \subsection{Trustworthiness and Reputation}
 \label{sec:reputation}
-One way to quantity trustworthiness in an economic environment is by using a reputation mechanism.
-Reputation systems are widely used within the gig economy but the trust is often centred to a single authority.
+One way to quantify trustworthiness in an economic environment is by using a reputation mechanism.
+Reputation systems are widely used within the gig economy but the trust is often centered around a single authority.
 Fifteen years of research on generic distributed reputation systems has yielded a wide variety of proposed designs and possible solutions.\footcite{delaviz2010improving}\,\footcite{delaviz2012sybilres}\,\footcite{kamvar2003eigentrust}
 Prior work by us challenges the problem of estimating reputation using network flow algorithms.
 This mechanism is called BarterCast and has been verified by a real-world implementation in our file-sharing software Tribler.\footcite{meulpolder2009bartercast}
