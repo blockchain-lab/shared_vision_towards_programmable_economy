@@ -306,9 +306,9 @@ A screenshot of the developed application is presented in Figure \ref{fig:mortga
 Each agreement reached between individuals in the market are stored as a double-signed contract on a public blockchain.
 The mortgage financing platform distinguishes between three different types of contracts:
 \begin{itemize}
-	\item Mortgage contract: this contract represent the initial mortgage agreement between a user and a mortgage provider, containing all relevant information about the agreed mortgage (i.e. the house address, mortgage rate and redemption agreements).
-	\item Investment contract: this type of contract is created when (a part of) a mortgage is sold to an investor. It holds properties of the resold mortgage.
-	\item Transaction contracts: when a mortgage is transferred from one investor to another, a transaction contract is created.
+	\item \emph{Mortgage contract}: this contract represent the initial mortgage agreement between a user and a mortgage provider, containing all relevant information about the agreed mortgage (i.e. the house address, mortgage rate and redemption agreements).
+	\item \emph{Investment contract}: this type of contract is created when (a part of) a mortgage is sold to an investor. It holds properties of the resold mortgage.
+	\item \emph{Transaction contracts}: when a mortgage is transferred from one investor to another, a transaction contract is created.
 \end{itemize}
 Investment and transaction contracts are expected to depend on another contract.
 For investment contracts, this should be a mortgage contract whereas transaction contracts should have a investment contract as dependency.
@@ -374,8 +374,8 @@ These challenges are often triggered by pushing a physical button attached to th
 A secure process for identity storage based on a PUF device proceeds in two phases: the enrollment phase (Figure \ref{fig:puf_enrollment}), where a cryptographic key, based on a PUF fingerprint is generated and the reconstruction phase (Figure \ref{fig:puf_reconstruction}), which restores the secret cryptographic key that was generated during the enrollment phase.
 Each phase will now be explained according to Figure \ref{fig:puf_key_storage}.
 \begin{itemize}
-	\item Enrollment phase: first, a so-called reference response of the targeted PUF is measured after initiating a challenge of the device. This reference response is used as input for the Fuzzy Extractor, which consists of a privacy amplification module and Error-Correcting Code (ECC) encoding. The privacy amplification module converts the PUF reference response to a usable cryptographic key. Additionally, some helper data is computed and saved in storage attached to the device. This helper data itself is not sufficient to restore the secret key and is used during the reconstruction phase.
-	\item Reconstruction phase: reconstruction of a stored key starts by measuring the PUF response, which is used as input for the Fuzzy Extractor. The helper data, generated during enrollment, is used to perform information reconciliation and generates the PUF reference response. After privacy amplification, the programmed cryptographic key is restored and ready for usage.
+	\item \emph{Enrollment phase}: first, a so-called reference response of the targeted PUF is measured after initiating a challenge of the device. This reference response is used as input for the Fuzzy Extractor, which consists of a privacy amplification module and Error-Correcting Code (ECC) encoding. The privacy amplification module converts the PUF reference response to a usable cryptographic key. Additionally, some helper data is computed and saved in storage attached to the device. This helper data itself is not sufficient to restore the secret key and is used during the reconstruction phase.
+	\item \emph{Reconstruction phase}: reconstruction of a stored key starts by measuring the PUF response, which is used as input for the Fuzzy Extractor. The helper data, generated during enrollment, is used to perform information reconciliation and generates the PUF reference response. After privacy amplification, the programmed cryptographic key is restored and ready for usage.
 \end{itemize}
 
 PUF devices can also be utilized for identification purposes.\footcite{vskoric2005robust}
@@ -567,9 +567,9 @@ We have designed, implemented and evaluated a fault-tolerant, horizontally scala
 As far as the authors are aware, this is the first true horizontally scalable blockchain fabric.
 We have built our system based on three important objectives:
 \begin{enumerate}
-	\item Reaching global consensus on a global state: global consensus renders many types of malicious activities useless since the consistent state has consent of honest users in the network.
-	\item Resistance against malicious users: our consensus mechanism should be unaffected by the presence of malicious users, with or without purpose attempting to manipulate the outcome of the global consensus. Usually, these attacks are successful when the number of malicious users reaches a specific threshold.
-	\item Horizontal scalability: in this context, horizontal scalability means that as more users join the TrustChain network, the global transaction throughput increases. Note that the Bitcoin system is not horizontal scalable since the global transaction throughput is not dependent on the number of users in the network.
+	\item \emph{Reaching global consensus on a global state}: global consensus renders many types of malicious activities useless since the consistent state has consent of honest users in the network.
+	\item \emph{Resistance against malicious users}: our consensus mechanism should be unaffected by the presence of malicious users, with or without purpose attempting to manipulate the outcome of the global consensus. Usually, these attacks are successful when the number of malicious users reaches a specific threshold.
+	\item \emph{Horizontal scalability}: in this context, horizontal scalability means that as more users join the TrustChain network, the global transaction throughput increases. Note that the Bitcoin system is not horizontal scalable since the global transaction throughput is not dependent on the number of users in the network.
 \end{enumerate}
 
 \begin{figure}[t]
