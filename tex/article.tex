@@ -748,7 +748,8 @@ Taxi drivers and passengers are matched based on their great circle distance.
 To study differences in matching efficiency between a market with a central clearinghouse and a fully decentralized network, we varied the percentage of taxi drivers performing matchmaking and the broadcast range of messages.
 The results are presented in Figure \ref{fig:matching_efficiency}, showing matching efficiency as the network becoming increasingly decentralized.
 The horizontal axis denotes the percentage of taxi drivers performing matchmaking whereas the vertical axis represents the average distance between a matched driver and passenger.
-The points on each line in Figure \ref{fig:matching_efficiency} correspond to a network where 10\%, 20\%, 30\% etc. of the taxi drivers are performing matchmaking, except for points near zero percentage on the horizontal axis: they resemble the situation where there is exactly one entity performing matchmaking, like an Uber server.
+The points on each line in Figure \ref{fig:matching_efficiency} correspond to a network where 10\%, 20\%, 30\% etc. of the taxi drivers are performing matchmaking.
+The only exception are the points near zero percentage on the horizontal axis: they resemble the situation where out of 550 taxis, exactly one taxi conducts all matchmaking activities, like an Uber server (thus 0.18\%).
 
 As a first observation, note that matching efficiency decreases when we decentralize the network, however, this performance loss is relatively minor.
 The differences in average matching distance between a fully centralized and decentralized market are only 30, 124 and 203 meters when a new offer reaches 30, 72 and 110 matchmakers respectively.
